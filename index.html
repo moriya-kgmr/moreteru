@@ -81,12 +81,19 @@ details.faq p{margin-top:8px}
 ol,ul.plain{margin:0;padding-left:1.3em;display:grid;gap:6px}
 .tag{display:inline-block;font:700 11px var(--f-mono);letter-spacing:.08em;color:var(--pr);background:var(--pr-bg);border-radius:4px;padding:1px 6px}
 .recs{display:grid;gap:12px;margin-top:4px}
-.rec{display:grid;grid-template-columns:1fr auto;gap:6px 16px;align-items:center;padding:14px 0;border-top:1px solid var(--line)}
+.rec{display:grid;grid-template-columns:auto 1fr auto;gap:6px 16px;align-items:start;padding:16px 0;border-top:1px solid var(--line)}
 .rec:first-child{border-top:0}
 .rec > div{min-width:0}
-.rec .name{font-weight:700}
-.rec .desc{font-size:14px;color:var(--muted)}
-@media (max-width:480px){.rec{grid-template-columns:1fr}.rec .btn{justify-self:start}}
+.rec .name{font-weight:700;font-size:17px}
+.rec .kind{font-size:12px;color:var(--muted);margin-bottom:6px}
+.rec .why{margin:0;padding-left:1.1em;display:grid;gap:4px;font-size:14px}
+.rec .btn{align-self:center}
+.a8px{position:absolute;width:1px;height:1px;border:0}
+.rank{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font:700 16px var(--f-mono);background:var(--bg);color:var(--muted);border:1px solid var(--line)}
+.rank.r1{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.rank.r2{background:var(--accent-soft);color:var(--accent);border-color:var(--accent)}
+.rank.r3{background:var(--surface);color:var(--accent);border-color:var(--accent)}
+@media (max-width:560px){.rec{grid-template-columns:auto 1fr}.rec .btn{grid-column:2;justify-self:start}}
 .breaches{list-style:none;margin:0;padding:0;display:grid}
 .breaches li{display:grid;grid-template-columns:1fr auto;gap:4px 12px;padding:12px 0;border-top:1px solid var(--line)}
 .breaches li:first-child{border-top:0}
@@ -201,29 +208,113 @@ footer nav{display:flex;gap:16px;flex-wrap:wrap}
   ・ASPから画像付きの広告タグが出る場合も、この枠の中に置き、PR表示は残してください
 -->
 <section class="card" id="recs" aria-labelledby="recs-h">
-  <h2 id="recs-h"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><span>再発を防ぐためのサービス <span class="tag">PR</span></span></h2>
+  <h2 id="recs-h"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><span>個人向け！再発を防ぐおすすめサービスTOP5 <span class="tag">PR</span></span></h2>
   <p class="pr-bar">当サイトはアフィリエイト広告（PR）を掲載しています。「PR」表示のあるリンクから商品を申し込むと、運営者に報酬が支払われることがあります。</p>
   <div class="recs">
+    <!-- A8.net の広告リンク（テキストリンク＋計測用の1pxの画像）。2026/10/29 提携承認済み -->
     <div class="rec">
+      <span class="rank r1" aria-label="1位">1</span>
       <div>
-        <div class="name">パスワード管理アプリ【商品名】</div>
-        <div class="desc">サービスごとに違う強いパスワードを自動で作り、覚えておいてくれます。使い回しをやめる一番の近道です。</div>
+        <div class="name">ESET HOME セキュリティ</div>
+        <div class="kind">総合セキュリティソフト</div>
+        <ul class="why">
+          <li>国内ではキヤノンITソリューションズが販売・サポートしているので、困ったときに日本語で相談できます。</li>
+          <li>上位プランにはパスワード管理機能も付いていて、ウイルス対策と使い回し対策を1本でまとめられます。</li>
+        </ul>
       </div>
-      <a class="btn" href="#" rel="sponsored noopener" target="_blank">詳しく見る</a>
+      <a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4BERAA+IGGJ6+1A8Q+15P77M" rel="sponsored nofollow noopener" target="_blank">公式サイトを見る</a><img class="a8px" src="https://www13.a8.net/0.gif?a8mat=4BERAA+IGGJ6+1A8Q+15P77M" width="1" height="1" alt="">
     </div>
     <div class="rec">
+      <span class="rank r2" aria-label="2位">2</span>
       <div>
-        <div class="name">セキュリティソフト【商品名】</div>
-        <div class="desc">偽サイトや不審なアプリをブロックし、フィッシング被害を防ぎます。家族の端末もまとめて守れるプランがあります。</div>
+        <div class="name">ノートン 360</div>
+        <div class="kind">総合セキュリティソフト</div>
+        <ul class="why">
+          <li>世界的に知名度の高いセキュリティソフトです。ウイルス対策に加えて、パスワード管理やVPNもまとめて使えます。</li>
+          <li>メールアドレスなどの流出を監視する機能があるプランもあり、「漏れていないか」を確かめ続けたい人に向いています。</li>
+        </ul>
       </div>
-      <a class="btn" href="#" rel="sponsored noopener" target="_blank">詳しく見る</a>
+      <a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4BERAA+JNBQQ+3IBI+61C2Q" rel="sponsored nofollow noopener" target="_blank">公式サイトを見る</a><img class="a8px" src="https://www11.a8.net/0.gif?a8mat=4BERAA+JNBQQ+3IBI+61C2Q" width="1" height="1" alt="">
     </div>
     <div class="rec">
+      <span class="rank r3" aria-label="3位">3</span>
       <div>
-        <div class="name">ダークウェブ監視サービス【商品名】</div>
-        <div class="desc">登録したメールアドレスやカード番号が新たに流出したとき、通知で知らせてくれます。</div>
+        <div class="name">Surfshark Antivirus</div>
+        <div class="kind">ウイルス対策ソフト</div>
+        <ul class="why">
+          <li>マルウェアなどの脅威から、パソコンやスマホを守るウイルス対策ソフトです。</li>
+          <li>同じ会社のVPNと組み合わせて使えるので、ウイルス対策と通信の保護を1社でそろえたい人に向いています。</li>
+        </ul>
       </div>
-      <a class="btn" href="#" rel="sponsored noopener" target="_blank">詳しく見る</a>
+      <a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4BERAA+LFMK2+4LSW+BX3J6" rel="sponsored nofollow noopener" target="_blank">公式サイトを見る</a><img class="a8px" src="https://www11.a8.net/0.gif?a8mat=4BERAA+LFMK2+4LSW+BX3J6" width="1" height="1" alt="">
+    </div>
+    <div class="rec">
+      <span class="rank" aria-label="4位">4</span>
+      <div>
+        <div class="name">NordVPN</div>
+        <div class="kind">VPN</div>
+        <ul class="why">
+          <li>カフェや駅のフリーWi-Fiでも通信を暗号化して、IDやパスワードの盗み見を防ぎます。</li>
+          <li>世界中で使われている大手VPNで、危険なサイトや広告をブロックする機能もあります。</li>
+        </ul>
+      </div>
+      <a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4BERAA+M125U+3YFI+61C2Q" rel="sponsored nofollow noopener" target="_blank">公式サイトを見る</a><img class="a8px" src="https://www12.a8.net/0.gif?a8mat=4BERAA+M125U+3YFI+61C2Q" width="1" height="1" alt="">
+    </div>
+    <div class="rec">
+      <span class="rank" aria-label="5位">5</span>
+      <div>
+        <div class="name">MillenVPN</div>
+        <div class="kind">VPN（国産）</div>
+        <ul class="why">
+          <li>日本の会社が運営する国産VPNで、申し込みからサポートまで日本語で完結します。</li>
+          <li>海外サービスに不安がある人でも始めやすく、フリーWi-Fiを使う機会が多い人の最初の1本に向いています。</li>
+        </ul>
+      </div>
+      <a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4BERAA+J1W4Y+3JTE+HV7V6" rel="sponsored nofollow noopener" target="_blank">公式サイトを見る</a><img class="a8px" src="https://www14.a8.net/0.gif?a8mat=4BERAA+J1W4Y+3JTE+HV7V6" width="1" height="1" alt="">
+    </div>
+  </div>
+  <p class="note">ランキングは、運営者が各社の公式情報をもとに「漏洩対策としての効果」「日本語での使いやすさ」「始めやすさ」の観点で選んだものです。料金や機能は変わることがあるため、申し込み前に公式サイトでご確認ください。</p>
+</section>
+
+<section class="card" id="recs-biz" aria-labelledby="biz-h">
+  <h2 id="biz-h"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M9 21v-4h6v4M8 7h2M14 7h2M8 11h2M14 11h2"/></svg></span><span>事業者向け！自社サイトを漏洩元にしない対策TOP3 <span class="tag">PR</span></span></h2>
+  <p class="pr-bar">この枠はアフィリエイト広告（PR）です。リンクから申し込むと、運営者に報酬が支払われることがあります。</p>
+  <div class="recs">
+    <div class="rec">
+      <span class="rank r1" aria-label="1位">1</span>
+      <div>
+        <div class="name">SiteLock</div>
+        <div class="kind">Webサイトの脆弱性診断・改ざん監視</div>
+        <ul class="why">
+          <li>自社サイトの弱点を診断し、改ざんの監視やマルウェアの駆除まで任せられます。</li>
+          <li>不正アクセスではWebサイトの弱点が狙われることも多いため、専任のセキュリティ担当がいない中小企業の最初の一手に向いています。</li>
+        </ul>
+      </div>
+      <a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4BERAA+K8RCI+2KX0+1ZJG1U" rel="sponsored nofollow noopener" target="_blank">公式サイトを見る</a><img class="a8px" src="https://www12.a8.net/0.gif?a8mat=4BERAA+K8RCI+2KX0+1ZJG1U" width="1" height="1" alt="">
+    </div>
+    <div class="rec">
+      <span class="rank r2" aria-label="2位">2</span>
+      <div>
+        <div class="name">Value-Auth</div>
+        <div class="kind">WordPressの不正ログイン対策</div>
+        <ul class="why">
+          <li>WordPressの管理画面に二段階認証を追加して、パスワードが漏れても乗っ取られにくくします。</li>
+          <li>0円から始められるので、コストをかけずに今日から対策できます。</li>
+        </ul>
+      </div>
+      <a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4BERAA+MMHRM+1JUK+1BMW42" rel="sponsored nofollow noopener" target="_blank">公式サイトを見る</a><img class="a8px" src="https://www10.a8.net/0.gif?a8mat=4BERAA+MMHRM+1JUK+1BMW42" width="1" height="1" alt="">
+    </div>
+    <div class="rec">
+      <span class="rank r3" aria-label="3位">3</span>
+      <div>
+        <div class="name">SUIKA VPN Team IP Service</div>
+        <div class="kind">法人向けVPN（固定IP）</div>
+        <ul class="why">
+          <li>スタッフ全員に固定IPアドレスを割り当て、社内システムにアクセスできる人を限定できます。</li>
+          <li>テレワークや外出先からの接続が多い会社の、情報漏洩対策に向いています。</li>
+        </ul>
+      </div>
+      <a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4BERAA+KU6YA+4R3G+BWVTE" rel="sponsored nofollow noopener" target="_blank">公式サイトを見る</a><img class="a8px" src="https://www15.a8.net/0.gif?a8mat=4BERAA+KU6YA+4R3G+BWVTE" width="1" height="1" alt="">
     </div>
   </div>
 </section>
