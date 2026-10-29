@@ -24,13 +24,19 @@ https://moreteru.com のソースコードです。
 | 通信先 | 目的 |
 | --- | --- |
 | api.pwnedpasswords.com | パスワード照合（ハッシュの先頭5文字のみ） |
-| haveibeenpwned.com | 最近の漏洩事例の一覧（公開データ） |
+| raw.githubusercontent.com | ニュース見出し（`news.json`）の読み込み |
 | fonts.googleapis.com / fonts.gstatic.com | 文字の表示（Google Fonts） |
 | Cloudflare Web Analytics | アクセス数の計測（Cookie不使用） |
 
+## ニュース見出しの自動更新
+
+`.github/workflows/update-news.yml` が1時間ごとに `scripts/fetch_news.py` を実行し、
+[Security NEXT](https://www.security-next.com/) と [ScanNetSecurity](https://scan.netsecurity.ne.jp/) のRSSから
+情報漏洩に関する記事の見出し・リンク・日時だけを `news.json` に保存します（記事本文は保存しません）。
+
 ## データの提供元
 
-漏洩データは [Have I Been Pwned](https://haveibeenpwned.com/)（CC BY 4.0）を利用しています。
+パスワード照合には [Have I Been Pwned](https://haveibeenpwned.com/) の Pwned Passwords を利用しています。
 当サイトは Have I Been Pwned の運営元とは関係ありません。
 
 ## 運営者

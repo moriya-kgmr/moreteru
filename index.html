@@ -93,6 +93,8 @@ ol,ul.plain{margin:0;padding-left:1.3em;display:grid;gap:6px}
 .b-name{font-weight:700;min-width:0;overflow-wrap:anywhere}
 .b-count{font:600 14px var(--f-mono);font-variant-numeric:tabular-nums;color:var(--bad);text-align:right}
 .b-meta{grid-column:1/-1;font-size:13px;color:var(--muted)}
+a.b-name{grid-column:1/-1;color:var(--ink);text-decoration:none}
+a.b-name:hover{color:var(--accent);text-decoration:underline}
 
 /* 開閉式（運営者情報・プライバシーポリシー） */
 .fold{padding:0}
@@ -229,6 +231,7 @@ footer nav{display:flex;gap:16px;flex-wrap:wrap}
 <section class="card" aria-labelledby="br-h">
   <h2 id="br-h"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h13v14H6a2 2 0 0 1-2-2z"/><path d="M17 9h3v8a2 2 0 0 1-2 2M8 9h5M8 13h5M8 17h3"/></svg></span>あなたは大丈夫？最近の情報漏洩事件・ニュース</h2>
   <ul class="breaches" id="breaches"><li><span class="b-meta">読み込み中…</span></li></ul>
+  <p class="note">見出しは国内のセキュリティニュースサイト（Security NEXT、ScanNetSecurity）から自動で集めています。記事は配信元のサイトで読めます。</p>
 </section>
 
 <div class="folds">
@@ -261,7 +264,7 @@ footer nav{display:flex;gap:16px;flex-wrap:wrap}
       <p>当サイトはアフィリエイトプログラムに参加しています。広告リンクを経由して商品を購入・申し込みした場合、広告配信事業者がCookie等を利用して成果を計測することがあります。当サイトの運営者があなたの個人情報を受け取ることはありません。</p>
 
       <h3>外部サービス</h3>
-      <p>漏洩事例の表示には Have I Been Pwned の公開データ（CC BY 4.0）を利用しています。表示する文字の読み込みに Google Fonts を利用しています。</p>
+      <p>ニュースの見出しは、Security NEXT と ScanNetSecurity が公開しているRSSから取得し、GitHub 上に保存したものを表示しています。表示する文字の読み込みに Google Fonts を利用しています。</p>
 
       <h3>免責事項</h3>
       <p>照合結果は既知の漏洩データとの比較であり、「見つからない」ことは安全を保証するものではありません。当サイトの情報を利用して生じた損害について、運営者は責任を負いかねます。紹介する商品の内容や価格は変更されることがあるため、最新情報は各公式サイトでご確認ください。</p>
@@ -275,7 +278,7 @@ footer nav{display:flex;gap:16px;flex-wrap:wrap}
 
 <footer>
   <nav><a href="#about" data-open="about">運営者情報</a><a href="#privacy" data-open="privacy">プライバシーポリシー</a><a href="https://docs.google.com/forms/d/e/1FAIpQLSf6xIEEqUGuoIKkTXFXBAXQe5ZmlmEewI4qRWO71FYooHPCmA/viewform" target="_blank" rel="noopener">お問い合わせ</a></nav>
-  <p>漏洩データの提供元：<a href="https://haveibeenpwned.com/" target="_blank" rel="noopener">Have I Been Pwned</a>（CC BY 4.0）</p>
+  <p>パスワード照合：<a href="https://haveibeenpwned.com/Passwords" target="_blank" rel="noopener">Have I Been Pwned（Pwned Passwords）</a> ／ ニュース：<a href="https://www.security-next.com/" target="_blank" rel="noopener">Security NEXT</a>、<a href="https://scan.netsecurity.ne.jp/" target="_blank" rel="noopener">ScanNetSecurity</a></p>
   <p>© 2026 流出チェッカー</p>
 </footer>
 </div>
@@ -346,30 +349,31 @@ footer nav{display:flex;gap:16px;flex-wrap:wrap}
     }
   });
 
-  async function loadBreaches() {
+  // 国内セキュリティニュースの見出し（GitHub Actions が1時間ごとに news.json を更新）
+  async function loadNews() {
     const list = $("breaches");
     const msg = (t) => { list.textContent = ""; const li = document.createElement("li"); const s = document.createElement("span"); s.className = "b-meta"; s.textContent = t; li.appendChild(s); list.appendChild(li); };
+    const day = new Intl.DateTimeFormat("ja-JP", { timeZone: "Asia/Tokyo", month: "numeric", day: "numeric" });
     try {
-      const res = await fetch("https://haveibeenpwned.com/api/v3/breaches");
+      const res = await fetch("https://raw.githubusercontent.com/moriya-kgmr/moreteru/main/news.json", { cache: "no-cache" });
       if (!res.ok) throw new Error("HTTP " + res.status);
       const data = await res.json();
-      const items = data.filter(b => b.IsVerified)
-        .sort((a, b) => new Date(b.AddedDate) - new Date(a.AddedDate)).slice(0, 8);
+      const items = (data.items || []).filter(i => /^https:\/\//.test(i.link)).slice(0, 8);
+      if (!items.length) return msg("現在表示できるニュースはありません。");
       list.textContent = "";
-      for (const b of items) {
+      for (const i of items) {
         const li = document.createElement("li");
-        const name = document.createElement("span"); name.className = "b-name"; name.textContent = b.Title + (b.Domain ? "（" + b.Domain + "）" : "");
-        const cnt = document.createElement("span"); cnt.className = "b-count"; cnt.textContent = fmt(b.PwnCount) + "件";
+        const a = document.createElement("a"); a.className = "b-name"; a.href = i.link; a.target = "_blank"; a.rel = "noopener"; a.textContent = i.title;
         const meta = document.createElement("span"); meta.className = "b-meta";
-        meta.textContent = "漏洩日 " + b.BreachDate + " ・ 流出した項目：" + (b.DataClasses || []).slice(0, 5).join("、");
-        li.append(name, cnt, meta);
+        meta.textContent = day.format(new Date(i.date)) + " ・ " + i.source;
+        li.append(a, meta);
         list.appendChild(li);
       }
     } catch {
-      msg("漏洩事例を読み込めませんでした。");
+      msg("ニュースを読み込めませんでした。時間をおいて再度お試しください。");
     }
   }
-  loadBreaches();
+  loadNews();
 })();
 </script>
 </body>
