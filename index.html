@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>流出チェッカー</title>
+<meta name="description" content="あなたのパスワードが過去の情報漏洩に含まれていないかを確認できる無料ツール。パスワードはこの端末の外に送信されません。">
+<link rel="canonical" href="https://moreteru.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f6b55'/%3E%3Cpath d='M32 12C32 12 18 29 18 38a14 14 0 0 0 28 0c0-9-14-26-14-26z' fill='%23fff'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://moreteru.com/">
+<meta property="og:site_name" content="流出チェッカー">
+<meta property="og:title" content="あなたのパスワード、漏れてる？｜流出チェッカー">
+<meta property="og:description" content="過去の流出データと照合できる無料チェックツール。パスワードは端末の外に送信されません。">
+<meta property="og:image" content="https://moreteru.com/ogp.png">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f6b55">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700;900&family=JetBrains+Mono:wght@400;600&display=swap">
+<!-- Cloudflare Web Analytics は Pages の設定で有効化済み（計測コードは自動で挿入されるため、ここへの記述は不要） -->
+<style>
+/* Layout: 緑のメインビジュアル帯 → 1カラムのカード（確認 → 対処 → サービス → ニュース）→ 開閉式の運営情報 */
+:root{
+  /* 明るいグレー基調で固定（端末のダークモード設定に関係なく、常にこの配色で表示） */
+  --bg:#eef0f2; --surface:#ffffff; --ink:#1f2a30; --muted:#5f6b73; --line:#d9dde1;
+  --accent:#0f6b55; --accent-ink:#ffffff; --accent-soft:#e3f1ec;
+  --hero-sub:#d4ebe3;
+  --safe:#1a7f4b; --warn:#9a5c00; --bad:#b3261e; --bad-bg:#fdecea; --safe-bg:#e7f5ee;
+  --pr:#7a5a00; --pr-bg:#fff4d6;
+  --f-display:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",sans-serif;
+  --f-body:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 var(--f-body);}
+
+/* メインビジュアル */
+.hero{background:var(--accent);color:var(--accent-ink)}
+.hero-in{max-width:720px;margin:0 auto;padding:40px max(16px,env(safe-area-inset-right,0px)) 44px max(16px,env(safe-area-inset-left,0px));display:grid;grid-template-columns:1fr 180px;gap:24px;align-items:center}
+.hero-in > div{min-width:0}
+.hero .eyebrow{font:600 12px var(--f-mono);letter-spacing:.12em;color:var(--hero-sub);text-transform:uppercase}
+.hero h1{font:900 clamp(30px,7vw,44px)/1.2 var(--f-display);margin:6px 0 14px;text-wrap:balance}
+.hero h1 .nb{display:inline-block}
+.hero .sub{margin:0;display:grid;gap:4px;font-size:15px;line-height:1.6;color:var(--hero-sub)}
+.hero .sub strong{color:var(--accent-ink);font-weight:700}
+.hero-art{width:100%;max-width:180px;height:auto;justify-self:end}
+@media (max-width:560px){.hero-in{grid-template-columns:1fr}.hero-art{max-width:110px;justify-self:start;order:-1}}
+
+.wrap{max-width:720px;margin:0 auto;padding:28px max(16px,env(safe-area-inset-right,0px)) 64px max(16px,env(safe-area-inset-left,0px));display:grid;gap:28px}
+.pr-bar{font-size:13px;color:var(--pr);background:var(--pr-bg);border-radius:8px;padding:8px 12px;margin:0 0 4px}
+h2{font:700 20px/1.4 var(--f-display);margin:0 0 14px;text-wrap:balance;display:flex;align-items:center;gap:12px}
+h3{font:700 16px/1.5 var(--f-display);margin:18px 0 4px}
+p{margin:0}
+.ico{flex:none;width:40px;height:40px;border-radius:10px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center}
+.ico svg{width:22px;height:22px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px}
+label{display:block;font-weight:700;margin-bottom:8px}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+input[type=password],input[type=text]{flex:1 1 220px;min-width:0;font:16px var(--f-mono);padding:12px 14px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+button,.btn{font:700 15px var(--f-body);padding:12px 18px;border-radius:8px;border:0;background:var(--accent);color:var(--accent-ink);cursor:pointer;text-decoration:none;display:inline-block}
+button.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+button:focus-visible,input:focus-visible,.btn:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.hero a:focus-visible{outline-color:var(--accent-ink)}
+button:disabled{opacity:.6;cursor:wait}
+.note{font-size:13px;color:var(--muted);margin-top:10px}
+.result{margin-top:16px;padding:14px 16px;border-radius:8px;font-weight:700}
+.result.bad{background:var(--bad-bg);color:var(--bad)}
+.result.safe{background:var(--safe-bg);color:var(--safe)}
+.result.err{background:var(--bg);color:var(--warn)}
+.result small{display:block;font-weight:400;color:var(--ink);margin-top:4px}
+.result a{color:inherit;font-weight:700}
+details.faq{margin-top:14px;font-size:14px;color:var(--muted)}
+details.faq summary{cursor:pointer;color:var(--accent);font-weight:700}
+details.faq p{margin-top:8px}
+.trust{margin-top:16px;padding:16px;border-radius:10px;background:var(--accent-soft)}
+.trust h3{margin:0 0 8px;color:var(--accent)}
+.trust ul{margin:0;padding-left:1.2em;display:grid;gap:6px;font-size:14px}
+ol,ul.plain{margin:0;padding-left:1.3em;display:grid;gap:6px}
+.tag{display:inline-block;font:700 11px var(--f-mono);letter-spacing:.08em;color:var(--pr);background:var(--pr-bg);border-radius:4px;padding:1px 6px}
+.recs{display:grid;gap:12px;margin-top:4px}
+.rec{display:grid;grid-template-columns:1fr auto;gap:6px 16px;align-items:center;padding:14px 0;border-top:1px solid var(--line)}
+.rec:first-child{border-top:0}
+.rec > div{min-width:0}
+.rec .name{font-weight:700}
+.rec .desc{font-size:14px;color:var(--muted)}
+@media (max-width:480px){.rec{grid-template-columns:1fr}.rec .btn{justify-self:start}}
+.breaches{list-style:none;margin:0;padding:0;display:grid}
+.breaches li{display:grid;grid-template-columns:1fr auto;gap:4px 12px;padding:12px 0;border-top:1px solid var(--line)}
+.breaches li:first-child{border-top:0}
+.b-name{font-weight:700;min-width:0;overflow-wrap:anywhere}
+.b-count{font:600 14px var(--f-mono);font-variant-numeric:tabular-nums;color:var(--bad);text-align:right}
+.b-meta{grid-column:1/-1;font-size:13px;color:var(--muted)}
+
+/* 開閉式（運営者情報・プライバシーポリシー） */
+.fold{padding:0}
+.fold > summary{list-style:none;cursor:pointer;padding:16px 22px;display:flex;align-items:center;gap:12px;font:700 17px/1.4 var(--f-display)}
+.fold > summary::-webkit-details-marker{display:none}
+.fold > summary .ico{width:34px;height:34px}
+.fold > summary .ico svg{width:18px;height:18px}
+.fold > summary::after{content:"";margin-left:auto;width:10px;height:10px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);transition:transform .2s}
+.fold[open] > summary::after{transform:rotate(-135deg)}
+.fold .body{padding:0 22px 22px;font-size:14px}
+.fold .body p + p{margin-top:8px}
+.fold dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:0}
+.fold dt{font-weight:700;color:var(--muted)}
+.fold dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.folds{display:grid;gap:12px}
+
+footer{font-size:12px;color:var(--muted);display:grid;gap:6px}
+a{color:var(--accent)}
+footer nav{display:flex;gap:16px;flex-wrap:wrap}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-in">
+    <div>
+      <div class="eyebrow">Breach Checker</div>
+      <h1><span class="nb">あなたの情報、</span><span class="nb">漏れていませんか</span></h1>
+      <p class="sub">
+        <span>過去の流出情報と照合して、あなたが今利用しているパスワードが含まれていないかチェック</span>
+        <strong>パスワードはこのサイトでは保存しません</strong>
+      </p>
+    </div>
+    <!-- メインビジュアル：パスワード欄を虫眼鏡で調べるイラスト -->
+    <svg class="hero-art" viewBox="0 0 200 180" role="img" aria-label="パスワード欄を虫眼鏡で調べるイラスト">
+      <rect x="14" y="26" width="150" height="112" rx="14" fill="#ffffff" fill-opacity="0.12" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2"/>
+      <circle cx="32" cy="44" r="4" fill="#ffffff" fill-opacity="0.6"/>
+      <circle cx="46" cy="44" r="4" fill="#ffffff" fill-opacity="0.6"/>
+      <circle cx="60" cy="44" r="4" fill="#ffffff" fill-opacity="0.6"/>
+      <rect x="30" y="66" width="118" height="28" rx="8" fill="#ffffff"/>
+      <g fill="#0f6b55"><circle cx="46" cy="80" r="4.5"/><circle cx="62" cy="80" r="4.5"/><circle cx="78" cy="80" r="4.5"/><circle cx="94" cy="80" r="4.5"/><circle cx="110" cy="80" r="4.5"/></g>
+      <rect x="30" y="104" width="64" height="18" rx="6" fill="#ffffff" fill-opacity="0.85"/>
+      <circle cx="138" cy="104" r="34" fill="#0f6b55" stroke="#ffffff" stroke-width="7"/>
+      <path d="M124 104 l10 10 l18 -20" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M163 129 l22 22" stroke="#ffffff" stroke-width="12" stroke-linecap="round"/>
+      <path d="M176 22 l4 9 l9 4 l-9 4 l-4 9 l-4 -9 l-9 -4 l9 -4 z" fill="#ffffff"/>
+    </svg>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section class="card" aria-labelledby="pw-h">
+  <h2 id="pw-h"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3M14 9l2 2"/></svg></span>パスワードを確認する</h2>
+  <form id="pw-form">
+    <label for="pw">確認したいパスワード</label>
+    <div class="row">
+      <input id="pw" type="password" autocomplete="off" spellcheck="false" required>
+      <button id="pw-toggle" type="button" class="ghost" aria-pressed="false">表示</button>
+      <button id="pw-btn" type="submit">確認する</button>
+    </div>
+  </form>
+  <div id="pw-result" aria-live="polite"></div>
+  <details class="faq">
+    <summary>パスワードを入力しても安全なの？</summary>
+    <p>入力されたパスワードは、あなたのブラウザ内でSHA-1という方式で変換（ハッシュ化）され、その先頭5文字だけが照合先のHave I Been Pwnedに送られます。照合先は先頭5文字が一致する数百件の候補を返し、残りの照合はブラウザ内で行います。そのため、照合先のサーバーにも当サイトにも、あなたのパスワードは保存されません。</p>
+  </details>
+</section>
+
+<section class="card" aria-labelledby="mail-h">
+  <h2 id="mail-h"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>メールアドレスを確認する</h2>
+  <p>メールアドレスの漏洩照会は、照合データの運営元である Have I Been Pwned の公式サイトで行えます。</p>
+  <div class="trust">
+    <h3>Have I Been Pwned って大丈夫？</h3>
+    <ul>
+      <li>オーストラリアのセキュリティ研究者 Troy Hunt 氏が2013年から運営している、世界的に知られた漏洩チェックサービスです。</li>
+      <li>ブラウザのFirefoxや、パスワード管理アプリの1Passwordにも、このサービスの漏洩チェック機能が組み込まれています。</li>
+      <li>2021年からは、米国のFBIが捜査で見つけた流出パスワードを提供しています。</li>
+      <li>パスワード照合の仕組みはプログラムが公開（オープンソース化）されていて、誰でも中身を確認できます。</li>
+    </ul>
+  </div>
+  <div class="row" style="margin-top:16px">
+    <a class="btn" href="https://haveibeenpwned.com/" target="_blank" rel="noopener">Have I Been Pwned で確認する</a>
+  </div>
+  <p class="note">英語のサイトです。トップの入力欄にメールアドレスを入れて検索すると、漏洩の有無が表示されます。</p>
+</section>
+
+<section class="card" aria-labelledby="todo-h">
+  <h2 id="todo-h"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l1.5 1.5L8 5M4 12l1.5 1.5L8 11M4 18l1.5 1.5L8 17M11 6h9M11 12h9M11 18h9"/></svg></span>漏洩が見つかったら！やるべきこと5選</h2>
+  <ol>
+    <li>そのパスワードを使っているすべてのサービスで、パスワードを変更する。</li>
+    <li>サービスごとに違うパスワードにする。覚えきれない場合は<a href="#recs">パスワード管理アプリ</a>を使う。</li>
+    <li>二段階認証（SMSや認証アプリ）を設定する。</li>
+    <li>クレジットカードの利用明細を確認し、身に覚えのない請求があればカード会社に連絡する。</li>
+    <li>「パスワードが漏れています」などのメールやSMSのリンクは開かず、公式アプリや公式サイトから直接ログインする。</li>
+  </ol>
+</section>
+
+<!--
+  ▼ アフィリエイト枠
+  ASPの管理画面で発行したリンクを href に、商品名・説明を実際の内容に差し替えてください。
+  ・rel="sponsored" はアフィリエイトリンクに付けるのが推奨されています（消さないでください）
+  ・ASPから画像付きの広告タグが出る場合も、この枠の中に置き、PR表示は残してください
+-->
+<section class="card" id="recs" aria-labelledby="recs-h">
+  <h2 id="recs-h"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><span>再発を防ぐためのサービス <span class="tag">PR</span></span></h2>
+  <p class="pr-bar">当サイトはアフィリエイト広告（PR）を掲載しています。「PR」表示のあるリンクから商品を申し込むと、運営者に報酬が支払われることがあります。</p>
+  <div class="recs">
+    <div class="rec">
+      <div>
+        <div class="name">パスワード管理アプリ【商品名】</div>
+        <div class="desc">サービスごとに違う強いパスワードを自動で作り、覚えておいてくれます。使い回しをやめる一番の近道です。</div>
+      </div>
+      <a class="btn" href="#" rel="sponsored noopener" target="_blank">詳しく見る</a>
+    </div>
+    <div class="rec">
+      <div>
+        <div class="name">セキュリティソフト【商品名】</div>
+        <div class="desc">偽サイトや不審なアプリをブロックし、フィッシング被害を防ぎます。家族の端末もまとめて守れるプランがあります。</div>
+      </div>
+      <a class="btn" href="#" rel="sponsored noopener" target="_blank">詳しく見る</a>
+    </div>
+    <div class="rec">
+      <div>
+        <div class="name">ダークウェブ監視サービス【商品名】</div>
+        <div class="desc">登録したメールアドレスやカード番号が新たに流出したとき、通知で知らせてくれます。</div>
+      </div>
+      <a class="btn" href="#" rel="sponsored noopener" target="_blank">詳しく見る</a>
+    </div>
+  </div>
+</section>
+
+<section class="card" aria-labelledby="br-h">
+  <h2 id="br-h"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h13v14H6a2 2 0 0 1-2-2z"/><path d="M17 9h3v8a2 2 0 0 1-2 2M8 9h5M8 13h5M8 17h3"/></svg></span>あなたは大丈夫？最近の情報漏洩事件・ニュース</h2>
+  <ul class="breaches" id="breaches"><li><span class="b-meta">読み込み中…</span></li></ul>
+</section>
+
+<div class="folds">
+  <details class="card fold" id="about">
+    <summary><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></span>運営者情報</summary>
+    <div class="body">
+      <dl>
+        <dt>サイト名</dt><dd>流出チェッカー</dd>
+        <dt>運営者</dt><dd>ネットの鍵守 守屋</dd>
+        <dt>連絡先</dt><dd><a href="https://docs.google.com/forms/d/e/1FAIpQLSf6xIEEqUGuoIKkTXFXBAXQe5ZmlmEewI4qRWO71FYooHPCmA/viewform" target="_blank" rel="noopener">お問い合わせフォーム</a></dd>
+        <dt>開設日</dt><dd>2026年10月29日</dd>
+      </dl>
+      <p class="note">当サイトはHave I Been Pwned の運営元とは関係ありません。</p>
+    </div>
+  </details>
+
+  <details class="card fold" id="privacy">
+    <summary><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span>プライバシーポリシー</summary>
+    <div class="body">
+      <h3>入力されたパスワードの取り扱い</h3>
+      <p>パスワードはお使いのブラウザ内でハッシュ化され、その先頭5文字のみが照合のために Have I Been Pwned（Pwned Passwords API）へ送信されます。パスワードそのもの、およびハッシュ値の全体は、当サイトを含むどこにも送信・保存されません。確認後、入力欄は自動で消去されます。</p>
+
+      <h3>取得する情報と利用目的</h3>
+      <p>お問い合わせフォームでは、返信のためにお名前（ニックネーム可）とメールアドレスをお預かりします。これらはお問い合わせへの回答のみに利用し、法令に基づく場合を除き、本人の同意なく第三者に提供しません。</p>
+
+      <h3>アクセス解析</h3>
+      <p>当サイトでは、利用状況の把握とサイト改善のために Cloudflare Web Analytics を使用しています。このツールはCookieを使用せず、個人を特定する情報は収集しません。</p>
+
+      <h3>アフィリエイトプログラム</h3>
+      <p>当サイトはアフィリエイトプログラムに参加しています。広告リンクを経由して商品を購入・申し込みした場合、広告配信事業者がCookie等を利用して成果を計測することがあります。当サイトの運営者があなたの個人情報を受け取ることはありません。</p>
+
+      <h3>外部サービス</h3>
+      <p>漏洩事例の表示には Have I Been Pwned の公開データ（CC BY 4.0）を利用しています。表示する文字の読み込みに Google Fonts を利用しています。</p>
+
+      <h3>免責事項</h3>
+      <p>照合結果は既知の漏洩データとの比較であり、「見つからない」ことは安全を保証するものではありません。当サイトの情報を利用して生じた損害について、運営者は責任を負いかねます。紹介する商品の内容や価格は変更されることがあるため、最新情報は各公式サイトでご確認ください。</p>
+
+      <h3>改定</h3>
+      <p>本ポリシーは必要に応じて改定します。改定後の内容は本ページに掲載した時点で効力を生じます。</p>
+      <p class="note">制定日：2026年10月29日</p>
+    </div>
+  </details>
+</div>
+
+<footer>
+  <nav><a href="#about" data-open="about">運営者情報</a><a href="#privacy" data-open="privacy">プライバシーポリシー</a><a href="https://docs.google.com/forms/d/e/1FAIpQLSf6xIEEqUGuoIKkTXFXBAXQe5ZmlmEewI4qRWO71FYooHPCmA/viewform" target="_blank" rel="noopener">お問い合わせ</a></nav>
+  <p>漏洩データの提供元：<a href="https://haveibeenpwned.com/" target="_blank" rel="noopener">Have I Been Pwned</a>（CC BY 4.0）</p>
+  <p>© 2026 流出チェッカー</p>
+</footer>
+</div>
+
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const fmt = (n) => Number(n).toLocaleString("ja-JP");
+
+  async function sha1Hex(text) {
+    const buf = await crypto.subtle.digest("SHA-1", new TextEncoder().encode(text));
+    return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, "0")).join("").toUpperCase();
+  }
+
+  function show(el, cls, title, sub, link) {
+    el.className = "result " + cls;
+    el.textContent = title;
+    if (sub) { const s = document.createElement("small"); s.textContent = sub; el.appendChild(s); }
+    if (link) {
+      const s = document.createElement("small"); const a = document.createElement("a");
+      a.href = link.href; a.textContent = link.text; s.appendChild(a); el.appendChild(s);
+    }
+  }
+
+  // フッターのリンクから開閉式の欄を開く
+  document.querySelectorAll("[data-open]").forEach(a => a.addEventListener("click", () => {
+    const d = $(a.dataset.open); if (d) d.open = true;
+  }));
+  const fromHash = () => { const d = location.hash && document.querySelector(location.hash); if (d && d.tagName === "DETAILS") d.open = true; };
+  window.addEventListener("hashchange", fromHash); fromHash();
+
+  $("pw-toggle").addEventListener("click", (e) => {
+    const input = $("pw"), on = input.type === "password";
+    input.type = on ? "text" : "password";
+    e.currentTarget.textContent = on ? "隠す" : "表示";
+    e.currentTarget.setAttribute("aria-pressed", String(on));
+  });
+
+  $("pw-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const pw = $("pw").value, out = $("pw-result"), btn = $("pw-btn");
+    if (!pw) return;
+    btn.disabled = true; btn.textContent = "確認中…";
+    try {
+      const hash = await sha1Hex(pw);
+      const prefix = hash.slice(0, 5), suffix = hash.slice(5);
+      const res = await fetch("https://api.pwnedpasswords.com/range/" + prefix, { headers: { "Add-Padding": "true" } });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const text = await res.text();
+      let count = 0;
+      for (const line of text.split("\n")) {
+        const [s, c] = line.trim().split(":");
+        if (s === suffix) { count = parseInt(c, 10); break; }
+      }
+      if (count > 0) {
+        show(out, "bad", "このパスワードは過去の漏洩データに " + fmt(count) + " 回登場しています",
+          "使っているサービスがあれば、すぐに別のパスワードへ変更してください。",
+          { href: "#todo-h", text: "やるべきことを見る" });
+      } else {
+        show(out, "safe", "既知の漏洩データには見つかりませんでした",
+          "ただし未公開の漏洩もあり得ます。サービスごとに違うパスワードを使いましょう。");
+      }
+    } catch (err) {
+      show(out, "err", "確認できませんでした", "通信に失敗しました。時間をおいてもう一度お試しください。");
+    } finally {
+      btn.disabled = false; btn.textContent = "確認する";
+      $("pw").value = "";
+    }
+  });
+
+  async function loadBreaches() {
+    const list = $("breaches");
+    const msg = (t) => { list.textContent = ""; const li = document.createElement("li"); const s = document.createElement("span"); s.className = "b-meta"; s.textContent = t; li.appendChild(s); list.appendChild(li); };
+    try {
+      const res = await fetch("https://haveibeenpwned.com/api/v3/breaches");
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const data = await res.json();
+      const items = data.filter(b => b.IsVerified)
+        .sort((a, b) => new Date(b.AddedDate) - new Date(a.AddedDate)).slice(0, 8);
+      list.textContent = "";
+      for (const b of items) {
+        const li = document.createElement("li");
+        const name = document.createElement("span"); name.className = "b-name"; name.textContent = b.Title + (b.Domain ? "（" + b.Domain + "）" : "");
+        const cnt = document.createElement("span"); cnt.className = "b-count"; cnt.textContent = fmt(b.PwnCount) + "件";
+        const meta = document.createElement("span"); meta.className = "b-meta";
+        meta.textContent = "漏洩日 " + b.BreachDate + " ・ 流出した項目：" + (b.DataClasses || []).slice(0, 5).join("、");
+        li.append(name, cnt, meta);
+        list.appendChild(li);
+      }
+    } catch {
+      msg("漏洩事例を読み込めませんでした。");
+    }
+  }
+  loadBreaches();
+})();
+</script>
+</body>
+</html>
