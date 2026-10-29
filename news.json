@@ -1,10 +1,16 @@
 {
- "updated": "2026-10-29T15:00:41.256856+00:00",
+ "updated": "2026-10-29T15:58:42.610024+00:00",
  "items": [
   {
    "title": "従業員の個人情報が流出した可能性 - ドトールコーヒー",
    "link": "https://www.security-next.com/192077",
    "date": "2026-10-29T14:01:13+00:00",
+   "source": "Security NEXT"
+  },
+  {
+   "title": "不正アクセスで電子ギフトが不正発行 - ギフティ",
+   "link": "https://www.security-next.com/191987",
+   "date": "2026-10-29T13:00:01+00:00",
    "source": "Security NEXT"
   },
   {
@@ -54,12 +60,6 @@
    "link": "https://scan.netsecurity.ne.jp/article/2026/10/29/56614.html",
    "date": "2026-10-28T23:05:02+00:00",
    "source": "ScanNetSecurity"
-  },
-  {
-   "title": "複数予約サイトで侵害、顧客情報が流出か - 楽天トラベル",
-   "link": "https://www.security-next.com/191989",
-   "date": "2026-10-28T14:40:59+00:00",
-   "source": "Security NEXT"
   }
  ]
 }
