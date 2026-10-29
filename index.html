@@ -25,6 +25,9 @@
   /* 明るいグレー基調で固定（端末のダークモード設定に関係なく、常にこの配色で表示） */
   --bg:#eef0f2; --surface:#ffffff; --ink:#1f2a30; --muted:#5f6b73; --line:#d9dde1;
   --accent:#0f6b55; --accent-ink:#ffffff; --accent-soft:#e3f1ec;
+  --cat-access:#b3261e; --cat-access-bg:#fbe9e7;
+  --cat-attack:#9a5c00; --cat-attack-bg:#fdf1dc;
+  --cat-mistake:#1f5f9e; --cat-mistake-bg:#e6effa;
   --hero-sub:#d4ebe3;
   --safe:#1a7f4b; --warn:#9a5c00; --bad:#b3261e; --bad-bg:#fdecea; --safe-bg:#e7f5ee;
   --pr:#7a5a00; --pr-bg:#fff4d6;
@@ -39,7 +42,10 @@ body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 var(--f-body)
 
 /* メインビジュアル */
 .hero{background:var(--accent);color:var(--accent-ink)}
-.hero-in{max-width:720px;margin:0 auto;padding:40px max(16px,env(safe-area-inset-right,0px)) 44px max(16px,env(safe-area-inset-left,0px));display:grid;grid-template-columns:1fr 180px;gap:24px;align-items:center}
+/* 写真：Arnold Francisca / Unsplash（Unsplashライセンス） */
+.hero{background:linear-gradient(90deg,rgba(15,107,85,.95) 0%,rgba(15,107,85,.86) 45%,rgba(15,107,85,.6) 100%),url("hero-photo.jpg") center/cover no-repeat,var(--accent)}
+@media (max-width:560px){.hero{background:linear-gradient(rgba(15,107,85,.86),rgba(15,107,85,.86)),url("hero-photo.jpg") 70% center/cover no-repeat,var(--accent)}}
+.hero-in{max-width:900px;margin:0 auto;padding:40px max(16px,env(safe-area-inset-right,0px)) 44px max(16px,env(safe-area-inset-left,0px));display:grid;grid-template-columns:1fr 180px;gap:24px;align-items:center}
 .hero-in > div{min-width:0}
 .hero .eyebrow{font:600 12px var(--f-mono);letter-spacing:.12em;color:var(--hero-sub);text-transform:uppercase}
 .hero h1{font:900 clamp(30px,7vw,44px)/1.2 var(--f-display);margin:6px 0 14px;text-wrap:balance}
@@ -47,11 +53,18 @@ body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 var(--f-body)
 .hero .sub{margin:0;display:grid;gap:4px;font-size:15px;line-height:1.6;color:var(--hero-sub)}
 .hero .sub strong{color:var(--accent-ink);font-weight:700}
 .hero-art{width:100%;max-width:180px;height:auto;justify-self:end}
-@media (max-width:560px){.hero-in{grid-template-columns:1fr}.hero-art{max-width:110px;justify-self:start;order:-1}}
+@media (max-width:560px){
+  .hero-in{grid-template-columns:1fr;position:relative;padding-top:32px}
+  .hero-art{position:absolute;top:20px;right:max(14px,env(safe-area-inset-right,0px));width:min(128px,31vw);max-width:none}
+  .hero .eyebrow{min-height:62px;display:flex;align-items:flex-end}
+}
 
-.wrap{max-width:720px;margin:0 auto;padding:28px max(16px,env(safe-area-inset-right,0px)) 64px max(16px,env(safe-area-inset-left,0px));display:grid;gap:28px}
+.wrap{max-width:900px;margin:0 auto;padding:28px max(16px,env(safe-area-inset-right,0px)) 64px max(16px,env(safe-area-inset-left,0px));display:grid;gap:28px}
 .pr-bar{font-size:13px;color:var(--pr);background:var(--pr-bg);border-radius:8px;padding:8px 12px;margin:0 0 4px}
-h2{font:700 20px/1.4 var(--f-display);margin:0 0 14px;text-wrap:balance;display:flex;align-items:center;gap:12px}
+h2{font:700 20px/1.4 var(--f-display);margin:0 0 14px;display:flex;align-items:center;gap:12px;word-break:auto-phrase}
+.h2t{min-width:0}
+.h2t .nb{display:inline-block}
+@media (max-width:560px){h2{font-size:18px}}
 h3{font:700 16px/1.5 var(--f-display);margin:18px 0 4px}
 p{margin:0}
 .ico{flex:none;width:40px;height:40px;border-radius:10px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center}
@@ -100,6 +113,16 @@ ol,ul.plain{margin:0;padding-left:1.3em;display:grid;gap:6px}
 .b-name{font-weight:700;min-width:0;overflow-wrap:anywhere}
 .b-count{font:600 14px var(--f-mono);font-variant-numeric:tabular-nums;color:var(--bad);text-align:right}
 .b-meta{grid-column:1/-1;font-size:13px;color:var(--muted)}
+/* ニュース一覧：種類別アイコン＋見出し＋種類チップ */
+.breaches.news li{grid-template-columns:44px 1fr;gap:2px 14px;align-items:start}
+.news .n-ico{grid-row:1 / span 2;width:44px;height:44px;border-radius:10px;display:grid;place-items:center}
+.news .n-ico svg{width:22px;height:22px}
+.news a.b-name,.news .b-meta{grid-column:2}
+.n-chip{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:999px;margin-right:4px}
+.c-access{color:var(--cat-access);background:var(--cat-access-bg)}
+.c-attack{color:var(--cat-attack);background:var(--cat-attack-bg)}
+.c-mistake{color:var(--cat-mistake);background:var(--cat-mistake-bg)}
+.c-leak{color:var(--accent);background:var(--accent-soft)}
 a.b-name{grid-column:1/-1;color:var(--ink);text-decoration:none}
 a.b-name:hover{color:var(--accent);text-decoration:underline}
 
@@ -191,7 +214,7 @@ footer nav{display:flex;gap:16px;flex-wrap:wrap}
 </section>
 
 <section class="card" aria-labelledby="todo-h">
-  <h2 id="todo-h"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l1.5 1.5L8 5M4 12l1.5 1.5L8 11M4 18l1.5 1.5L8 17M11 6h9M11 12h9M11 18h9"/></svg></span>漏洩が見つかったら！やるべきこと5選</h2>
+  <h2 id="todo-h"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l1.5 1.5L8 5M4 12l1.5 1.5L8 11M4 18l1.5 1.5L8 17M11 6h9M11 12h9M11 18h9"/></svg></span><span class="h2t"><span class="nb">漏洩が見つかったら！</span><span class="nb">やるべきこと5選</span></span></h2>
   <ol>
     <li>そのパスワードを使っているすべてのサービスで、パスワードを変更する。</li>
     <li>サービスごとに違うパスワードにする。覚えきれない場合は<a href="#recs">パスワード管理アプリ</a>を使う。</li>
@@ -208,7 +231,7 @@ footer nav{display:flex;gap:16px;flex-wrap:wrap}
   ・ASPから画像付きの広告タグが出る場合も、この枠の中に置き、PR表示は残してください
 -->
 <section class="card" id="recs" aria-labelledby="recs-h">
-  <h2 id="recs-h"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><span>個人向け！再発を防ぐおすすめサービスTOP5 <span class="tag">PR</span></span></h2>
+  <h2 id="recs-h"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><span class="h2t"><span class="nb">個人向け！</span><span class="nb">再発を防ぐ</span><span class="nb">おすすめサービスTOP5 <span class="tag">PR</span></span></span></h2>
   <p class="pr-bar">当サイトはアフィリエイト広告（PR）を掲載しています。「PR」表示のあるリンクから商品を申し込むと、運営者に報酬が支払われることがあります。</p>
   <div class="recs">
     <!-- A8.net の広告リンク（テキストリンク＋計測用の1pxの画像）。2026/10/29 提携承認済み -->
@@ -277,7 +300,7 @@ footer nav{display:flex;gap:16px;flex-wrap:wrap}
 </section>
 
 <section class="card" id="recs-biz" aria-labelledby="biz-h">
-  <h2 id="biz-h"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M9 21v-4h6v4M8 7h2M14 7h2M8 11h2M14 11h2"/></svg></span><span>事業者向け！自社サイトを漏洩元にしない対策TOP3 <span class="tag">PR</span></span></h2>
+  <h2 id="biz-h"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M9 21v-4h6v4M8 7h2M14 7h2M8 11h2M14 11h2"/></svg></span><span class="h2t"><span class="nb">事業者向け！</span><span class="nb">自社サイトを</span><span class="nb">漏洩元にしない</span><span class="nb">対策TOP3 <span class="tag">PR</span></span></span></h2>
   <p class="pr-bar">この枠はアフィリエイト広告（PR）です。リンクから申し込むと、運営者に報酬が支払われることがあります。</p>
   <div class="recs">
     <div class="rec">
@@ -320,7 +343,7 @@ footer nav{display:flex;gap:16px;flex-wrap:wrap}
 </section>
 
 <section class="card" aria-labelledby="br-h">
-  <h2 id="br-h"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h13v14H6a2 2 0 0 1-2-2z"/><path d="M17 9h3v8a2 2 0 0 1-2 2M8 9h5M8 13h5M8 17h3"/></svg></span>あなたは大丈夫？最近の情報漏洩事件・ニュース</h2>
+  <h2 id="br-h"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h13v14H6a2 2 0 0 1-2-2z"/><path d="M17 9h3v8a2 2 0 0 1-2 2M8 9h5M8 13h5M8 17h3"/></svg></span><span class="h2t"><span class="nb">あなたは大丈夫？</span><span class="nb">最近の情報漏洩</span><span class="nb">事件・ニュース</span></span></h2>
   <ul class="breaches" id="breaches"><li><span class="b-meta">読み込み中…</span></li></ul>
   <p class="note">見出しは国内のセキュリティニュースサイト（Security NEXT、ScanNetSecurity）から自動で集めています。記事は配信元のサイトで読めます。</p>
 </section>
@@ -355,7 +378,7 @@ footer nav{display:flex;gap:16px;flex-wrap:wrap}
       <p>当サイトはアフィリエイトプログラムに参加しています。広告リンクを経由して商品を購入・申し込みした場合、広告配信事業者がCookie等を利用して成果を計測することがあります。当サイトの運営者があなたの個人情報を受け取ることはありません。</p>
 
       <h3>外部サービス</h3>
-      <p>ニュースの見出しは、Security NEXT と ScanNetSecurity が公開しているRSSから取得し、GitHub 上に保存したものを表示しています。表示する文字の読み込みに Google Fonts を利用しています。</p>
+      <p>ニュースの見出しは、Security NEXT と ScanNetSecurity が公開しているRSSから取得し、GitHub 上に保存したものを表示しています。表示する文字の読み込みに Google Fonts を利用しています。メインビジュアルの写真は Arnold Francisca 氏が Unsplash で公開しているものです。</p>
 
       <h3>免責事項</h3>
       <p>照合結果は既知の漏洩データとの比較であり、「見つからない」ことは安全を保証するものではありません。当サイトの情報を利用して生じた損害について、運営者は責任を負いかねます。紹介する商品の内容や価格は変更されることがあるため、最新情報は各公式サイトでご確認ください。</p>
@@ -440,6 +463,20 @@ footer nav{display:flex;gap:16px;flex-wrap:wrap}
     }
   });
 
+  // 見出しの言葉から事件の種類を判別し、オリジナルのアイコンを割り当てる（上から順に判定）
+  const S = (d) => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' + d + '</svg>';
+  const CATS = [
+    { key: "c-mistake", label: "人的ミス", re: /誤送信|誤って|誤送付|閲覧可能|紛失|置き忘れ|設定ミス|誤登録|誤表示/,
+      svg: S('<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>') },
+    { key: "c-attack", label: "サイバー攻撃", re: /ランサム|サイバー攻撃|マルウェア|ウイルス|DDoS|攻撃/,
+      svg: S('<path d="M12 3l10 18H2z"/><path d="M12 10v4M12 17.5v.01"/>') },
+    { key: "c-access", label: "不正アクセス", re: /不正アクセス|不正ログイン|侵害|乗っ取|なりすまし/,
+      svg: S('<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.6-1.7"/><path d="M12 15v2"/>') },
+    { key: "c-leak", label: "情報流出", re: /./,
+      svg: S('<path d="M12 3s-6 7-6 11a6 6 0 0 0 12 0c0-4-6-11-6-11z"/>') },
+  ];
+  const classify = (title) => CATS.find(c => c.re.test(title));
+
   // 国内セキュリティニュースの見出し（GitHub Actions が1時間ごとに news.json を更新）
   async function loadNews() {
     const list = $("breaches");
@@ -452,12 +489,16 @@ footer nav{display:flex;gap:16px;flex-wrap:wrap}
       const items = (data.items || []).filter(i => /^https:\/\//.test(i.link)).slice(0, 8);
       if (!items.length) return msg("現在表示できるニュースはありません。");
       list.textContent = "";
+      list.classList.add("news");
       for (const i of items) {
+        const cat = classify(i.title);
         const li = document.createElement("li");
+        const ico = document.createElement("span"); ico.className = "n-ico " + cat.key; ico.setAttribute("aria-hidden", "true"); ico.innerHTML = cat.svg;
         const a = document.createElement("a"); a.className = "b-name"; a.href = i.link; a.target = "_blank"; a.rel = "noopener"; a.textContent = i.title;
         const meta = document.createElement("span"); meta.className = "b-meta";
-        meta.textContent = day.format(new Date(i.date)) + " ・ " + i.source;
-        li.append(a, meta);
+        const chip = document.createElement("span"); chip.className = "n-chip " + cat.key; chip.textContent = cat.label;
+        meta.append(chip, " " + day.format(new Date(i.date)) + " ・ " + i.source);
+        li.append(ico, a, meta);
         list.appendChild(li);
       }
     } catch {
