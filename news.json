@@ -1,64 +1,64 @@
 {
- "updated": "2026-10-29T22:48:20.845705+00:00",
+ "updated": "2026-10-29T23:43:33.053594+00:00",
  "items": [
   {
-   "title": "従業員の個人情報が流出した可能性 - ドトールコーヒー",
-   "link": "https://www.security-next.com/192077",
-   "date": "2026-10-29T14:01:13+00:00",
-   "source": "Security NEXT"
-  },
-  {
-   "title": "不正アクセスで電子ギフトが不正発行 - ギフティ",
-   "link": "https://www.security-next.com/191987",
-   "date": "2026-10-29T13:00:01+00:00",
-   "source": "Security NEXT"
-  },
-  {
-   "title": "三井住友DS投信直販ネットのマイページにログインできない状況に、取引委託業者のシステムで不正アクセスを検知",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/10/29/56621.html",
-   "date": "2026-10-28T23:05:25+00:00",
+   "title": "今日もどこかで情報漏えい 第53回「2026年9月の情報漏えい」カメラが情報漏えいの瞬間を捉えた世紀の映像",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/10/30/56635.html",
+   "date": "2026-10-29T23:10:02+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "「ショップサーブ」に不正アクセス、漏えい対象者数は約2,335万6,000人",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/10/29/56620.html",
-   "date": "2026-10-28T23:05:22+00:00",
+   "title": "Gunosy の社内業務用アカウントの認証情報を用いた不正ログイン、取引先や役員・従業員等の情報が流出",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/10/30/56634.html",
+   "date": "2026-10-29T23:05:26+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "フジテレビの番組宣伝システムに不正アクセス、メディア関係者の個人情報が漏えいした可能性",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/10/29/56619.html",
-   "date": "2026-10-28T23:05:19+00:00",
+   "title": "So-net 会員データベースに不正アクセス、会員情報214万1,986件が漏えい",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/10/30/56633.html",
+   "date": "2026-10-29T23:05:24+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "医療機関業務支援システム「@link（アットリンク）」に不正アクセス、サービスの提供を一時停止",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/10/29/56618.html",
-   "date": "2026-10-28T23:05:17+00:00",
+   "title": "「お名前.com デスクトップクラウド」に不正アクセス、情報が公開された顧客に上限300万円の特別見舞金",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/10/30/56632.html",
+   "date": "2026-10-29T23:05:20+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "ルールに違反し外部生成AIサービスにパナソニックグループ従業員の個人情報をアップロード",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/10/29/56617.html",
-   "date": "2026-10-28T23:05:13+00:00",
+   "title": "不正アクセスでチケット購入サービス「GETTIIS」会員情報が外部流出",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/10/30/56631.html",
+   "date": "2026-10-29T23:05:18+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "BtoC通販向け決済「NP後払い」に不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/10/29/56616.html",
-   "date": "2026-10-28T23:05:10+00:00",
+   "title": "リモートディテーリング事業等を行うエンタッチにランサムウェア攻撃",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/10/30/56630.html",
+   "date": "2026-10-29T23:05:14+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "石油資源開発が利用するラクスライトクラウドのASPサービス「blastmail」に不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/10/29/56615.html",
-   "date": "2026-10-28T23:05:06+00:00",
+   "title": "ニフティの回線申込・受付管理システムに不正アクセス、最大54万2,513件の会員情報に影響",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/10/30/56629.html",
+   "date": "2026-10-29T23:05:12+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "丸木医科器械へのサイバー攻撃で基幹システムがダウン、FAX で注文受付",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/10/29/56614.html",
-   "date": "2026-10-28T23:05:02+00:00",
+   "title": "セカンドリテイリングに不正アクセス",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/10/30/56628.html",
+   "date": "2026-10-29T23:05:10+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "エンタッチにランサムウェア攻撃、データベース内の情報が流出",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/10/30/56627.html",
+   "date": "2026-10-29T23:05:08+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "メディアサーバにディレクトリパストラバーサルが存在 ～ アルカディア運営の「SpeeCAN RAIDEN」に不正アクセス",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/10/30/56626.html",
+   "date": "2026-10-29T23:05:05+00:00",
    "source": "ScanNetSecurity"
   }
  ]
