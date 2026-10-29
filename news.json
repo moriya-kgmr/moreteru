@@ -1,0 +1,65 @@
+{
+ "updated": "2026-10-29T12:00:31.538229+00:00",
+ "items": [
+  {
+   "title": "三井住友DS投信直販ネットのマイページにログインできない状況に、取引委託業者のシステムで不正アクセスを検知",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/10/29/56621.html",
+   "date": "2026-10-28T23:05:25+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "「ショップサーブ」に不正アクセス、漏えい対象者数は約2,335万6,000人",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/10/29/56620.html",
+   "date": "2026-10-28T23:05:22+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "フジテレビの番組宣伝システムに不正アクセス、メディア関係者の個人情報が漏えいした可能性",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/10/29/56619.html",
+   "date": "2026-10-28T23:05:19+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "医療機関業務支援システム「@link（アットリンク）」に不正アクセス、サービスの提供を一時停止",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/10/29/56618.html",
+   "date": "2026-10-28T23:05:17+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "ルールに違反し外部生成AIサービスにパナソニックグループ従業員の個人情報をアップロード",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/10/29/56617.html",
+   "date": "2026-10-28T23:05:13+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "BtoC通販向け決済「NP後払い」に不正アクセス",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/10/29/56616.html",
+   "date": "2026-10-28T23:05:10+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "石油資源開発が利用するラクスライトクラウドのASPサービス「blastmail」に不正アクセス",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/10/29/56615.html",
+   "date": "2026-10-28T23:05:06+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "丸木医科器械へのサイバー攻撃で基幹システムがダウン、FAX で注文受付",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/10/29/56614.html",
+   "date": "2026-10-28T23:05:02+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "複数予約サイトで侵害、顧客情報が流出か - 楽天トラベル",
+   "link": "https://www.security-next.com/191989",
+   "date": "2026-10-28T14:40:59+00:00",
+   "source": "Security NEXT"
+  },
+  {
+   "title": "婚活情報ポータルサイトに無関係の個人情報 - 愛知県",
+   "link": "https://www.security-next.com/191655",
+   "date": "2026-10-28T14:38:54+00:00",
+   "source": "Security NEXT"
+  }
+ ]
+}
