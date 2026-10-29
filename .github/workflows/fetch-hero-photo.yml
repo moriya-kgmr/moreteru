@@ -1,0 +1,26 @@
+name: fetch-hero-photo
+
+# メインビジュアル用の写真（Arnold Francisca / Unsplash、Unsplashライセンス）を
+# リポジトリに保存するための一回限りのジョブ。手動実行のみ。
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download photo
+        run: |
+          curl -fsSL "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1600&q=60&fm=jpg&fit=crop" -o hero-photo.jpg
+          ls -l hero-photo.jpg
+          file hero-photo.jpg
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add hero-photo.jpg
+          git diff --cached --quiet || (git commit -m "Add hero photo (Arnold Francisca / Unsplash)" && git push)
