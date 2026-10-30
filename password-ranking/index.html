@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>【漏洩回数ランキング】「123456」は2億回、「sakura」も68万回流出していた｜流出チェッカー</title>
+<meta name="description" content="日本人がよく使うパスワード25個を、流出パスワードのデータベースで照合しました。1位の「123456」は約2億回、「pokemon」は約214万回、「sakura」も約68万回登場。結果と、今日からできる対策をまとめます。">
+<link rel="canonical" href="https://moreteru.com/password-ranking/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f6b55'/%3E%3Cpath d='M32 12C32 12 18 29 18 38a14 14 0 0 0 28 0c0-9-14-26-14-26z' fill='%23fff'/%3E%3C/svg%3E">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://moreteru.com/password-ranking/">
+<meta property="og:site_name" content="流出チェッカー">
+<meta property="og:title" content="【漏洩回数ランキング】「123456」は2億回、「sakura」も68万回流出していた">
+<meta property="og:description" content="日本人がよく使うパスワード25個の漏洩回数を全部調べました。">
+<meta property="og:image" content="https://moreteru.com/password-ranking/ogp.jpg">
+<meta property="og:locale" content="ja_JP">
+<meta property="article:published_time" content="2026-10-30">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f6b55">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700;900&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+
+/* Layout: 緑のメインビジュアル帯 → 1カラムのカード（確認 → 対処 → サービス → ニュース）→ 開閉式の運営情報 */
+:root{
+  /* 明るいグレー基調で固定（端末のダークモード設定に関係なく、常にこの配色で表示） */
+  --bg:#eef0f2; --surface:#ffffff; --ink:#1f2a30; --muted:#5f6b73; --line:#d9dde1;
+  --accent:#0f6b55; --accent-ink:#ffffff; --accent-soft:#e3f1ec;
+  --cat-access:#b3261e; --cat-access-bg:#fbe9e7;
+  --cat-attack:#9a5c00; --cat-attack-bg:#fdf1dc;
+  --cat-mistake:#1f5f9e; --cat-mistake-bg:#e6effa;
+  --hero-sub:#d4ebe3;
+  --safe:#1a7f4b; --warn:#9a5c00; --bad:#b3261e; --bad-bg:#fdecea; --safe-bg:#e7f5ee;
+  --pr:#7a5a00; --pr-bg:#fff4d6;
+  --f-display:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",sans-serif;
+  --f-body:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 var(--f-body);}
+
+/* メインビジュアル */
+.hero{background:var(--accent);color:var(--accent-ink)}
+/* 写真：Arnold Francisca / Unsplash（Unsplashライセンス） */
+.hero{background:linear-gradient(90deg,rgba(15,107,85,.95) 0%,rgba(15,107,85,.86) 45%,rgba(15,107,85,.6) 100%),url("hero-photo.jpg") center/cover no-repeat,var(--accent)}
+@media (max-width:560px){.hero{background:linear-gradient(rgba(15,107,85,.86),rgba(15,107,85,.86)),url("hero-photo.jpg") 70% center/cover no-repeat,var(--accent)}}
+.hero-in{max-width:900px;margin:0 auto;padding:40px max(16px,env(safe-area-inset-right,0px)) 44px max(16px,env(safe-area-inset-left,0px));display:grid;grid-template-columns:1fr 180px;gap:24px;align-items:center}
+.hero-in > div{min-width:0}
+.hero .eyebrow{font:600 12px var(--f-mono);letter-spacing:.12em;color:var(--hero-sub);text-transform:uppercase}
+.hero h1{font:900 clamp(30px,7vw,44px)/1.2 var(--f-display);margin:6px 0 14px;text-wrap:balance}
+.hero h1 .nb{display:inline-block}
+.hero .sub{margin:0;display:grid;gap:4px;font-size:15px;line-height:1.6;color:var(--hero-sub)}
+.hero .sub strong{color:var(--accent-ink);font-weight:700}
+.hero-art{width:100%;max-width:180px;height:auto;justify-self:end}
+@media (max-width:560px){
+  .hero-in{grid-template-columns:1fr;position:relative;padding-top:32px}
+  .hero-art{position:absolute;top:20px;right:max(14px,env(safe-area-inset-right,0px));width:min(128px,31vw);max-width:none}
+  .hero .eyebrow{min-height:62px;display:flex;align-items:flex-end}
+}
+
+.wrap{max-width:900px;margin:0 auto;padding:28px max(16px,env(safe-area-inset-right,0px)) 64px max(16px,env(safe-area-inset-left,0px));display:grid;gap:28px}
+.pr-bar{font-size:13px;color:var(--pr);background:var(--pr-bg);border-radius:8px;padding:8px 12px;margin:0 0 4px}
+h2{font:700 20px/1.4 var(--f-display);margin:0 0 14px;display:flex;align-items:center;gap:12px;word-break:auto-phrase}
+.h2t{min-width:0}
+.h2t .nb{display:inline-block}
+@media (max-width:560px){h2{font-size:18px}}
+h3{font:700 16px/1.5 var(--f-display);margin:18px 0 4px}
+p{margin:0}
+.ico{flex:none;width:40px;height:40px;border-radius:10px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center}
+.ico svg{width:22px;height:22px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px}
+label{display:block;font-weight:700;margin-bottom:8px}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+input[type=password],input[type=text]{flex:1 1 220px;min-width:0;font:16px var(--f-mono);padding:12px 14px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+button,.btn{font:700 15px var(--f-body);padding:12px 18px;border-radius:8px;border:0;background:var(--accent);color:var(--accent-ink);cursor:pointer;text-decoration:none;display:inline-block}
+button.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+button:focus-visible,input:focus-visible,.btn:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.hero a:focus-visible{outline-color:var(--accent-ink)}
+button:disabled{opacity:.6;cursor:wait}
+.note{font-size:13px;color:var(--muted);margin-top:10px}
+.result{margin-top:16px;padding:14px 16px;border-radius:8px;font-weight:700}
+.result.bad{background:var(--bad-bg);color:var(--bad)}
+.result.safe{background:var(--safe-bg);color:var(--safe)}
+.result.err{background:var(--bg);color:var(--warn)}
+.result small{display:block;font-weight:400;color:var(--ink);margin-top:4px}
+.result a{color:inherit;font-weight:700}
+details.faq{margin-top:14px;font-size:14px;color:var(--muted)}
+details.faq summary{cursor:pointer;color:var(--accent);font-weight:700}
+details.faq p{margin-top:8px}
+.trust{margin-top:16px;padding:16px;border-radius:10px;background:var(--accent-soft)}
+.trust h3{margin:0 0 8px;color:var(--accent)}
+.trust ul{margin:0;padding-left:1.2em;display:grid;gap:6px;font-size:14px}
+ol,ul.plain{margin:0;padding-left:1.3em;display:grid;gap:6px}
+.tag{display:inline-block;font:700 11px var(--f-mono);letter-spacing:.08em;color:var(--pr);background:var(--pr-bg);border-radius:4px;padding:1px 6px}
+.recs{display:grid;gap:12px;margin-top:4px}
+.rec{display:grid;grid-template-columns:auto 1fr auto;gap:6px 16px;align-items:start;padding:16px 0;border-top:1px solid var(--line)}
+.rec:first-child{border-top:0}
+.rec > div{min-width:0}
+.rec .name{font-weight:700;font-size:17px}
+.rec .kind{font-size:12px;color:var(--muted);margin-bottom:6px}
+.rec .why{margin:0;padding-left:1.1em;display:grid;gap:4px;font-size:14px}
+.rec .btn{align-self:center}
+.a8px{position:absolute;width:1px;height:1px;border:0}
+.rank{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font:700 16px var(--f-mono);background:var(--bg);color:var(--muted);border:1px solid var(--line)}
+.rank.r1{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.rank.r2{background:var(--accent-soft);color:var(--accent);border-color:var(--accent)}
+.rank.r3{background:var(--surface);color:var(--accent);border-color:var(--accent)}
+@media (max-width:560px){.rec{grid-template-columns:auto 1fr}.rec .btn{grid-column:2;justify-self:start}}
+.breaches{list-style:none;margin:0;padding:0;display:grid}
+.breaches li{display:grid;grid-template-columns:1fr auto;gap:4px 12px;padding:12px 0;border-top:1px solid var(--line)}
+.breaches li:first-child{border-top:0}
+.b-name{font-weight:700;min-width:0;overflow-wrap:anywhere}
+.b-count{font:600 14px var(--f-mono);font-variant-numeric:tabular-nums;color:var(--bad);text-align:right}
+.b-meta{grid-column:1/-1;font-size:13px;color:var(--muted)}
+/* ニュース一覧：種類別アイコン＋見出し＋種類チップ */
+.breaches.news li{grid-template-columns:44px 1fr;gap:2px 14px;align-items:start}
+.news .n-ico{grid-row:1 / span 2;width:44px;height:44px;border-radius:10px;display:grid;place-items:center}
+.news .n-ico svg{width:22px;height:22px}
+.news a.b-name,.news .b-meta{grid-column:2}
+.n-chip{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:999px;margin-right:4px}
+.c-access{color:var(--cat-access);background:var(--cat-access-bg)}
+.c-attack{color:var(--cat-attack);background:var(--cat-attack-bg)}
+.c-mistake{color:var(--cat-mistake);background:var(--cat-mistake-bg)}
+.c-leak{color:var(--accent);background:var(--accent-soft)}
+a.b-name{grid-column:1/-1;color:var(--ink);text-decoration:none}
+a.b-name:hover{color:var(--accent);text-decoration:underline}
+
+/* 開閉式（運営者情報・プライバシーポリシー） */
+.fold{padding:0}
+.fold > summary{list-style:none;cursor:pointer;padding:16px 22px;display:flex;align-items:center;gap:12px;font:700 17px/1.4 var(--f-display)}
+.fold > summary::-webkit-details-marker{display:none}
+.fold > summary .ico{width:34px;height:34px}
+.fold > summary .ico svg{width:18px;height:18px}
+.fold > summary::after{content:"";margin-left:auto;width:10px;height:10px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);transition:transform .2s}
+.fold[open] > summary::after{transform:rotate(-135deg)}
+.fold .body{padding:0 22px 22px;font-size:14px}
+.fold .body p + p{margin-top:8px}
+.fold dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:0}
+.fold dt{font-weight:700;color:var(--muted)}
+.fold dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.folds{display:grid;gap:12px}
+
+footer{font-size:12px;color:var(--muted);display:grid;gap:6px}
+a{color:var(--accent)}
+footer nav{display:flex;gap:16px;flex-wrap:wrap}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+
+/* ===== 記事ページ用 ===== */
+.art-hero{color:#fff;background:linear-gradient(90deg,rgba(15,107,85,.95) 0%,rgba(15,107,85,.86) 50%,rgba(15,107,85,.62) 100%),url("/hero-photo.jpg") center/cover no-repeat,var(--accent)}
+.art-hero-in{max-width:760px;margin:0 auto;padding-block:28px 34px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:12px}
+.art-hero .crumb,.art-hero .crumb a{color:var(--hero-sub)}
+.art-hero h1{font:900 clamp(26px,6vw,40px)/1.35 var(--f-display);margin:0;color:#fff}
+.art-hero h1 .nb{display:inline-block}
+.art-hero h1 em{font-style:normal;color:#ffd76a}
+.h1-tag{display:table;font-size:14px;font-weight:900;color:var(--accent);background:#fff;border-radius:6px;padding:3px 12px;margin-bottom:10px;letter-spacing:.02em}
+.art-hero .meta{margin:0;color:var(--hero-sub);font-size:13px}
+@media (max-width:560px){.art-hero{background:linear-gradient(rgba(15,107,85,.88),rgba(15,107,85,.88)),url("/hero-photo.jpg") 70% center/cover no-repeat,var(--accent)}}
+
+.photo{margin:0;display:grid;gap:4px}
+.photo img{width:100%;height:auto;border-radius:12px;display:block;aspect-ratio:640/427;object-fit:cover}
+.photo figcaption{font-size:11px;color:var(--muted);text-align:right}
+.topbar{background:var(--accent);color:var(--accent-ink)}
+.topbar-in{max-width:900px;margin:0 auto;padding-block:12px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;justify-content:space-between;align-items:center;gap:12px}
+.topbar a{color:var(--accent-ink);text-decoration:none;font-weight:700}
+.topbar .to-tool{font-size:13px;border:1px solid rgba(255,255,255,.6);border-radius:999px;padding:4px 12px}
+.art{max-width:760px}
+.crumb{font-size:12px;color:var(--muted)}
+.crumb a{color:var(--muted)}
+.art h1{font:900 clamp(24px,5.4vw,34px)/1.35 var(--f-display);margin:0;text-wrap:pretty;word-break:auto-phrase}
+.art .meta{font-size:13px;color:var(--muted);margin-top:8px}
+.eyecatch{width:100%;height:auto;border-radius:12px;display:block;aspect-ratio:1200/630;object-fit:cover}
+.prose{display:grid;gap:14px;font-size:16px}
+.prose h2{font-size:22px;margin:8px 0 0;padding-left:12px;border-left:5px solid var(--accent);display:block}
+.prose ul,.prose ol{margin:0;padding-left:1.3em;display:grid;gap:8px}
+.prose strong{color:var(--ink)}
+.note-box{font-size:13px;color:var(--muted);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 14px}
+/* ランキング */
+.rank-list{list-style:none;margin:0;padding:0;display:grid}
+.rank-list li{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:2px 10px;align-items:center;padding:9px 0;border-top:1px solid var(--line)}
+.rank-list li:first-child{border-top:0}
+.rk{font:700 14px var(--f-mono);color:var(--muted);text-align:right}
+.rank-list li:nth-child(-n+3) .rk{color:var(--bad)}
+.pw{font:700 15px var(--f-mono);overflow-wrap:anywhere}
+.pw small{font:400 12px var(--f-body);color:var(--muted);margin-left:6px}
+.cnt{font:700 14px var(--f-mono);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+.bar{grid-column:2 / 4;height:6px;border-radius:3px;background:var(--line);overflow:hidden}
+.bar span{display:block;height:100%;background:var(--muted)}
+.rank-list li.jp .bar span{background:var(--cat-mistake)}
+.rank-list li.jp .pw{color:var(--cat-mistake)}
+.legend{font-size:12px;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:-1px}
+/* チェッカーへの誘導 */
+.cta{background:var(--accent);color:var(--accent-ink);border-radius:12px;padding:20px 22px;display:grid;grid-template-columns:1fr auto;gap:10px 18px;align-items:center}
+.cta p{margin:0;color:var(--hero-sub);font-size:14px}
+.cta strong{display:block;color:var(--accent-ink);font-size:18px;margin-bottom:2px}
+.cta .btn{background:var(--accent-ink);color:var(--accent)}
+@media (max-width:560px){.cta{grid-template-columns:1fr}.cta .btn{justify-self:start}}
+</style>
+</head>
+<body>
+
+<header class="art-hero">
+  <div class="art-hero-in">
+    <nav class="crumb" aria-label="パンくずリスト"><a href="/">流出チェッカー</a> ＞ 漏洩回数ランキング</nav>
+    <h1><span class="h1-tag">漏洩回数ランキング</span><span class="nb">「123456」は<em>2億回</em>、</span><span class="nb">「sakura」も<em>68万回</em></span><span class="nb">流出していた</span></h1>
+    <p class="meta">日本人がよく使うパスワード25選 ・ 2026年10月30日 ・ ネットの鍵守 守屋</p>
+  </div>
+</header>
+
+<div class="wrap art">
+
+<figure class="photo">
+  <img src="worry.jpg" width="640" height="427" alt="スマートフォンを手に不安そうな表情を浮かべる女性">
+  <figcaption>※イメージ写真</figcaption>
+</figure>
+
+<p class="pr-bar">本記事はアフィリエイト広告（PR）を含みます。「PR」表示のあるリンクから商品を申し込むと、運営者に報酬が支払われることがあります。</p>
+
+<div class="prose">
+  <p>「自分のパスワードは大丈夫」と思っていませんか。</p>
+  <p>世界中で流出したパスワードを集めたデータベース「Pwned Passwords」に、日本人が使いがちなパスワード25個を照合し、それぞれ何回登場するかを調べました（2026年10月30日計測）。</p>
+  <p>結果、1位の「123456」は約2億1,046万回。日本らしい「sakura」でも約68万回、「pokemon」は約214万回でした。自分や家族が使っていないか、ランキングで確認してみてください。</p>
+
+  <h2 id="ranking">漏洩回数ランキング</h2>
+  <p>1位の「123456」と25位の「osaka」では、4万倍以上の差がありました。棒の長さは10倍ごとに同じ間隔で伸びる目盛（対数目盛）で表しています。</p>
+  <p class="legend"><span><i style="background:var(--muted)"></i>数字・英単語など</span><span><i style="background:var(--cat-mistake)"></i>日本らしい言葉</span></p>
+  <ol class="rank-list">
+    <li><span class="rk">1</span><span class="pw">123456<small>数字の並び</small></span><span class="cnt" title="210,461,208回">2.1億回</span><span class="bar" aria-hidden="true"><span style="width:98.6%"></span></span></li>
+    <li><span class="rk">2</span><span class="pw">12345678<small>数字の並び</small></span><span class="cnt" title="70,606,130回">7,061万回</span><span class="bar" aria-hidden="true"><span style="width:89.8%"></span></span></li>
+    <li><span class="rk">3</span><span class="pw">password<small>定番英単語</small></span><span class="cnt" title="52,372,427回">5,237万回</span><span class="bar" aria-hidden="true"><span style="width:87.4%"></span></span></li>
+    <li><span class="rk">4</span><span class="pw">qwerty<small>キー配列</small></span><span class="cnt" title="30,812,897回">3,081万回</span><span class="bar" aria-hidden="true"><span style="width:83.1%"></span></span></li>
+    <li><span class="rk">5</span><span class="pw">111111<small>数字の並び</small></span><span class="cnt" title="15,943,793回">1,594万回</span><span class="bar" aria-hidden="true"><span style="width:77.8%"></span></span></li>
+    <li><span class="rk">6</span><span class="pw">abc123<small>英数字の定番</small></span><span class="cnt" title="12,994,280回">1,299万回</span><span class="bar" aria-hidden="true"><span style="width:76.2%"></span></span></li>
+    <li><span class="rk">7</span><span class="pw">iloveyou<small>定番英単語</small></span><span class="cnt" title="7,007,935回">701万回</span><span class="bar" aria-hidden="true"><span style="width:71.2%"></span></span></li>
+    <li><span class="rk">8</span><span class="pw">1qaz2wsx<small>キー配列</small></span><span class="cnt" title="5,832,052回">583万回</span><span class="bar" aria-hidden="true"><span style="width:69.7%"></span></span></li>
+    <li><span class="rk">9</span><span class="pw">a123456<small>英数字の定番</small></span><span class="cnt" title="3,773,237回">377万回</span><span class="bar" aria-hidden="true"><span style="width:66.2%"></span></span></li>
+    <li><span class="rk">10</span><span class="pw">asdfgh<small>キー配列</small></span><span class="cnt" title="2,394,812回">239万回</span><span class="bar" aria-hidden="true"><span style="width:62.6%"></span></span></li>
+    <li class="jp"><span class="rk">11</span><span class="pw">pokemon<small>キャラクター名</small></span><span class="cnt" title="2,143,254回">214万回</span><span class="bar" aria-hidden="true"><span style="width:61.7%"></span></span></li>
+    <li class="jp"><span class="rk">12</span><span class="pw">naruto<small>キャラクター名</small></span><span class="cnt" title="1,643,722回">164万回</span><span class="bar" aria-hidden="true"><span style="width:59.6%"></span></span></li>
+    <li class="jp"><span class="rk">13</span><span class="pw">sakura<small>日本語ローマ字</small></span><span class="cnt" title="683,950回">68万回</span><span class="bar" aria-hidden="true"><span style="width:52.5%"></span></span></li>
+    <li class="jp"><span class="rk">14</span><span class="pw">tigers<small>野球</small></span><span class="cnt" title="573,767回">57万回</span><span class="bar" aria-hidden="true"><span style="width:51.1%"></span></span></li>
+    <li class="jp"><span class="rk">15</span><span class="pw">pikachu<small>キャラクター名</small></span><span class="cnt" title="438,518回">44万回</span><span class="bar" aria-hidden="true"><span style="width:48.9%"></span></span></li>
+    <li class="jp"><span class="rk">16</span><span class="pw">suzuki<small>名字</small></span><span class="cnt" title="390,564回">39万回</span><span class="bar" aria-hidden="true"><span style="width:48.0%"></span></span></li>
+    <li class="jp"><span class="rk">17</span><span class="pw">doraemon<small>キャラクター名</small></span><span class="cnt" title="248,819回">25万回</span><span class="bar" aria-hidden="true"><span style="width:44.4%"></span></span></li>
+    <li class="jp"><span class="rk">18</span><span class="pw">giants<small>野球</small></span><span class="cnt" title="182,091回">18万回</span><span class="bar" aria-hidden="true"><span style="width:41.9%"></span></span></li>
+    <li class="jp"><span class="rk">19</span><span class="pw">0101<small>誕生日（4桁）</small></span><span class="cnt" title="163,022回">16万回</span><span class="bar" aria-hidden="true"><span style="width:41.0%"></span></span></li>
+    <li class="jp"><span class="rk">20</span><span class="pw">totoro<small>キャラクター名</small></span><span class="cnt" title="79,603回">8万回</span><span class="bar" aria-hidden="true"><span style="width:35.2%"></span></span></li>
+    <li class="jp"><span class="rk">21</span><span class="pw">tanaka<small>名字</small></span><span class="cnt" title="46,726回">5万回</span><span class="bar" aria-hidden="true"><span style="width:30.9%"></span></span></li>
+    <li class="jp"><span class="rk">22</span><span class="pw">nippon<small>日本語ローマ字</small></span><span class="cnt" title="38,749回">4万回</span><span class="bar" aria-hidden="true"><span style="width:29.4%"></span></span></li>
+    <li class="jp"><span class="rk">23</span><span class="pw">19900101<small>生年月日</small></span><span class="cnt" title="17,690回">2万回</span><span class="bar" aria-hidden="true"><span style="width:23.1%"></span></span></li>
+    <li class="jp"><span class="rk">24</span><span class="pw">tokyo<small>地名</small></span><span class="cnt" title="16,356回">2万回</span><span class="bar" aria-hidden="true"><span style="width:22.5%"></span></span></li>
+    <li class="jp"><span class="rk">25</span><span class="pw">osaka<small>地名</small></span><span class="cnt" title="4,780回">4,780回</span><span class="bar" aria-hidden="true"><span style="width:12.6%"></span></span></li>
+  </ol>
+  <p class="note-box">回数は、同じパスワードが別々の流出事件で見つかった回数の合計（延べ回数）です。2億人が使っているという意味ではありません。</p>
+</div>
+
+<aside class="cta">
+  <div><strong>あなたのパスワードは何回漏れている？</strong><p>今使っているパスワードを、同じデータベースで無料チェックできます。パスワードはこのサイトでは保存しません。</p></div>
+  <a class="btn" href="/#pw-h">流出チェッカーで確認する</a>
+</aside>
+
+<div class="prose">
+  <h2 id="trend">結果からわかったこと</h2>
+  <ul>
+    <li><strong>数字の並びは桁違い</strong>：「123456」は約2億1,046万回、2位の「12345678」も約7,061万回です。上位5件のうち3件が「数字を順に押すだけ」のパスワードでした。</li>
+    <li><strong>好きなキャラの名前も筒抜け</strong>：「pokemon」約214万回、「naruto」約164万回と、日本発の作品名は100万回を超えています。世界中にファンがいるので、攻撃者が使う単語リストにも当然入っています。</li>
+    <li><strong>「日本語なら安全」は思い込み</strong>：「sakura」は約68万回、野球の「tigers」は約57万回、名字の「suzuki」も約39万回でした。</li>
+    <li><strong>キーボードの並びもバレている</strong>：縦になぞる「1qaz2wsx」は一見ランダムですが、約583万回も登場しています。</li>
+    <li><strong>回数が少なくても安全ではない</strong>：最下位の「osaka」でも4,780回漏れています。一度でも登場したパスワードは攻撃用のリストに載り、「先に試される候補」になります。「19900101」のような生年月日も、組み合わせが少ないので総当たりで簡単に試せます。</li>
+  </ul>
+  <p>「覚えやすい」ものは「当てやすい」。漏洩回数は、そのまま攻撃者が試す順番だと考えてください。</p>
+</div>
+
+<aside class="cta">
+  <div><strong>ランキングにないパスワードも漏れているかも</strong><p>思いつきで作ったつもりのパスワードでも、すでに誰かと同じ可能性があります。</p></div>
+  <a class="btn" href="/#pw-h">無料でチェックする</a>
+</aside>
+
+<div class="prose">
+  <h2 id="method">調べ方と安全性</h2>
+  <p>調査には、セキュリティ研究者の Troy Hunt 氏が運営する「Have I Been Pwned」の Pwned Passwords API を使いました（調査日：2026年10月30日）。</p>
+  <p>このAPIには、パスワードそのものを送りません。パスワードを「ハッシュ値」という別の文字列に変換し、その先頭5文字だけを送ります。返ってきた候補との照合は手元で行うため、どのパスワードを調べたかは相手のサーバーにも分かりません。当サイトのチェックツールも同じ仕組みで動いていて、ソースコードは <a href="https://github.com/moriya-kgmr/moreteru" target="_blank" rel="noopener">GitHub</a> で公開しています。</p>
+</div>
+
+<aside class="cta">
+  <div><strong>パスワードの安全性、30秒で確認</strong><p>入力したパスワードはこのサイトでは保存しません。仕組みはソースコードで公開しています。</p></div>
+  <a class="btn" href="/#pw-h">流出チェッカーを使う</a>
+</aside>
+
+<div class="prose">
+  <h2 id="todo">今日からやること</h2>
+  <ol>
+    <li><strong>自分のパスワードを確認する</strong>：ランキングにないパスワードでも、漏洩している可能性があります。<a href="/#pw-h">流出チェッカーで確認</a>してみてください。</li>
+    <li><strong>使い回しをやめる</strong>：1つ漏れると、同じパスワードを使っている全サービスが危険になります。</li>
+    <li><strong>パスワード管理機能を使う</strong>：サービスごとに違う強いパスワードを自動で作り、覚えておいてくれます。パスワード管理機能付きのセキュリティソフトは<a href="#recs">下のランキング</a>で紹介しています。</li>
+    <li><strong>二段階認証を設定する</strong>：パスワードが漏れても、それだけではログインされなくなります。</li>
+  </ol>
+</div>
+
+<section class="card" id="recs" aria-labelledby="recs-h">
+  <h2 id="recs-h"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><span class="h2t"><span class="nb">個人向け！</span><span class="nb">再発を防ぐ</span><span class="nb">おすすめサービスTOP5 <span class="tag">PR</span></span></span></h2>
+  <p class="pr-bar">当サイトはアフィリエイト広告（PR）を掲載しています。「PR」表示のあるリンクから商品を申し込むと、運営者に報酬が支払われることがあります。</p>
+  <div class="recs">
+    <!-- A8.net の広告リンク（テキストリンク＋計測用の1pxの画像）。2026/10/29 提携承認済み -->
+    <div class="rec">
+      <span class="rank r1" aria-label="1位">1</span>
+      <div>
+        <div class="name">ESET HOME セキュリティ</div>
+        <div class="kind">総合セキュリティソフト</div>
+        <ul class="why">
+          <li>国内ではキヤノンITソリューションズが販売・サポートしているので、困ったときに日本語で相談できます。</li>
+          <li>上位プランにはパスワード管理機能も付いていて、ウイルス対策と使い回し対策を1本でまとめられます。</li>
+        </ul>
+      </div>
+      <a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4BERAA+IGGJ6+1A8Q+15P77M" rel="sponsored nofollow noopener" target="_blank">公式サイトを見る</a><img class="a8px" src="https://www13.a8.net/0.gif?a8mat=4BERAA+IGGJ6+1A8Q+15P77M" width="1" height="1" alt="">
+    </div>
+    <div class="rec">
+      <span class="rank r2" aria-label="2位">2</span>
+      <div>
+        <div class="name">ノートン 360</div>
+        <div class="kind">総合セキュリティソフト</div>
+        <ul class="why">
+          <li>世界的に知名度の高いセキュリティソフトです。ウイルス対策に加えて、パスワード管理やVPNもまとめて使えます。</li>
+          <li>メールアドレスなどの流出を監視する機能があるプランもあり、「漏れていないか」を確かめ続けたい人に向いています。</li>
+        </ul>
+      </div>
+      <a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4BERAA+JNBQQ+3IBI+61C2Q" rel="sponsored nofollow noopener" target="_blank">公式サイトを見る</a><img class="a8px" src="https://www11.a8.net/0.gif?a8mat=4BERAA+JNBQQ+3IBI+61C2Q" width="1" height="1" alt="">
+    </div>
+    <div class="rec">
+      <span class="rank r3" aria-label="3位">3</span>
+      <div>
+        <div class="name">Surfshark Antivirus</div>
+        <div class="kind">ウイルス対策ソフト</div>
+        <ul class="why">
+          <li>マルウェアなどの脅威から、パソコンやスマホを守るウイルス対策ソフトです。</li>
+          <li>同じ会社のVPNと組み合わせて使えるので、ウイルス対策と通信の保護を1社でそろえたい人に向いています。</li>
+        </ul>
+      </div>
+      <a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4BERAA+LFMK2+4LSW+BX3J6" rel="sponsored nofollow noopener" target="_blank">公式サイトを見る</a><img class="a8px" src="https://www11.a8.net/0.gif?a8mat=4BERAA+LFMK2+4LSW+BX3J6" width="1" height="1" alt="">
+    </div>
+    <div class="rec">
+      <span class="rank" aria-label="4位">4</span>
+      <div>
+        <div class="name">NordVPN</div>
+        <div class="kind">VPN</div>
+        <ul class="why">
+          <li>カフェや駅のフリーWi-Fiでも通信を暗号化して、IDやパスワードの盗み見を防ぎます。</li>
+          <li>世界中で使われている大手VPNで、危険なサイトや広告をブロックする機能もあります。</li>
+        </ul>
+      </div>
+      <a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4BERAA+M125U+3YFI+61C2Q" rel="sponsored nofollow noopener" target="_blank">公式サイトを見る</a><img class="a8px" src="https://www12.a8.net/0.gif?a8mat=4BERAA+M125U+3YFI+61C2Q" width="1" height="1" alt="">
+    </div>
+    <div class="rec">
+      <span class="rank" aria-label="5位">5</span>
+      <div>
+        <div class="name">MillenVPN</div>
+        <div class="kind">VPN（国産）</div>
+        <ul class="why">
+          <li>日本の会社が運営する国産VPNで、申し込みからサポートまで日本語で完結します。</li>
+          <li>海外サービスに不安がある人でも始めやすく、フリーWi-Fiを使う機会が多い人の最初の1本に向いています。</li>
+        </ul>
+      </div>
+      <a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4BERAA+J1W4Y+3JTE+HV7V6" rel="sponsored nofollow noopener" target="_blank">公式サイトを見る</a><img class="a8px" src="https://www14.a8.net/0.gif?a8mat=4BERAA+J1W4Y+3JTE+HV7V6" width="1" height="1" alt="">
+    </div>
+  </div>
+  <p class="note">ランキングは、運営者が各社の公式情報をもとに「漏洩対策としての効果」「日本語での使いやすさ」「始めやすさ」の観点で選んだものです。料金や機能は変わることがあるため、申し込み前に公式サイトでご確認ください。</p>
+</section>
+
+<footer>
+  <nav><a href="/">流出チェッカー トップ</a><a href="/#about">運営者情報</a><a href="/#privacy">プライバシーポリシー</a></nav>
+  <p>出典：<a href="https://haveibeenpwned.com/Passwords" target="_blank" rel="noopener">Have I Been Pwned（Pwned Passwords）</a> ／ 写真：Arnold Francisca / Unsplash、写真AC</p>
+  <p>© 2026 流出チェッカー</p>
+</footer>
+</div>
+</body>
+</html>
