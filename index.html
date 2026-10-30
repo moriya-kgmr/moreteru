@@ -127,7 +127,7 @@ a.b-name{grid-column:1/-1;color:var(--ink);text-decoration:none}
 a.b-name:hover{color:var(--accent);text-decoration:underline}
 
 .feature{display:grid;grid-template-columns:220px 1fr;gap:18px;align-items:center;text-decoration:none;color:var(--ink);padding:14px}
-.feature img{width:100%;height:auto;border-radius:8px;display:block}
+.feature img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:8px;display:block}
 .feature > div{min-width:0;display:grid;gap:4px}
 .feature strong{font:700 17px/1.5 var(--f-display);word-break:auto-phrase}
 .feature-tag{justify-self:start;font-size:11px;font-weight:700;color:var(--accent);background:var(--accent-soft);border-radius:999px;padding:1px 10px}
@@ -202,15 +202,6 @@ footer nav{display:flex;gap:16px;flex-wrap:wrap}
     <p>入力されたパスワードは、あなたのブラウザ内でSHA-1という方式で変換（ハッシュ化）され、その先頭5文字だけが照合先のHave I Been Pwnedに送られます。照合先は先頭5文字が一致する数百件の候補を返し、残りの照合はブラウザ内で行います。そのため、照合先のサーバーにも当サイトにも、あなたのパスワードは保存されません。</p>
   </details>
 </section>
-
-<a class="card feature" href="/password-ranking/">
-  <img src="/password-ranking/ogp.jpg" width="1200" height="630" alt="" loading="lazy">
-  <div>
-    <span class="feature-tag">特集記事</span>
-    <strong>【漏洩回数ランキング】「123456」は2億回、「sakura」も68万回流出していた</strong>
-    <span class="feature-sub">日本人がよく使うパスワード25個の漏洩回数を全部調べました</span>
-  </div>
-</a>
 
 <section class="card" aria-labelledby="mail-h">
   <h2 id="mail-h"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>メールアドレスを確認する</h2>
@@ -365,6 +356,15 @@ footer nav{display:flex;gap:16px;flex-wrap:wrap}
   <p class="note">見出しは国内のセキュリティニュースサイト（Security NEXT、ScanNetSecurity）から自動で集めています。記事は配信元のサイトで読めます。</p>
 </section>
 
+<a class="card feature" href="/articles/001/">
+  <img src="/articles/001/worry.jpg" width="640" height="427" alt="" loading="lazy">
+  <div>
+    <span class="feature-tag">特集記事</span>
+    <strong>【漏洩回数ランキング】「123456」は2億回、「sakura」も68万回流出していた</strong>
+    <span class="feature-sub">日本人がよく使うパスワード25個の漏洩回数を全部調べました</span>
+  </div>
+</a>
+
 <div class="folds">
   <details class="card fold" id="about">
     <summary><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></span>運営者情報</summary>
@@ -408,7 +408,7 @@ footer nav{display:flex;gap:16px;flex-wrap:wrap}
 </div>
 
 <footer>
-  <nav><a href="#about" data-open="about">運営者情報</a><a href="#privacy" data-open="privacy">プライバシーポリシー</a><a href="https://docs.google.com/forms/d/e/1FAIpQLSf6xIEEqUGuoIKkTXFXBAXQe5ZmlmEewI4qRWO71FYooHPCmA/viewform" target="_blank" rel="noopener">お問い合わせ</a></nav>
+  <nav><a href="/articles/">記事一覧</a><a href="#about" data-open="about">運営者情報</a><a href="#privacy" data-open="privacy">プライバシーポリシー</a><a href="https://docs.google.com/forms/d/e/1FAIpQLSf6xIEEqUGuoIKkTXFXBAXQe5ZmlmEewI4qRWO71FYooHPCmA/viewform" target="_blank" rel="noopener">お問い合わせ</a></nav>
   <p>パスワード照合：<a href="https://haveibeenpwned.com/Passwords" target="_blank" rel="noopener">Have I Been Pwned（Pwned Passwords）</a> ／ ニュース：<a href="https://www.security-next.com/" target="_blank" rel="noopener">Security NEXT</a>、<a href="https://scan.netsecurity.ne.jp/" target="_blank" rel="noopener">ScanNetSecurity</a></p>
   <p>© 2026 流出チェッカー</p>
 </footer>
