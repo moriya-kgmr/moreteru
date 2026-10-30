@@ -1,9 +1,16 @@
-name: fetch-hero-photo
+name: fetch-photo
 
-# メインビジュアル用の写真（Arnold Francisca / Unsplash、Unsplashライセンス）を
-# リポジトリに保存するための一回限りのジョブ。手動実行のみ。
+# 画像素材をURLからリポジトリに保存するための手動ジョブ。
+# 使用素材：写真 Arnold Francisca / Unsplash、写真AC No.35133353（FineGraphics）
 on:
   workflow_dispatch:
+    inputs:
+      url:
+        description: "画像のURL"
+        required: true
+      path:
+        description: "保存先（例：password-ranking/worry.jpg）"
+        required: true
 
 permissions:
   contents: write
@@ -13,14 +20,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Download photo
+      - name: Download
+        env:
+          URL: ${{ inputs.url }}
+          DEST: ${{ inputs.path }}
         run: |
-          curl -fsSL "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1600&q=60&fm=jpg&fit=crop" -o hero-photo.jpg
-          ls -l hero-photo.jpg
-          file hero-photo.jpg
+          mkdir -p "$(dirname "$DEST")"
+          curl -fsSL "$URL" -o "$DEST"
+          file "$DEST"
+          if command -v convert >/dev/null; then convert "$DEST" -strip -resize '640x>' -quality 72 "$DEST"; fi
+          ls -l "$DEST"
       - name: Commit
+        env:
+          DEST: ${{ inputs.path }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add hero-photo.jpg
-          git diff --cached --quiet || (git commit -m "Add hero photo (Arnold Francisca / Unsplash)" && git push)
+          git add "$DEST"
+          git diff --cached --quiet || (git commit -m "Add image $DEST" && git push)
