@@ -1,6 +1,12 @@
 {
- "updated": "2026-10-30T09:56:26.584101+00:00",
+ "updated": "2026-10-30T10:52:11.410387+00:00",
  "items": [
+  {
+   "title": "アプリの管理システムが侵害、会員情報流出 - 松屋",
+   "link": "https://www.security-next.com/192210",
+   "date": "2026-10-30T10:26:41+00:00",
+   "source": "Security NEXT"
+  },
   {
    "title": "今日もどこかで情報漏えい 第53回「2026年9月の情報漏えい」カメラが情報漏えいの瞬間を捉えた世紀の映像",
    "link": "https://scan.netsecurity.ne.jp/article/2026/10/30/56635.html",
@@ -53,12 +59,6 @@
    "title": "エンタッチにランサムウェア攻撃、データベース内の情報が流出",
    "link": "https://scan.netsecurity.ne.jp/article/2026/10/30/56627.html",
    "date": "2026-10-29T23:05:08+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "メディアサーバにディレクトリパストラバーサルが存在 ～ アルカディア運営の「SpeeCAN RAIDEN」に不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/10/30/56626.html",
-   "date": "2026-10-29T23:05:05+00:00",
    "source": "ScanNetSecurity"
   }
  ]
