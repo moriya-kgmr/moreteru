@@ -1,64 +1,64 @@
 {
- "updated": "2026-11-01T22:41:36.063009+00:00",
+ "updated": "2026-11-01T23:39:53.574622+00:00",
  "items": [
   {
-   "title": "アプリの管理システムが侵害、会員情報流出 - 松屋",
-   "link": "https://www.security-next.com/192210",
-   "date": "2026-10-30T10:26:41+00:00",
-   "source": "Security NEXT"
-  },
-  {
-   "title": "今日もどこかで情報漏えい 第53回「2026年9月の情報漏えい」カメラが情報漏えいの瞬間を捉えた世紀の映像",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/10/30/56635.html",
-   "date": "2026-10-29T23:10:02+00:00",
+   "title": "AI を活用した総点検で発見 ～ デジタルアーツのクラウドサービス運用環境に不正アクセス",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/02/56649.html",
+   "date": "2026-11-01T23:05:36+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "Gunosy の社内業務用アカウントの認証情報を用いた不正ログイン、取引先や役員・従業員等の情報が流出",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/10/30/56634.html",
-   "date": "2026-10-29T23:05:26+00:00",
+   "title": "WPプラグインの脆弱性悪用 ～ ティエスエスリンクのウェブサイトに不正アクセス、製品にはセキュリティ上の問題 確認されておらず",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/02/56648.html",
+   "date": "2026-11-01T23:05:33+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "So-net 会員データベースに不正アクセス、会員情報214万1,986件が漏えい",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/10/30/56633.html",
-   "date": "2026-10-29T23:05:24+00:00",
+   "title": "他の職員のIDとパスワードを使用し複数回にわたり庁内共有フォルダに不正アクセス、上司の印影の偽造も",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/02/56647.html",
+   "date": "2026-11-01T23:05:29+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "「お名前.com デスクトップクラウド」に不正アクセス、情報が公開された顧客に上限300万円の特別見舞金",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/10/30/56632.html",
-   "date": "2026-10-29T23:05:20+00:00",
+   "title": "「楽天トラベル」海外ホテル予約サイトの一部ページと多言語予約サイトに不正アクセス",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/02/56646.html",
+   "date": "2026-11-01T23:05:26+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "不正アクセスでチケット購入サービス「GETTIIS」会員情報が外部流出",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/10/30/56631.html",
-   "date": "2026-10-29T23:05:18+00:00",
+   "title": "ユミルリンクのメール配信サービスの一部サーバシステムに不正アクセス、延べ51,628,280件の情報が流出",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/02/56645.html",
+   "date": "2026-11-01T23:05:23+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "リモートディテーリング事業等を行うエンタッチにランサムウェア攻撃",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/10/30/56630.html",
-   "date": "2026-10-29T23:05:14+00:00",
+   "title": "フジッコのキャンペーンの応募受付業務の委託先に不正アクセス",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/02/56644.html",
+   "date": "2026-11-01T23:05:21+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "ニフティの回線申込・受付管理システムに不正アクセス、最大54万2,513件の会員情報に影響",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/10/30/56629.html",
-   "date": "2026-10-29T23:05:12+00:00",
+   "title": "「SHIPS CYCLE MARKET」で利用している外部アプリケーション「Swym Wishlist Plus」に不正アクセス、外部の疑似サイトに誘導",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/02/56643.html",
+   "date": "2026-11-01T23:05:17+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "セカンドリテイリングに不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/10/30/56628.html",
-   "date": "2026-10-29T23:05:10+00:00",
+   "title": "新菱冷熱工業にサイバー攻撃、システム障害で一部サービスにも影響",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/02/56642.html",
+   "date": "2026-11-01T23:05:12+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "エンタッチにランサムウェア攻撃、データベース内の情報が流出",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/10/30/56627.html",
-   "date": "2026-10-29T23:05:08+00:00",
+   "title": "Sallyに2件の不正アクセス、問い合わせ情報が漏えいした可能性",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/02/56641.html",
+   "date": "2026-11-01T23:05:10+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "PingCAPに不正アクセス、日本国内で最大約5万件の個人情報が漏えい",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/02/56640.html",
+   "date": "2026-11-01T23:05:07+00:00",
    "source": "ScanNetSecurity"
   }
  ]
