@@ -1,6 +1,12 @@
 {
- "updated": "2026-11-02T11:58:37.226662+00:00",
+ "updated": "2026-11-02T13:12:09.670863+00:00",
  "items": [
+  {
+   "title": "個人情報漏洩の個人向け被害者相談窓口を強化 - IPA",
+   "link": "https://www.security-next.com/192287",
+   "date": "2026-11-02T12:25:29+00:00",
+   "source": "Security NEXT"
+  },
   {
    "title": "AI を活用した総点検で発見 ～ デジタルアーツのクラウドサービス運用環境に不正アクセス",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/02/56649.html",
@@ -53,12 +59,6 @@
    "title": "Sallyに2件の不正アクセス、問い合わせ情報が漏えいした可能性",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/02/56641.html",
    "date": "2026-11-01T23:05:10+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "PingCAPに不正アクセス、日本国内で最大約5万件の個人情報が漏えい",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/02/56640.html",
-   "date": "2026-11-01T23:05:07+00:00",
    "source": "ScanNetSecurity"
   }
  ]
