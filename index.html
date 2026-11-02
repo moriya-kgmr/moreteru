@@ -134,6 +134,19 @@ a.b-name:hover{color:var(--accent);text-decoration:underline}
 .feature-sub{font-size:13px;color:var(--muted)}
 .feature:hover strong{color:var(--accent);text-decoration:underline}
 @media (max-width:560px){.feature{grid-template-columns:1fr}}
+/* オリジナル特集記事（更新順リスト） */
+.flist{list-style:none;margin:0;padding:0;display:grid}
+.flist li{border-top:1px solid var(--line)}
+.flist li:first-child{border-top:0}
+.frow{display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:center;padding:14px 0;text-decoration:none;color:var(--ink)}
+.frow img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:8px;display:block}
+.frow > div{min-width:0;display:grid;gap:4px}
+.frow strong{font:700 16px/1.5 var(--f-display);word-break:auto-phrase}
+.frow:hover strong{color:var(--accent);text-decoration:underline}
+.fmeta{font:600 12px var(--f-mono);color:var(--muted)}
+.fnew{display:inline-block;font:700 11px var(--f-body);color:#fff;background:var(--bad);border-radius:4px;padding:0 6px;margin-right:6px}
+.fmore{margin-top:10px;text-align:right;font-size:14px;font-weight:700}
+@media (max-width:560px){.frow{grid-template-columns:104px 1fr;gap:12px}.frow strong{font-size:14px}.fmeta{font-size:11px}}
 /* 開閉式（運営者情報・プライバシーポリシー） */
 .fold{padding:0}
 .fold > summary{list-style:none;cursor:pointer;padding:16px 22px;display:flex;align-items:center;gap:12px;font:700 17px/1.4 var(--f-display)}
@@ -356,14 +369,25 @@ footer nav{display:flex;gap:16px;flex-wrap:wrap}
   <p class="note">見出しは国内のセキュリティニュースサイト（Security NEXT、ScanNetSecurity）から自動で集めています。記事は配信元のサイトで読めます。</p>
 </section>
 
-<a class="card feature" href="/articles/001/">
-  <img src="/articles/001/worry.jpg" width="640" height="427" alt="" loading="lazy">
-  <div>
-    <span class="feature-tag">特集記事</span>
-    <strong>【漏洩回数ランキング】「123456」は2億回、「sakura」も68万回流出していた</strong>
-    <span class="feature-sub">日本人がよく使うパスワード25個の漏洩回数を全部調べました</span>
-  </div>
-</a>
+<section class="card" id="features" aria-labelledby="ft-h">
+  <h2 id="ft-h"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h12a4 4 0 0 1 4 4v12H8a4 4 0 0 1-4-4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg></span><span class="h2t"><span class="nb">オリジナル</span><span class="nb">特集記事</span></span></h2>
+  <!-- 新しい記事はこのリストの一番上に追加（更新順）。NEWは最新の1件だけに付ける -->
+  <ol class="flist">
+    <li><a class="frow" href="/articles/003/">
+      <img src="/articles/003/eyecatch.jpg" width="960" height="640" alt="" loading="lazy">
+      <div><span class="fmeta"><span class="fnew">NEW</span>2026年11月2日</span><strong>【漏洩データで検証】「パスワードを変えても意味ない」は本当？「sakura123」は10万回、ありがちな変え方はもう漏れていた</strong></div>
+    </a></li>
+    <li><a class="frow" href="/articles/002/">
+      <img src="/articles/002/leak.jpg" width="960" height="640" alt="" loading="lazy">
+      <div><span class="fmeta">2026年10月31日</span><strong>【漏洩対策ガイド】漏洩は今年度だけで延べ2.6億人分。企業の発表を待たずに、今日できる7つの防衛策</strong></div>
+    </a></li>
+    <li><a class="frow" href="/articles/001/">
+      <img src="/articles/001/worry.jpg" width="640" height="427" alt="" loading="lazy">
+      <div><span class="fmeta">2026年10月30日</span><strong>【漏洩回数ランキング】「123456」は2億回、「sakura」も68万回流出していた</strong></div>
+    </a></li>
+  </ol>
+  <p class="fmore"><a href="/articles/">記事一覧をすべて見る →</a></p>
+</section>
 
 <div class="folds">
   <details class="card fold" id="about">
