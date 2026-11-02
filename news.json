@@ -1,6 +1,12 @@
 {
- "updated": "2026-11-02T17:08:48.290819+00:00",
+ "updated": "2026-11-02T17:59:48.153395+00:00",
  "items": [
+  {
+   "title": "外務省のネットワークで侵害 - 個人情報流出の可能性",
+   "link": "https://www.security-next.com/192256",
+   "date": "2026-11-02T13:55:46+00:00",
+   "source": "Security NEXT"
+  },
   {
    "title": "アイリスオーヤマ通販サイトで侵害 - 詳細を調査",
    "link": "https://www.security-next.com/192208",
@@ -11,6 +17,12 @@
    "title": "個人情報漏洩の個人向け被害者相談窓口を強化 - IPA",
    "link": "https://www.security-next.com/192287",
    "date": "2026-11-02T12:25:29+00:00",
+   "source": "Security NEXT"
+  },
+  {
+   "title": "ECサイトに不正アクセス、会員情報流出 - フィギュアメーカー",
+   "link": "https://www.security-next.com/191996",
+   "date": "2026-11-02T02:43:41+00:00",
    "source": "Security NEXT"
   },
   {
@@ -47,18 +59,6 @@
    "title": "フジッコのキャンペーンの応募受付業務の委託先に不正アクセス",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/02/56644.html",
    "date": "2026-11-01T23:05:21+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "「SHIPS CYCLE MARKET」で利用している外部アプリケーション「Swym Wishlist Plus」に不正アクセス、外部の疑似サイトに誘導",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/02/56643.html",
-   "date": "2026-11-01T23:05:17+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "新菱冷熱工業にサイバー攻撃、システム障害で一部サービスにも影響",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/02/56642.html",
-   "date": "2026-11-01T23:05:12+00:00",
    "source": "ScanNetSecurity"
   }
  ]
