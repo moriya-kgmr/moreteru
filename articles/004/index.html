@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>【漏洩はなぜ止まらない？】サントリーも約10万人分。情報流出が相次ぐ4つの理由と、利用者の守り方｜流出チェッカー</title>
+<meta name="description" content="サントリーホールディングスが約10万人分の個人情報漏洩を発表。なぜ2026年秋に情報流出が相次ぐのか、JPCERT/CCの注意喚起や公表データをもとに4つの理由を整理し、利用者ができる守り方をまとめました。">
+<link rel="canonical" href="https://moreteru.com/articles/004/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f6b55'/%3E%3Cpath d='M32 12C32 12 18 29 18 38a14 14 0 0 0 28 0c0-9-14-26-14-26z' fill='%23fff'/%3E%3C/svg%3E">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://moreteru.com/articles/004/">
+<meta property="og:site_name" content="流出チェッカー">
+<meta property="og:title" content="【漏洩はなぜ止まらない？】サントリーも約10万人分。情報流出が相次ぐ4つの理由と、利用者の守り方">
+<meta property="og:description" content="サントリーも約10万人分。漏洩が相次ぐ4つの理由と、利用者の守り方。">
+<meta property="og:image" content="https://moreteru.com/articles/004/ogp.jpg">
+<meta property="og:locale" content="ja_JP">
+<meta property="article:published_time" content="2026-11-03">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f6b55">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700;900&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+
+/* Layout: 緑のメインビジュアル帯 → 1カラムのカード（確認 → 対処 → サービス → ニュース）→ 開閉式の運営情報 */
+:root{
+  /* 明るいグレー基調で固定（端末のダークモード設定に関係なく、常にこの配色で表示） */
+  --bg:#eef0f2; --surface:#ffffff; --ink:#1f2a30; --muted:#5f6b73; --line:#d9dde1;
+  --accent:#0f6b55; --accent-ink:#ffffff; --accent-soft:#e3f1ec;
+  --cat-access:#b3261e; --cat-access-bg:#fbe9e7;
+  --cat-attack:#9a5c00; --cat-attack-bg:#fdf1dc;
+  --cat-mistake:#1f5f9e; --cat-mistake-bg:#e6effa;
+  --hero-sub:#d4ebe3;
+  --safe:#1a7f4b; --warn:#9a5c00; --bad:#b3261e; --bad-bg:#fdecea; --safe-bg:#e7f5ee;
+  --pr:#7a5a00; --pr-bg:#fff4d6;
+  --f-display:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",sans-serif;
+  --f-body:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 var(--f-body);}
+
+/* メインビジュアル */
+.hero{background:var(--accent);color:var(--accent-ink)}
+/* 写真：Arnold Francisca / Unsplash（Unsplashライセンス） */
+.hero{background:linear-gradient(90deg,rgba(15,107,85,.95) 0%,rgba(15,107,85,.86) 45%,rgba(15,107,85,.6) 100%),url("hero-photo.jpg") center/cover no-repeat,var(--accent)}
+@media (max-width:560px){.hero{background:linear-gradient(rgba(15,107,85,.86),rgba(15,107,85,.86)),url("hero-photo.jpg") 70% center/cover no-repeat,var(--accent)}}
+.hero-in{max-width:900px;margin:0 auto;padding:40px max(16px,env(safe-area-inset-right,0px)) 44px max(16px,env(safe-area-inset-left,0px));display:grid;grid-template-columns:1fr 180px;gap:24px;align-items:center}
+.hero-in > div{min-width:0}
+.hero .eyebrow{font:600 12px var(--f-mono);letter-spacing:.12em;color:var(--hero-sub);text-transform:uppercase}
+.hero h1{font:900 clamp(30px,7vw,44px)/1.2 var(--f-display);margin:6px 0 14px;text-wrap:balance}
+.hero h1 .nb{display:inline-block}
+.hero .sub{margin:0;display:grid;gap:4px;font-size:15px;line-height:1.6;color:var(--hero-sub)}
+.hero .sub strong{color:var(--accent-ink);font-weight:700}
+.hero-art{width:100%;max-width:180px;height:auto;justify-self:end}
+@media (max-width:560px){
+  .hero-in{grid-template-columns:1fr;position:relative;padding-top:32px}
+  .hero-art{position:absolute;top:20px;right:max(14px,env(safe-area-inset-right,0px));width:min(128px,31vw);max-width:none}
+  .hero .eyebrow{min-height:62px;display:flex;align-items:flex-end}
+}
+
+.wrap{max-width:900px;margin:0 auto;padding:28px max(16px,env(safe-area-inset-right,0px)) 64px max(16px,env(safe-area-inset-left,0px));display:grid;gap:28px}
+.pr-bar{font-size:13px;color:var(--pr);background:var(--pr-bg);border-radius:8px;padding:8px 12px;margin:0 0 4px}
+h2{font:700 20px/1.4 var(--f-display);margin:0 0 14px;display:flex;align-items:center;gap:12px;word-break:auto-phrase}
+.h2t{min-width:0}
+.h2t .nb{display:inline-block}
+@media (max-width:560px){h2{font-size:18px}}
+h3{font:700 16px/1.5 var(--f-display);margin:18px 0 4px}
+p{margin:0}
+.ico{flex:none;width:40px;height:40px;border-radius:10px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center}
+.ico svg{width:22px;height:22px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px}
+label{display:block;font-weight:700;margin-bottom:8px}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+input[type=password],input[type=text]{flex:1 1 220px;min-width:0;font:16px var(--f-mono);padding:12px 14px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+button,.btn{font:700 15px var(--f-body);padding:12px 18px;border-radius:8px;border:0;background:var(--accent);color:var(--accent-ink);cursor:pointer;text-decoration:none;display:inline-block}
+button.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+button:focus-visible,input:focus-visible,.btn:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.hero a:focus-visible{outline-color:var(--accent-ink)}
+button:disabled{opacity:.6;cursor:wait}
+.note{font-size:13px;color:var(--muted);margin-top:10px}
+.result{margin-top:16px;padding:14px 16px;border-radius:8px;font-weight:700}
+.result.bad{background:var(--bad-bg);color:var(--bad)}
+.result.safe{background:var(--safe-bg);color:var(--safe)}
+.result.err{background:var(--bg);color:var(--warn)}
+.result small{display:block;font-weight:400;color:var(--ink);margin-top:4px}
+.result a{color:inherit;font-weight:700}
+details.faq{margin-top:14px;font-size:14px;color:var(--muted)}
+details.faq summary{cursor:pointer;color:var(--accent);font-weight:700}
+details.faq p{margin-top:8px}
+.trust{margin-top:16px;padding:16px;border-radius:10px;background:var(--accent-soft)}
+.trust h3{margin:0 0 8px;color:var(--accent)}
+.trust ul{margin:0;padding-left:1.2em;display:grid;gap:6px;font-size:14px}
+ol,ul.plain{margin:0;padding-left:1.3em;display:grid;gap:6px}
+.tag{display:inline-block;font:700 11px var(--f-mono);letter-spacing:.08em;color:var(--pr);background:var(--pr-bg);border-radius:4px;padding:1px 6px}
+.recs{display:grid;gap:12px;margin-top:4px}
+.rec{display:grid;grid-template-columns:auto 1fr auto;gap:6px 16px;align-items:start;padding:16px 0;border-top:1px solid var(--line)}
+.rec:first-child{border-top:0}
+.rec > div{min-width:0}
+.rec .name{font-weight:700;font-size:17px}
+.rec .kind{font-size:12px;color:var(--muted);margin-bottom:6px}
+.rec .why{margin:0;padding-left:1.1em;display:grid;gap:4px;font-size:14px}
+.rec .btn{align-self:center}
+.a8px{position:absolute;width:1px;height:1px;border:0}
+.rank{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font:700 16px var(--f-mono);background:var(--bg);color:var(--muted);border:1px solid var(--line)}
+.rank.r1{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.rank.r2{background:var(--accent-soft);color:var(--accent);border-color:var(--accent)}
+.rank.r3{background:var(--surface);color:var(--accent);border-color:var(--accent)}
+@media (max-width:560px){.rec{grid-template-columns:auto 1fr}.rec .btn{grid-column:2;justify-self:start}}
+.breaches{list-style:none;margin:0;padding:0;display:grid}
+.breaches li{display:grid;grid-template-columns:1fr auto;gap:4px 12px;padding:12px 0;border-top:1px solid var(--line)}
+.breaches li:first-child{border-top:0}
+.b-name{font-weight:700;min-width:0;overflow-wrap:anywhere}
+.b-count{font:600 14px var(--f-mono);font-variant-numeric:tabular-nums;color:var(--bad);text-align:right}
+.b-meta{grid-column:1/-1;font-size:13px;color:var(--muted)}
+/* ニュース一覧：種類別アイコン＋見出し＋種類チップ */
+.breaches.news li{grid-template-columns:44px 1fr;gap:2px 14px;align-items:start}
+.news .n-ico{grid-row:1 / span 2;width:44px;height:44px;border-radius:10px;display:grid;place-items:center}
+.news .n-ico svg{width:22px;height:22px}
+.news a.b-name,.news .b-meta{grid-column:2}
+.n-chip{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:999px;margin-right:4px}
+.c-access{color:var(--cat-access);background:var(--cat-access-bg)}
+.c-attack{color:var(--cat-attack);background:var(--cat-attack-bg)}
+.c-mistake{color:var(--cat-mistake);background:var(--cat-mistake-bg)}
+.c-leak{color:var(--accent);background:var(--accent-soft)}
+a.b-name{grid-column:1/-1;color:var(--ink);text-decoration:none}
+a.b-name:hover{color:var(--accent);text-decoration:underline}
+
+/* 開閉式（運営者情報・プライバシーポリシー） */
+.fold{padding:0}
+.fold > summary{list-style:none;cursor:pointer;padding:16px 22px;display:flex;align-items:center;gap:12px;font:700 17px/1.4 var(--f-display)}
+.fold > summary::-webkit-details-marker{display:none}
+.fold > summary .ico{width:34px;height:34px}
+.fold > summary .ico svg{width:18px;height:18px}
+.fold > summary::after{content:"";margin-left:auto;width:10px;height:10px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);transition:transform .2s}
+.fold[open] > summary::after{transform:rotate(-135deg)}
+.fold .body{padding:0 22px 22px;font-size:14px}
+.fold .body p + p{margin-top:8px}
+.fold dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:0}
+.fold dt{font-weight:700;color:var(--muted)}
+.fold dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.folds{display:grid;gap:12px}
+
+footer{font-size:12px;color:var(--muted);display:grid;gap:6px}
+a{color:var(--accent)}
+footer nav{display:flex;gap:16px;flex-wrap:wrap}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+
+/* ===== 記事ページ用 ===== */
+.art-hero{color:#fff;background:linear-gradient(90deg,rgba(15,107,85,.95) 0%,rgba(15,107,85,.86) 50%,rgba(15,107,85,.62) 100%),url("/hero-photo.jpg") center/cover no-repeat,var(--accent)}
+.art-hero-in{max-width:760px;margin:0 auto;padding-block:28px 34px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:12px}
+.art-hero .crumb,.art-hero .crumb a{color:var(--hero-sub)}
+.art-hero h1{font:900 clamp(26px,6vw,40px)/1.35 var(--f-display);margin:0;color:#fff}
+.art-hero h1 .nb{display:inline-block}
+.art-hero h1 em{font-style:normal;color:#ffd76a}
+.h1-tag{display:table;font-size:14px;font-weight:900;color:var(--accent);background:#fff;border-radius:6px;padding:3px 12px;margin-bottom:10px;letter-spacing:.02em}
+.art-hero .meta{margin:0;color:var(--hero-sub);font-size:13px}
+@media (max-width:560px){.art-hero{background:linear-gradient(rgba(15,107,85,.88),rgba(15,107,85,.88)),url("/hero-photo.jpg") 70% center/cover no-repeat,var(--accent)}}
+
+.photo{margin:0;display:grid;gap:4px}
+.photo img{width:100%;height:auto;border-radius:12px;display:block;aspect-ratio:640/427;object-fit:cover}
+.photo figcaption{font-size:11px;color:var(--muted);text-align:right}
+.topbar{background:var(--accent);color:var(--accent-ink)}
+.topbar-in{max-width:900px;margin:0 auto;padding-block:12px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;justify-content:space-between;align-items:center;gap:12px}
+.topbar a{color:var(--accent-ink);text-decoration:none;font-weight:700}
+.topbar .to-tool{font-size:13px;border:1px solid rgba(255,255,255,.6);border-radius:999px;padding:4px 12px}
+.art{max-width:760px}
+.crumb{font-size:12px;color:var(--muted)}
+.crumb a{color:var(--muted)}
+.art h1{font:900 clamp(24px,5.4vw,34px)/1.35 var(--f-display);margin:0;text-wrap:pretty;word-break:auto-phrase}
+.art .meta{font-size:13px;color:var(--muted);margin-top:8px}
+.eyecatch{width:100%;height:auto;border-radius:12px;display:block;aspect-ratio:1200/630;object-fit:cover}
+.prose{display:grid;gap:14px;font-size:16px}
+.prose h2{font-size:22px;margin:8px 0 0;padding-left:12px;border-left:5px solid var(--accent);display:block}
+.prose ul,.prose ol{margin:0;padding-left:1.3em;display:grid;gap:8px}
+.prose strong{color:var(--ink)}
+.note-box{font-size:13px;color:var(--muted);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 14px}
+/* ランキング */
+.rank-list{list-style:none;margin:0;padding:0;display:grid}
+.rank-list li{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:2px 10px;align-items:center;padding:9px 0;border-top:1px solid var(--line)}
+.rank-list li:first-child{border-top:0}
+.rk{font:700 14px var(--f-mono);color:var(--muted);text-align:right}
+.rank-list li:nth-child(-n+3) .rk{color:var(--bad)}
+.pw{font:700 15px var(--f-mono);overflow-wrap:anywhere}
+.pw small{font:400 12px var(--f-body);color:var(--muted);margin-left:6px}
+.cnt{font:700 14px var(--f-mono);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+.bar{grid-column:2 / 4;height:6px;border-radius:3px;background:var(--line);overflow:hidden}
+.bar span{display:block;height:100%;background:var(--muted)}
+.rank-list li.jp .bar span{background:var(--cat-mistake)}
+.rank-list li.jp .pw{color:var(--cat-mistake)}
+.legend{font-size:12px;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:-1px}
+/* チェッカーへの誘導 */
+.cta{background:var(--accent);color:var(--accent-ink);border-radius:12px;padding:20px 22px;display:grid;grid-template-columns:1fr auto;gap:10px 18px;align-items:center}
+.cta p{margin:0;color:var(--hero-sub);font-size:14px}
+.cta strong{display:block;color:var(--accent-ink);font-size:18px;margin-bottom:2px}
+.cta .btn{background:var(--accent-ink);color:var(--accent)}
+@media (max-width:560px){.cta{grid-template-columns:1fr}.cta .btn{justify-self:start}}
+
+/* ===== No.002 追加 ===== */
+.prose .mon-list,.mon-list{list-style:none;margin:0;padding:0;display:grid}
+.mon-list li{display:grid;grid-template-columns:96px minmax(0,1fr) 64px;gap:10px;align-items:center;padding:8px 0;border-top:1px solid var(--line)}
+.mon-list li:first-child{border-top:0}
+.mon-list .m{font-size:14px;font-weight:700}
+.mon-list .m small{display:block;font-weight:400;font-size:11px;color:var(--muted);line-height:1.2}
+.mon-list .bar{grid-column:auto;height:10px;border-radius:5px}
+.mon-list .bar span{background:var(--muted)}
+.mon-list li.hot .bar span{background:var(--bad)}
+.mon-list li.hot .cnt{color:var(--bad)}
+.prose .risk,.risk{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.risk li{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:grid;grid-template-columns:150px 1fr;gap:4px 14px}
+.risk .what{font-weight:700;color:var(--bad)}
+.risk .then{font-size:15px}
+@media (max-width:560px){.risk li{grid-template-columns:1fr}.steps > li{padding:16px 16px 16px 56px}.steps > li::before{left:12px}}
+.steps{counter-reset:s;list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.steps > li{counter-increment:s;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px 16px 62px;position:relative}
+.steps > li::before{content:counter(s);position:absolute;left:16px;top:16px;width:32px;height:32px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font:700 15px var(--f-mono)}
+.steps h3{margin:0 0 4px;font-size:17px}
+.steps p{font-size:15px}
+.steps p + p{margin-top:6px}
+.steps .when{display:inline-block;font-size:11px;font-weight:700;color:var(--accent);background:var(--accent-soft);border-radius:999px;padding:0 8px;margin-left:6px;vertical-align:2px}
+.case{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;display:grid;gap:10px}
+.case h3{margin:0;font-size:18px}
+.case .when{font-size:12px;color:var(--muted)}
+.case dl{display:grid;grid-template-columns:120px 1fr;gap:6px 14px;margin:0;font-size:14px}
+.case dt{font-weight:700;color:var(--muted)}
+.case dd{margin:0;min-width:0}
+.case .bad{color:var(--bad);font-weight:700}
+.case .do{background:var(--accent-soft);border-radius:8px;padding:10px 14px;font-size:14px}
+.case .do b{color:var(--accent)}
+.case .src{font-size:12px;color:var(--muted)}
+@media (max-width:560px){.case dl{grid-template-columns:1fr}.case dt{margin-top:4px}}
+.flow{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+.flow li{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:15px}
+.flow li b{color:var(--bad)}
+.flow.okf li b{color:var(--safe)}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.vs > div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.vs > div > b{display:block;font:700 14px var(--f-body);margin-bottom:6px}
+.vs .ng > b{color:var(--bad)} .vs .ok > b{color:var(--safe)}
+.vs ol{margin:0;padding-left:1.2em;font-size:14px;display:grid;gap:4px}
+@media (max-width:560px){.vs{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"【漏洩はなぜ止まらない？】サントリーも約10万人分。情報流出が相次ぐ4つの理由と、利用者の守り方","image":"https://moreteru.com/articles/004/ogp.jpg","datePublished":"2026-11-03","author":{"@type":"Person","name":"ネットの鍵守 守屋"},"publisher":{"@type":"Organization","name":"流出チェッカー","url":"https://moreteru.com/"},"mainEntityOfPage":"https://moreteru.com/articles/004/"}</script>
+</head>
+<body>
+
+<header class="art-hero">
+  <div class="art-hero-in">
+    <nav class="crumb" aria-label="パンくずリスト"><a href="/">流出チェッカー</a> ＞ <a href="/articles/">記事一覧</a> ＞ 漏洩はなぜ止まらない？</nav>
+    <h1><span class="h1-tag">漏洩はなぜ止まらない？</span><span class="nb">サントリーも<em>約10万人分</em>。</span><span class="nb">情報流出が相次ぐ</span><span class="nb"><em>4つの理由</em></span></h1>
+    <p class="meta">利用者の守り方まで ・ 2026年11月3日 ・ ネットの鍵守 守屋</p>
+  </div>
+</header>
+
+<div class="wrap art">
+
+<figure class="photo">
+  <img src="eyecatch.jpg" width="960" height="640" alt="オフィスで頭を抱える会社員のイメージ">
+  <figcaption>※イメージ画像</figcaption>
+</figure>
+
+<p class="pr-bar">本記事はアフィリエイト広告（PR）を含みます。「PR」表示のあるリンクから商品を申し込むと、運営者に報酬が支払われることがあります。</p>
+
+<div class="prose">
+  <p>2026年11月2日、サントリーホールディングスが、グループの従業員などおよそ10万人分の個人情報が漏洩したと発表しました。10月だけでも、通販サイト、航空会社、タクシー会社、新聞社などで漏洩の発表が続いています。</p>
+  <p>「なぜ、こんなにも続くのか」。この記事では、セキュリティ機関の注意喚起や公表データをもとに、<strong>漏洩が相次ぐ4つの理由</strong>を整理します。そのうえで、利用者にとって何が変わったのか、どう身を守ればいいのかをまとめます。</p>
+</div>
+
+<aside class="cta">
+  <div><strong>まずは今のパスワードを確認</strong><p>どの会社から漏れても、最初に狙われるのはパスワードの使い回しです。流出データに載っていないか、無料で調べられます。</p></div>
+  <a class="btn" href="/#pw-h">流出チェッカーで確認する</a>
+</aside>
+
+<div class="prose">
+  <h2 id="suntory">サントリーの件で分かっていること</h2>
+</div>
+<article class="case">
+  <div><h3>サントリーホールディングス</h3><span class="when">2026年11月2日 発表</span></div>
+  <dl><dt>規模</dt><dd class="bad">約10万人分</dd><dt>漏れた情報</dt><dd>グループ会社や関連企業の従業員約9万人分の氏名やメールアドレスなど／2026年新卒採用の応募者約7,200人分の氏名など／企業活動体験プログラムの登録者約7,300人分のメールアドレス</dd><dt>含まれないとされる情報</dt><dd>クレジットカードなどの決済情報（現時点で不正利用は確認されていないとしています）</dd><dt>原因</dt><dd>グループが使う外部のクラウドサービスへの不正アクセス。10月28日に米マイクロソフトのクラウドサービスで異常を検知し、遮断したとしています。侵入経路の詳細は公表されていません。</dd></dl>
+  <p class="src">出典：<a href="https://www.daily.co.jp/society/economics/2026/11/02/0020994048.shtml" target="_blank" rel="noopener">共同通信（デイリースポーツ掲載、11月2日）</a></p>
+</article>
+
+<div class="prose">
+  <p>注目したいのは、漏れたのが「お客さん」ではなく、<strong>従業員や就職活動の応募者</strong>の情報だったことです。10月30日に発表された日本交通の件でも、約29万人分のうち最も多いのは採用の応募者（約10万8,000人）でした。商品を買っていなくても、応募や登録をしただけの会社から情報が漏れる。それが今の漏洩の特徴の一つです。</p>
+
+  <h2 id="data">数字で見る「相次ぐ漏洩」</h2>
+  <p>セキュリティ会社のマクニカの集計では、国内の企業がWebシステムからの個人情報の漏洩などを発表した件数は、次のように増えています。</p>
+  <ol class="mon-list">
+    <li><span class="m">2024年</span><span class="bar" aria-hidden="true"><span style="width:52.1%"></span></span><span class="cnt">62件</span></li>
+    <li><span class="m">2025年</span><span class="bar" aria-hidden="true"><span style="width:70.6%"></span></span><span class="cnt">84件</span></li>
+    <li class="hot"><span class="m">2026年<small>10月6日時点</small></span><span class="bar" aria-hidden="true"><span style="width:100.0%"></span></span><span class="cnt">119件</span></li>
+  </ol>
+  <p>2026年は10月6日の時点で、すでに前年1年分を大きく超えました。119件のうち81件は7月以降の発表です。また、個人情報保護委員会のまとめでは、不正アクセスによる漏洩の報告は、10月は16日までの半月で830件と、9月1か月分（303件）の2.7倍に達しています。</p>
+  <p class="note-box">出典：マクニカの集計（サイバーセキュリティラボ「2026年秋、情報漏えいはなぜ止まらないのか」で紹介）、個人情報保護委員会「参考資料2」（2026年10月28日）の速報値。</p>
+</div>
+
+<aside class="cta">
+  <div><strong>ニュースを見て不安になったら</strong><p>自分のパスワードが流出データに含まれていないか、30秒で確認できます。</p></div>
+  <a class="btn" href="/#pw-h">無料でチェックする</a>
+</aside>
+
+<div class="prose">
+  <h2 id="why">情報流出が相次ぐ4つの理由</h2>
+</div>
+
+<ol class="steps">
+  <li><h3>古い「穴」がふさがれないまま残っている</h3>
+    <p>JPCERT/CC（国内のセキュリティ対応の調整機関）は10月9日、国内で相次ぐ不正アクセスについて注意喚起を出しました。そこで最初に挙げられているのが、<strong>すでに知られている脆弱性（ソフトの弱点）を探して突く攻撃</strong>です。修正版が出ていても、更新されていないシステムや、設定の不備が残ったままの機器が狙われています。</p>
+    <p>10月には、Webサイトで広く使われているプログラミング言語PHPで深刻な脆弱性が見つかり、修正版の公開前に情報が漏れ出す騒ぎもありました。国内でも多くのサービスが緊急メンテナンスに追われました。</p></li>
+  <li><h3>画面の「裏口」が狙われている</h3>
+    <p>同じ注意喚起では、アプリやシステムどうしをつなぐ「API」を悪用した不正操作も挙げられています。公開されているスマホアプリを解析して、画面からは操作できない内部の仕組みに直接アクセスし、権限を書き換えたり、不正なアカウントを作ったりする手口です。</p>
+    <p>社内向けのデータ分析ツールや管理システム、外部のクラウドサービスなど、<strong>利用者からは見えない場所</strong>が入口になるケースが増えています。サントリーの件も、グループが使う外部のクラウドサービスへの不正アクセスでした。</p></li>
+  <li><h3>盗まれた「鍵」が使い回されている</h3>
+    <p>攻撃者は、ある場所で盗んだIDやパスワード、システムの認証キーを、別の場所で使います。JPCERT/CCは、他のシステムへの侵害で盗まれたAPIキーが使われた例も報告しています。10月に発表された日本経済新聞社の約183万件の漏洩も、クラウドにアクセスするための認証情報が盗まれたことが原因とされています。</p>
+    <p>これは、個人がパスワードを使い回して乗っ取られる仕組みとまったく同じです。<strong>1か所で漏れた鍵が、次の侵入の入口になる</strong>。漏洩が連鎖しやすいのはこのためです。</p></li>
+  <li><h3>攻撃の手間が下がり、数が増えている</h3>
+    <p>警察庁によると、脆弱性を探すような不審なアクセスは、1日・1IPあたり13,687件と、前年同期（9,085.4件）の約1.5倍に増えました。送信元の大部分は海外です。国の資料では、AIを悪用して攻撃の大部分を自動で実行した例も報告されています。</p>
+    <p>ただし、個々の漏洩でAIが使われたと確認された情報は、今のところ多くありません。「AIのせいで急増した」と言い切れる段階ではないことにも注意が必要です。</p></li>
+</ol>
+
+<div class="prose">
+  <p class="note-box">一方で、セキュリティ会社ラックのCTOは、攻撃そのものが短期間に急増したというより、<strong>各社の調査と公表の時期が重なった面も大きい</strong>と指摘しています。不正アクセスの発覚から公表までには、調査のために数週間〜数か月かかることがあります。日本交通の件も、不正アクセスは7月で、詳しい公表は10月でした。</p>
+</div>
+
+<aside class="cta">
+  <div><strong>「漏れる前提」で備えるなら</strong><p>まずは今のパスワードが流出データに載っていないかを確認しましょう。</p></div>
+  <a class="btn" href="/#pw-h">流出チェッカーを使う</a>
+</aside>
+
+<div class="prose">
+  <h2 id="meaning">利用者にとって、何が変わったのか</h2>
+  <ul>
+    <li><strong>「使っていない会社」からも漏れる</strong>：採用の応募、イベントの登録、昔の会員登録。どこに情報を渡したか覚えていない会社からも、漏洩の連絡が来る時代です。</li>
+    <li><strong>漏れてから知るまでに時間がかかる</strong>：調査には時間がかかるので、通知が届いたときには、漏洩から何か月もたっていることがあります。</li>
+    <li><strong>漏れた情報は「次の攻撃」の材料になる</strong>：名前やメールアドレスは偽のメールやSMSに、パスワードは別のサービスへのログインの試行に使われます。</li>
+  </ul>
+  <p>つまり、「どこから漏れたか」を追いかけるより、<strong>どこから漏れても被害につながらない状態</strong>を先に作っておくほうが現実的です。</p>
+
+  <h2 id="todo">今日からやること</h2>
+  <ol>
+    <li><strong>パスワードの流出を確認する</strong>：<a href="/#pw-h">流出チェッカー</a>で、今使っているパスワードを調べます。</li>
+    <li><strong>使い回しをやめ、二段階認証をオンにする</strong>：1か所で漏れた鍵で、他の扉まで開けられないようにします。変え方のコツは<a href="/articles/003/">「パスワードを変えても意味ない」は本当？</a>で解説しています。</li>
+    <li><strong>会社を名乗る連絡のリンクは開かない</strong>：「お詫び」「確認のお願い」の連絡は、公式サイトやアプリから確かめます。</li>
+    <li><strong>使っていない登録を整理する</strong>：退会できるサービスは退会して、漏れる場所そのものを減らします。</li>
+  </ol>
+  <p>あわせて読みたい：<a href="/articles/002/">【漏洩対策ガイド】企業の発表を待たずに、今日できる7つの防衛策</a></p>
+</div>
+
+<section class="card" id="recs" aria-labelledby="recs-h">
+  <h2 id="recs-h"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><span class="h2t"><span class="nb">個人向け！</span><span class="nb">再発を防ぐ</span><span class="nb">おすすめサービスTOP5 <span class="tag">PR</span></span></span></h2>
+  <p class="pr-bar">当サイトはアフィリエイト広告（PR）を掲載しています。「PR」表示のあるリンクから商品を申し込むと、運営者に報酬が支払われることがあります。</p>
+  <div class="recs">
+    <!-- A8.net の広告リンク（テキストリンク＋計測用の1pxの画像）。2026/10/29 提携承認済み -->
+    <div class="rec">
+      <span class="rank r1" aria-label="1位">1</span>
+      <div>
+        <div class="name">ESET HOME セキュリティ</div>
+        <div class="kind">総合セキュリティソフト</div>
+        <ul class="why">
+          <li>国内ではキヤノンITソリューションズが販売・サポートしているので、困ったときに日本語で相談できます。</li>
+          <li>上位プランにはパスワード管理機能も付いていて、ウイルス対策と使い回し対策を1本でまとめられます。</li>
+        </ul>
+      </div>
+      <a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4BERAA+IGGJ6+1A8Q+15P77M" rel="sponsored nofollow noopener" target="_blank">公式サイトを見る</a><img class="a8px" src="https://www13.a8.net/0.gif?a8mat=4BERAA+IGGJ6+1A8Q+15P77M" width="1" height="1" alt="">
+    </div>
+    <div class="rec">
+      <span class="rank r2" aria-label="2位">2</span>
+      <div>
+        <div class="name">ノートン 360</div>
+        <div class="kind">総合セキュリティソフト</div>
+        <ul class="why">
+          <li>世界的に知名度の高いセキュリティソフトです。ウイルス対策に加えて、パスワード管理やVPNもまとめて使えます。</li>
+          <li>メールアドレスなどの流出を監視する機能があるプランもあり、「漏れていないか」を確かめ続けたい人に向いています。</li>
+        </ul>
+      </div>
+      <a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4BERAA+JNBQQ+3IBI+61C2Q" rel="sponsored nofollow noopener" target="_blank">公式サイトを見る</a><img class="a8px" src="https://www11.a8.net/0.gif?a8mat=4BERAA+JNBQQ+3IBI+61C2Q" width="1" height="1" alt="">
+    </div>
+    <div class="rec">
+      <span class="rank r3" aria-label="3位">3</span>
+      <div>
+        <div class="name">Surfshark Antivirus</div>
+        <div class="kind">ウイルス対策ソフト</div>
+        <ul class="why">
+          <li>マルウェアなどの脅威から、パソコンやスマホを守るウイルス対策ソフトです。</li>
+          <li>同じ会社のVPNと組み合わせて使えるので、ウイルス対策と通信の保護を1社でそろえたい人に向いています。</li>
+        </ul>
+      </div>
+      <a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4BERAA+LFMK2+4LSW+BX3J6" rel="sponsored nofollow noopener" target="_blank">公式サイトを見る</a><img class="a8px" src="https://www11.a8.net/0.gif?a8mat=4BERAA+LFMK2+4LSW+BX3J6" width="1" height="1" alt="">
+    </div>
+    <div class="rec">
+      <span class="rank" aria-label="4位">4</span>
+      <div>
+        <div class="name">NordVPN</div>
+        <div class="kind">VPN</div>
+        <ul class="why">
+          <li>カフェや駅のフリーWi-Fiでも通信を暗号化して、IDやパスワードの盗み見を防ぎます。</li>
+          <li>世界中で使われている大手VPNで、危険なサイトや広告をブロックする機能もあります。</li>
+        </ul>
+      </div>
+      <a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4BERAA+M125U+3YFI+61C2Q" rel="sponsored nofollow noopener" target="_blank">公式サイトを見る</a><img class="a8px" src="https://www12.a8.net/0.gif?a8mat=4BERAA+M125U+3YFI+61C2Q" width="1" height="1" alt="">
+    </div>
+    <div class="rec">
+      <span class="rank" aria-label="5位">5</span>
+      <div>
+        <div class="name">MillenVPN</div>
+        <div class="kind">VPN（国産）</div>
+        <ul class="why">
+          <li>日本の会社が運営する国産VPNで、申し込みからサポートまで日本語で完結します。</li>
+          <li>海外サービスに不安がある人でも始めやすく、フリーWi-Fiを使う機会が多い人の最初の1本に向いています。</li>
+        </ul>
+      </div>
+      <a class="btn" href="https://px.a8.net/svt/ejp?a8mat=4BERAA+J1W4Y+3JTE+HV7V6" rel="sponsored nofollow noopener" target="_blank">公式サイトを見る</a><img class="a8px" src="https://www14.a8.net/0.gif?a8mat=4BERAA+J1W4Y+3JTE+HV7V6" width="1" height="1" alt="">
+    </div>
+  </div>
+  <p class="note">ランキングは、運営者が各社の公式情報をもとに「漏洩対策としての効果」「日本語での使いやすさ」「始めやすさ」の観点で選んだものです。料金や機能は変わることがあるため、申し込み前に公式サイトでご確認ください。</p>
+</section>
+
+<footer>
+  <nav><a href="/">流出チェッカー トップ</a><a href="/articles/">記事一覧</a><a href="/#about">運営者情報</a><a href="/#privacy">プライバシーポリシー</a></nav>
+  <p>出典：<a href="https://www.daily.co.jp/society/economics/2026/11/02/0020994048.shtml" target="_blank" rel="noopener">共同通信（サントリーHD）</a>、<a href="https://scan.netsecurity.ne.jp/article/2026/10/13/56428.html" target="_blank" rel="noopener">ScanNetSecurity（JPCERT/CCの注意喚起）</a>、<a href="https://www.gate02.ne.jp/lab/security-article/data-breach-surge-2026-autumn/" target="_blank" rel="noopener">サイバーセキュリティラボ（マクニカ集計・警察庁・ラックCTOの見解）</a>、<a href="https://www.ppc.go.jp/files/pdf/261028_sankoushiryou-2.pdf" target="_blank" rel="noopener">個人情報保護委員会「参考資料2」</a>、<a href="https://www.gizmodo.jp/article/php-vulnerability-incident-explained/" target="_blank" rel="noopener">GIZMODO（PHPの脆弱性）</a>、<a href="https://www.sbbit.jp/article/cont1/187977" target="_blank" rel="noopener">ビジネス+IT（日本交通）</a>、<a href="https://kumanichi.com/articles/2047340" target="_blank" rel="noopener">熊本日日新聞（日経新聞）</a> ／ 写真：Arnold Francisca / Unsplash</p>
+  <p>© 2026 流出チェッカー</p>
+</footer>
+</div>
+</body>
+</html>
