@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T04:58:52.508083+00:00",
+ "updated": "2026-11-03T05:58:42.201724+00:00",
  "items": [
   {
    "title": "外務省のネットワークで侵害 - 個人情報流出の可能性",
@@ -26,40 +26,10 @@
    "source": "Security NEXT"
   },
   {
-   "title": "AI を活用した総点検で発見 ～ デジタルアーツのクラウドサービス運用環境に不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/02/56649.html",
-   "date": "2026-11-01T23:05:36+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "WPプラグインの脆弱性悪用 ～ ティエスエスリンクのウェブサイトに不正アクセス、製品にはセキュリティ上の問題 確認されておらず",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/02/56648.html",
-   "date": "2026-11-01T23:05:33+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "他の職員のIDとパスワードを使用し複数回にわたり庁内共有フォルダに不正アクセス、上司の印影の偽造も",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/02/56647.html",
-   "date": "2026-11-01T23:05:29+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "「楽天トラベル」海外ホテル予約サイトの一部ページと多言語予約サイトに不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/02/56646.html",
-   "date": "2026-11-01T23:05:26+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "ユミルリンクのメール配信サービスの一部サーバシステムに不正アクセス、延べ5,162万8,280件の情報が流出",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/02/56645.html",
-   "date": "2026-11-01T23:05:23+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "フジッコのキャンペーンの応募受付業務の委託先に不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/02/56644.html",
-   "date": "2026-11-01T23:05:21+00:00",
-   "source": "ScanNetSecurity"
+   "title": "アプリの管理システムが侵害、会員情報流出 - 松屋",
+   "link": "https://www.security-next.com/192210",
+   "date": "2026-10-30T10:26:41+00:00",
+   "source": "Security NEXT"
   }
  ]
 }
