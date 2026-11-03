@@ -1,64 +1,64 @@
 {
- "updated": "2026-11-03T22:50:15.636996+00:00",
+ "updated": "2026-11-03T23:45:12.701851+00:00",
  "items": [
   {
-   "title": "外務省のネットワークで侵害 - 個人情報流出の可能性",
-   "link": "https://www.security-next.com/192256",
-   "date": "2026-11-02T13:55:46+00:00",
-   "source": "Security NEXT"
-  },
-  {
-   "title": "アイリスオーヤマ通販サイトで侵害 - 詳細を調査",
-   "link": "https://www.security-next.com/192208",
-   "date": "2026-11-02T13:13:36+00:00",
-   "source": "Security NEXT"
-  },
-  {
-   "title": "個人情報漏洩の個人向け被害者相談窓口を強化 - IPA",
-   "link": "https://www.security-next.com/192287",
-   "date": "2026-11-02T12:25:29+00:00",
-   "source": "Security NEXT"
-  },
-  {
-   "title": "ECサイトに不正アクセス、会員情報流出 - フィギュアメーカー",
-   "link": "https://www.security-next.com/191996",
-   "date": "2026-11-02T02:43:41+00:00",
-   "source": "Security NEXT"
-  },
-  {
-   "title": "AI を活用した総点検で発見 ～ デジタルアーツのクラウドサービス運用環境に不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/02/56649.html",
-   "date": "2026-11-01T23:05:36+00:00",
+   "title": "Proofpoint Blog 第60回 日本のランサムウェア感染率が 2 年で約 2 倍に急増 ～ ランサムウェア感染率/身代金支払率 12 か国調査 2026",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/04/56666.html",
+   "date": "2026-11-03T23:15:02+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "WPプラグインの脆弱性悪用 ～ ティエスエスリンクのウェブサイトに不正アクセス、製品にはセキュリティ上の問題 確認されておらず",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/02/56648.html",
-   "date": "2026-11-01T23:05:33+00:00",
+   "title": "外務省のネットワークに不正アクセス、7月27日に検知",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/04/56663.html",
+   "date": "2026-11-03T23:05:31+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "他の職員のIDとパスワードを使用し複数回にわたり庁内共有フォルダに不正アクセス、上司の印影の偽造も",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/02/56647.html",
-   "date": "2026-11-01T23:05:29+00:00",
+   "title": "「MUJIアプリ」で最大 約2,726万件の顧客情報が流出した可能性",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/04/56662.html",
+   "date": "2026-11-03T23:05:28+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "「楽天トラベル」海外ホテル予約サイトの一部ページと多言語予約サイトに不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/02/56646.html",
-   "date": "2026-11-01T23:05:26+00:00",
+   "title": "松屋公式アプリに不正アクセス 会員情報等が漏えい",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/04/56661.html",
+   "date": "2026-11-03T23:05:25+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "ユミルリンクのメール配信サービスの一部サーバシステムに不正アクセス、延べ5,162万8,280件の情報が流出",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/02/56645.html",
-   "date": "2026-11-01T23:05:23+00:00",
+   "title": "「アイリスプラザ」に不正アクセス、安全確保のため一時停止",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/04/56660.html",
+   "date": "2026-11-03T23:05:22+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "フジッコのキャンペーンの応募受付業務の委託先に不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/02/56644.html",
-   "date": "2026-11-01T23:05:21+00:00",
+   "title": "ELESTYLEのシステムに不正アクセス、加盟店の登録情報が外部に取得された可能性",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/04/56659.html",
+   "date": "2026-11-03T23:05:19+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "競輪・オートレース投票サービス「チャリロト」に不正アクセス、点検で不審なログを発見",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/04/56658.html",
+   "date": "2026-11-03T23:05:17+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "高速道路情報サイト「ドラとら」に不正アクセス、登録情報が閲覧された可能性",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/04/56657.html",
+   "date": "2026-11-03T23:05:13+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "東京都水道局で個人情報を含む外付けHDD4台が施錠されたキャビネットから紛失",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/04/56656.html",
+   "date": "2026-11-03T23:05:09+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "ハウス電子マネー発行サービス「Value Card」に不正アクセス、ID番号等が流出",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/04/56655.html",
+   "date": "2026-11-03T23:05:07+00:00",
    "source": "ScanNetSecurity"
   }
  ]
