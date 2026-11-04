@@ -1,6 +1,12 @@
 {
- "updated": "2026-11-04T07:21:47.439908+00:00",
+ "updated": "2026-11-04T09:00:23.810757+00:00",
  "items": [
+  {
+   "title": "化粧品口コミ情報サイトで侵害 - 会員情報が流出",
+   "link": "https://www.security-next.com/192337",
+   "date": "2026-11-04T05:34:45+00:00",
+   "source": "Security NEXT"
+  },
   {
    "title": "Proofpoint Blog 第60回 日本のランサムウェア感染率が 2 年で約 2 倍に急増 ～ ランサムウェア感染率/身代金支払率 12 か国調査 2026",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/04/56666.html",
@@ -53,12 +59,6 @@
    "title": "東京都水道局で個人情報を含む外付けHDD4台が施錠されたキャビネットから紛失",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/04/56656.html",
    "date": "2026-11-03T23:05:09+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "ハウス電子マネー発行サービス「Value Card」に不正アクセス、ID番号等が流出",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/04/56655.html",
-   "date": "2026-11-03T23:05:07+00:00",
    "source": "ScanNetSecurity"
   }
  ]
