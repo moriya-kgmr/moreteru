@@ -1,6 +1,12 @@
 {
- "updated": "2026-11-05T13:15:33.462938+00:00",
+ "updated": "2026-11-05T14:27:25.346138+00:00",
  "items": [
+  {
+   "title": "サーバ設定不備、従業員情報流出の可能性 - 資さんうどん",
+   "link": "https://www.security-next.com/192260",
+   "date": "2026-11-05T12:16:57+00:00",
+   "source": "Security NEXT"
+  },
   {
    "title": "個人情報含む業務用USBメモリが所在不明に - 奈良県",
    "link": "https://www.security-next.com/191606",
@@ -53,12 +59,6 @@
    "title": "ギフティへの不正アクセスによるeギフトの不正発行、約5.5億円の損失見込み",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/05/56674.html",
    "date": "2026-11-04T23:05:07+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "LINE連携基盤「COMSBI エンタープライズ基盤」に不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/05/56673.html",
-   "date": "2026-11-04T23:05:05+00:00",
    "source": "ScanNetSecurity"
   }
  ]
