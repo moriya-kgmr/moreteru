@@ -1,10 +1,16 @@
 {
- "updated": "2026-11-05T14:27:25.346138+00:00",
+ "updated": "2026-11-05T16:05:35.636720+00:00",
  "items": [
   {
    "title": "サーバ設定不備、従業員情報流出の可能性 - 資さんうどん",
    "link": "https://www.security-next.com/192260",
    "date": "2026-11-05T12:16:57+00:00",
+   "source": "Security NEXT"
+  },
+  {
+   "title": "申請用ファイルに不備、サイト上に個人情報が残存 - 福岡県",
+   "link": "https://www.security-next.com/192081",
+   "date": "2026-11-05T11:59:03+00:00",
    "source": "Security NEXT"
   },
   {
@@ -53,12 +59,6 @@
    "title": "ドトールコーヒーのシステムに不正アクセス、従業員及び退職者 計951名の個人情報が漏えいした可能性",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/05/56675.html",
    "date": "2026-11-04T23:05:11+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "ギフティへの不正アクセスによるeギフトの不正発行、約5.5億円の損失見込み",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/05/56674.html",
-   "date": "2026-11-04T23:05:07+00:00",
    "source": "ScanNetSecurity"
   }
  ]
