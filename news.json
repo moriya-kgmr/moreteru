@@ -1,6 +1,12 @@
 {
- "updated": "2026-11-05T10:09:51.193049+00:00",
+ "updated": "2026-11-05T11:10:27.332336+00:00",
  "items": [
+  {
+   "title": "個人情報が保存されたHDDや書類を紛失 - 都水道局",
+   "link": "https://www.security-next.com/192391",
+   "date": "2026-11-05T08:15:22+00:00",
+   "source": "Security NEXT"
+  },
   {
    "title": "GMOペイメントゲートウェイ、ライフカード向けサービスで顧客情報一部流出の可能性",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/05/56680.html",
@@ -54,12 +60,6 @@
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/05/56672.html",
    "date": "2026-11-04T23:05:02+00:00",
    "source": "ScanNetSecurity"
-  },
-  {
-   "title": "ネット登録会員の個人情報が流出した可能性 - クラブツーリズム",
-   "link": "https://www.security-next.com/192254",
-   "date": "2026-11-04T10:46:55+00:00",
-   "source": "Security NEXT"
   }
  ]
 }
