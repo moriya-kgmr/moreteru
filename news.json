@@ -1,6 +1,12 @@
 {
- "updated": "2026-11-05T12:00:27.854520+00:00",
+ "updated": "2026-11-05T13:15:33.462938+00:00",
  "items": [
+  {
+   "title": "個人情報含む業務用USBメモリが所在不明に - 奈良県",
+   "link": "https://www.security-next.com/191606",
+   "date": "2026-11-05T10:17:18+00:00",
+   "source": "Security NEXT"
+  },
   {
    "title": "個人情報が保存されたHDDや書類を紛失 - 都水道局",
    "link": "https://www.security-next.com/192391",
@@ -53,12 +59,6 @@
    "title": "LINE連携基盤「COMSBI エンタープライズ基盤」に不正アクセス",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/05/56673.html",
    "date": "2026-11-04T23:05:05+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "バリューデザインへの不正アクセス、一部のモスカード番号等が流出",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/05/56672.html",
-   "date": "2026-11-04T23:05:02+00:00",
    "source": "ScanNetSecurity"
   }
  ]
