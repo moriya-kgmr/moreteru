@@ -1,6 +1,18 @@
 {
- "updated": "2026-11-06T13:09:40.307961+00:00",
+ "updated": "2026-11-06T14:22:29.581679+00:00",
  "items": [
+  {
+   "title": "ECサイトの会員管理システムで個人情報が流出 - ノジマ",
+   "link": "https://www.security-next.com/192339",
+   "date": "2026-11-06T14:21:17+00:00",
+   "source": "Security NEXT"
+  },
+  {
+   "title": "問い合わせフォーム利用者などの個人情報が流出 - ヤクルト",
+   "link": "https://www.security-next.com/192342",
+   "date": "2026-11-06T11:11:33+00:00",
+   "source": "Security NEXT"
+  },
   {
    "title": "「ドコモオンラインショップ」と「My docomo」で個人情報が流出",
    "link": "https://www.security-next.com/192453",
@@ -47,18 +59,6 @@
    "title": "SNSキャンペーンツール「OWNLY」に不正アクセス、合計1万4,034 件の参加者情報が漏えい",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/06/56690.html",
    "date": "2026-11-05T23:05:16+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "JETROが利用する国際ビジネスマッチングサイトに不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/06/56689.html",
-   "date": "2026-11-05T23:05:13+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "2026年は438万件のカード情報が漏えい ～ MM総研",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/06/56688.html",
-   "date": "2026-11-05T23:05:11+00:00",
    "source": "ScanNetSecurity"
   }
  ]
