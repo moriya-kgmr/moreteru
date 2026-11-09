@@ -1,6 +1,12 @@
 {
- "updated": "2026-11-09T15:00:07.817419+00:00",
+ "updated": "2026-11-09T16:07:53.932825+00:00",
  "items": [
+  {
+   "title": "「ネットマイル」で会員情報流出の可能性 - 影響など調査",
+   "link": "https://www.security-next.com/192460",
+   "date": "2026-11-09T11:13:30+00:00",
+   "source": "Security NEXT"
+  },
   {
    "title": "不正アクセスで個人情報流出、通話音声にクレカ情報も - ロート製薬",
    "link": "https://www.security-next.com/192493",
@@ -53,12 +59,6 @@
    "title": "CNポイントのサテライトシステムに不正アクセス",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/09/56703.html",
    "date": "2026-11-08T23:05:08+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "電力・ガス取引監視等委員会ウェブサイトに不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/09/56702.html",
-   "date": "2026-11-08T23:05:05+00:00",
    "source": "ScanNetSecurity"
   }
  ]
