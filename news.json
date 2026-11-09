@@ -1,64 +1,64 @@
 {
- "updated": "2026-11-09T22:51:36.180427+00:00",
+ "updated": "2026-11-09T23:46:10.003501+00:00",
  "items": [
   {
-   "title": "中学校で生徒の個人情報含む学習記録ファイルを紛失 - 伊万里市",
-   "link": "https://www.security-next.com/192347",
-   "date": "2026-11-09T12:27:52+00:00",
-   "source": "Security NEXT"
-  },
-  {
-   "title": "「ネットマイル」で会員情報流出の可能性 - 影響など調査",
-   "link": "https://www.security-next.com/192460",
-   "date": "2026-11-09T11:13:30+00:00",
-   "source": "Security NEXT"
-  },
-  {
-   "title": "不正アクセスで個人情報流出、通話音声にクレカ情報も - ロート製薬",
-   "link": "https://www.security-next.com/192493",
-   "date": "2026-11-09T04:56:53+00:00",
-   "source": "Security NEXT"
-  },
-  {
-   "title": "JNSAのセキュ理解度チェックサービスで侵害 - 影響など調査",
-   "link": "https://www.security-next.com/192491",
-   "date": "2026-11-09T02:42:49+00:00",
-   "source": "Security NEXT"
-  },
-  {
-   "title": "英政府機関、2028年までに重要インフラへのランサムウェア攻撃で AI 搭載マルウェアが使われる可能性が「非常に高い」と警告",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/09/56711.html",
-   "date": "2026-11-08T23:20:02+00:00",
+   "title": "個人情報を預ける基準は知名度よりも「セキュリティ対策の信頼性」26.2ポイント差",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/10/56728.html",
+   "date": "2026-11-09T23:10:03+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "消防庁「安否情報システム」に不正アクセス、影響範囲調査のためにサービスを停止消防庁の「安否情報システム」に不正アクセス、影響範囲調査のためサービス停止",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/09/56708.html",
-   "date": "2026-11-08T23:05:20+00:00",
+   "title": "第三者が管理画面へ総当たり攻撃を行い侵入 ～ イープラス フェス専用アプリに不正アクセス",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/10/56727.html",
+   "date": "2026-11-09T23:05:35+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "「ポイントインカム」と「CoinTrade」で個人情報が流出",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/09/56707.html",
-   "date": "2026-11-08T23:05:19+00:00",
+   "title": "SMBCコンシューマーファイナンスの保証システムに不正アクセス、外部へのデータ送信を確認",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/10/56726.html",
+   "date": "2026-11-09T23:05:31+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "ソニー銀行のデジタル証券に関連する外部委託先Securitize Japanに不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/09/56706.html",
-   "date": "2026-11-08T23:05:16+00:00",
+   "title": "東京海上ダイレクト損害保険の契約者向け「マイページ」等に不正アクセス",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/10/56725.html",
+   "date": "2026-11-09T23:05:28+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "ソニー生命「お客さま WEB サービス」に不正アクセス、メディケア生命保険 契約者等 約38.5万件が漏えい",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/09/56705.html",
-   "date": "2026-11-08T23:05:12+00:00",
+   "title": "ドコモオンラインショップ・My docomo に不正アクセス、最大約30万件の顧客情報が流出",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/10/56724.html",
+   "date": "2026-11-09T23:05:25+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "デニーズアプリへ不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/09/56704.html",
-   "date": "2026-11-08T23:05:10+00:00",
+   "title": "「SHOGUN BURGER公式アプリ」に不正アクセス、一部顧客の個人情報の漏えい",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/10/56723.html",
+   "date": "2026-11-09T23:05:21+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "Vookにデータ分析ツールの脆弱性を悪用した不正アクセス、会員情報等が漏えいした可能性",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/10/56722.html",
+   "date": "2026-11-09T23:05:18+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "「料理王国ウェブマガジン」の有料・無料会員の情報が漏えい",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/10/56721.html",
+   "date": "2026-11-09T23:05:14+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "「投資のコンシェルジュ」に不正アクセス",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/10/56720.html",
+   "date": "2026-11-09T23:05:10+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "黒金化成にランサムウェア攻撃 調査結果公表1年後",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/10/56718.html",
+   "date": "2026-11-09T23:05:02+00:00",
    "source": "ScanNetSecurity"
   }
  ]
