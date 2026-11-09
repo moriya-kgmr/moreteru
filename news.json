@@ -1,6 +1,18 @@
 {
- "updated": "2026-11-09T13:18:50.432907+00:00",
+ "updated": "2026-11-09T15:00:07.817419+00:00",
  "items": [
+  {
+   "title": "不正アクセスで個人情報流出、通話音声にクレカ情報も - ロート製薬",
+   "link": "https://www.security-next.com/192493",
+   "date": "2026-11-09T04:56:53+00:00",
+   "source": "Security NEXT"
+  },
+  {
+   "title": "JNSAのセキュ理解度チェックサービスで侵害 - 影響など調査",
+   "link": "https://www.security-next.com/192491",
+   "date": "2026-11-09T02:42:49+00:00",
+   "source": "Security NEXT"
+  },
   {
    "title": "英政府機関、2028年までに重要インフラへのランサムウェア攻撃で AI 搭載マルウェアが使われる可能性が「非常に高い」と警告",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/09/56711.html",
@@ -48,18 +60,6 @@
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/09/56702.html",
    "date": "2026-11-08T23:05:05+00:00",
    "source": "ScanNetSecurity"
-  },
-  {
-   "title": "花キューピットに不正アクセス、423万8,242件の会員情報が漏えい",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/09/56701.html",
-   "date": "2026-11-08T23:05:02+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "ECサイトの会員管理システムで個人情報が流出 - ノジマ",
-   "link": "https://www.security-next.com/192339",
-   "date": "2026-11-06T14:21:17+00:00",
-   "source": "Security NEXT"
   }
  ]
 }
