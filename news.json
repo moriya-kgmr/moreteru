@@ -1,6 +1,12 @@
 {
- "updated": "2026-11-09T16:07:53.932825+00:00",
+ "updated": "2026-11-09T17:15:28.283545+00:00",
  "items": [
+  {
+   "title": "中学校で生徒の個人情報含む学習記録ファイルを紛失 - 伊万里市",
+   "link": "https://www.security-next.com/192347",
+   "date": "2026-11-09T12:27:52+00:00",
+   "source": "Security NEXT"
+  },
   {
    "title": "「ネットマイル」で会員情報流出の可能性 - 影響など調査",
    "link": "https://www.security-next.com/192460",
@@ -53,12 +59,6 @@
    "title": "デニーズアプリへ不正アクセス",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/09/56704.html",
    "date": "2026-11-08T23:05:10+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "CNポイントのサテライトシステムに不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/09/56703.html",
-   "date": "2026-11-08T23:05:08+00:00",
    "source": "ScanNetSecurity"
   }
  ]
