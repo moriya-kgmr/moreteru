@@ -1,64 +1,64 @@
 {
- "updated": "2026-11-10T22:49:27.533524+00:00",
+ "updated": "2026-11-10T23:42:18.673889+00:00",
  "items": [
   {
-   "title": "関連サイトで侵害、個人情報が流出 - 阪急阪神百貨店",
-   "link": "https://www.security-next.com/191650",
-   "date": "2026-11-10T14:22:36+00:00",
-   "source": "Security NEXT"
-  },
-  {
-   "title": "「花キューピット」のECサイトで侵害 - 利用者メアドなど流出",
-   "link": "https://www.security-next.com/192157",
-   "date": "2026-11-10T13:54:27+00:00",
-   "source": "Security NEXT"
-  },
-  {
-   "title": "ドトール、通販サイトでも侵害 - 会員情報流出の可能性",
-   "link": "https://www.security-next.com/192495",
-   "date": "2026-11-10T07:06:44+00:00",
-   "source": "Security NEXT"
-  },
-  {
-   "title": "システム侵害で顧客情報流出の可能性 - ニトリグループ",
-   "link": "https://www.security-next.com/192572",
-   "date": "2026-11-10T01:47:21+00:00",
-   "source": "Security NEXT"
-  },
-  {
-   "title": "個人情報を預ける基準は知名度よりも「セキュリティ対策の信頼性」26.2ポイント差",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/10/56728.html",
-   "date": "2026-11-09T23:10:03+00:00",
+   "title": "今後も同種のサイバー攻撃続く恐れ 標的調査や侵害にAI使用の可能性 ～ 国家サイバー統括室",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/11/56746.html",
+   "date": "2026-11-10T23:15:03+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "第三者が管理画面へ総当たり攻撃を行い侵入 ～ イープラス フェス専用アプリに不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/10/56727.html",
-   "date": "2026-11-09T23:05:35+00:00",
+   "title": "NTTデータ委託先に不正アクセス、社債購入者に対する特典付与を支援する「STdirectServices」のサービス停止",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/11/56744.html",
+   "date": "2026-11-10T23:05:25+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "SMBCコンシューマーファイナンスの保証システムに不正アクセス、外部へのデータ送信を確認",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/10/56726.html",
-   "date": "2026-11-09T23:05:31+00:00",
+   "title": "九州電力送配電に不正アクセス、電力量情報が漏えいした可能性",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/11/56743.html",
+   "date": "2026-11-10T23:05:21+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "東京海上ダイレクト損害保険の契約者向け「マイページ」等に不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/10/56725.html",
-   "date": "2026-11-09T23:05:28+00:00",
+   "title": "電通総研「FACERE」に設定不備、第三者からの不正アクセス確認",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/11/56742.html",
+   "date": "2026-11-10T23:05:19+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "ドコモオンラインショップ・My docomo に不正アクセス、最大約30万件の顧客情報が流出",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/10/56724.html",
-   "date": "2026-11-09T23:05:25+00:00",
+   "title": "ISM CloudOne に不正アクセス",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/11/56741.html",
+   "date": "2026-11-10T23:05:14+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "「SHOGUN BURGER公式アプリ」に不正アクセス、一部顧客の個人情報の漏えい",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/10/56723.html",
-   "date": "2026-11-09T23:05:21+00:00",
+   "title": "モバイルオーダーサービス「PICKS」に不正アクセス、8,312人の個人情報が漏えい",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/11/56740.html",
+   "date": "2026-11-10T23:05:12+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "ビジュアルアーツに不正アクセス、認証情報が保存されていた可能性のある端末で明確な痕跡は確認されず",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/11/56739.html",
+   "date": "2026-11-10T23:05:10+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "ティンパンアレイに不正アクセス、延べ約120万件の会員情報が流出した可能性",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/11/56738.html",
+   "date": "2026-11-10T23:05:07+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "オンラインくじサイト「はにくじランド」に不正アクセス、第三者による不正なコマンド実行と認証情報の不正利用の形跡を確認",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/11/56737.html",
+   "date": "2026-11-10T23:05:05+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "JAL 委託先 Amadeus社に不正アクセス、予約情報の一部が外部から参照された形跡",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/11/56736.html",
+   "date": "2026-11-10T23:05:02+00:00",
    "source": "ScanNetSecurity"
   }
  ]
