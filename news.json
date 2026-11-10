@@ -1,6 +1,12 @@
 {
- "updated": "2026-11-10T07:14:12.717353+00:00",
+ "updated": "2026-11-10T08:23:51.864002+00:00",
  "items": [
+  {
+   "title": "ドトール、通販サイトでも侵害 - 会員情報流出の可能性",
+   "link": "https://www.security-next.com/192495",
+   "date": "2026-11-10T07:06:44+00:00",
+   "source": "Security NEXT"
+  },
   {
    "title": "個人情報を預ける基準は知名度よりも「セキュリティ対策の信頼性」26.2ポイント差",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/10/56728.html",
@@ -53,12 +59,6 @@
    "title": "「投資のコンシェルジュ」に不正アクセス",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/10/56720.html",
    "date": "2026-11-09T23:05:10+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "黒金化成にランサムウェア攻撃 調査結果公表1年後",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/10/56718.html",
-   "date": "2026-11-09T23:05:02+00:00",
    "source": "ScanNetSecurity"
   }
  ]
