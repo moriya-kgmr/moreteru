@@ -1,6 +1,12 @@
 {
- "updated": "2026-11-10T15:54:34.952758+00:00",
+ "updated": "2026-11-10T16:57:42.356700+00:00",
  "items": [
+  {
+   "title": "関連サイトで侵害、個人情報が流出 - 阪急阪神百貨店",
+   "link": "https://www.security-next.com/191650",
+   "date": "2026-11-10T14:22:36+00:00",
+   "source": "Security NEXT"
+  },
   {
    "title": "「花キューピット」のECサイトで侵害 - 利用者メアドなど流出",
    "link": "https://www.security-next.com/192157",
@@ -53,12 +59,6 @@
    "title": "「SHOGUN BURGER公式アプリ」に不正アクセス、一部顧客の個人情報の漏えい",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/10/56723.html",
    "date": "2026-11-09T23:05:21+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "Vookにデータ分析ツールの脆弱性を悪用した不正アクセス、会員情報等が漏えいした可能性",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/10/56722.html",
-   "date": "2026-11-09T23:05:18+00:00",
    "source": "ScanNetSecurity"
   }
  ]
