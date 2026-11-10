@@ -1,10 +1,16 @@
 {
- "updated": "2026-11-10T08:23:51.864002+00:00",
+ "updated": "2026-11-10T09:59:05.024310+00:00",
  "items": [
   {
    "title": "ドトール、通販サイトでも侵害 - 会員情報流出の可能性",
    "link": "https://www.security-next.com/192495",
    "date": "2026-11-10T07:06:44+00:00",
+   "source": "Security NEXT"
+  },
+  {
+   "title": "システム侵害で顧客情報流出の可能性 - ニトリグループ",
+   "link": "https://www.security-next.com/192572",
+   "date": "2026-11-10T01:47:21+00:00",
    "source": "Security NEXT"
   },
   {
@@ -53,12 +59,6 @@
    "title": "「料理王国ウェブマガジン」の有料・無料会員の情報が漏えい",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/10/56721.html",
    "date": "2026-11-09T23:05:14+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "「投資のコンシェルジュ」に不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/10/56720.html",
-   "date": "2026-11-09T23:05:10+00:00",
    "source": "ScanNetSecurity"
   }
  ]
