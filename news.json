@@ -1,6 +1,12 @@
 {
- "updated": "2026-11-10T13:07:19.661111+00:00",
+ "updated": "2026-11-10T14:18:48.686900+00:00",
  "items": [
+  {
+   "title": "「花キューピット」のECサイトで侵害 - 利用者メアドなど流出",
+   "link": "https://www.security-next.com/192157",
+   "date": "2026-11-10T13:54:27+00:00",
+   "source": "Security NEXT"
+  },
   {
    "title": "ドトール、通販サイトでも侵害 - 会員情報流出の可能性",
    "link": "https://www.security-next.com/192495",
@@ -53,12 +59,6 @@
    "title": "Vookにデータ分析ツールの脆弱性を悪用した不正アクセス、会員情報等が漏えいした可能性",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/10/56722.html",
    "date": "2026-11-09T23:05:18+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "「料理王国ウェブマガジン」の有料・無料会員の情報が漏えい",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/10/56721.html",
-   "date": "2026-11-09T23:05:14+00:00",
    "source": "ScanNetSecurity"
   }
  ]
