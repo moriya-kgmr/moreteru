@@ -1,65 +1,65 @@
 {
- "updated": "2026-11-11T22:56:52.450840+00:00",
+ "updated": "2026-11-11T23:53:12.887661+00:00",
  "items": [
+  {
+   "title": "ランサムウェアは一度限りの身代金要求から継続的な恐喝へ ～ プルーフポイント調査",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/12/56765.html",
+   "date": "2026-11-11T23:10:11+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "上場企業の個人情報漏えい事故 過去最多更新 ～ 東京商工リサーチ調査",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/12/56764.html",
+   "date": "2026-11-11T23:10:09+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "NTTデータが住友生命から受託した「住友生命Vitality体験版・企業型」、「Vitalityスマート（福利厚生タイプ含む）」に不正アクセス",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/12/56761.html",
+   "date": "2026-11-11T23:05:23+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "メール配信サービス「アララメッセージ」への不正アクセス、再開時期は未定",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/12/56760.html",
+   "date": "2026-11-11T23:05:19+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "メール配信サービス「アララメッセージ」に不正アクセス、8,132万9,467件のメールアドレスが漏えい",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/12/56759.html",
+   "date": "2026-11-11T23:05:16+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "「MUJIアプリ」への不正アクセス、さらなる総合的セキュリティ対策が必要と判断しネットストア再開を延期",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/12/56758.html",
+   "date": "2026-11-11T23:05:13+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "エムオーテックスに不正アクセス、LANSCOPE等の製品主要機能への影響は無い",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/12/56757.html",
+   "date": "2026-11-11T23:05:10+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "ヤクルト本社ホームページに不正アクセス、約4万件の個人情報が漏えい",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/12/56756.html",
+   "date": "2026-11-11T23:05:08+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "全日空商事「選べるe-GIFT」に不正アクセス",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/12/56755.html",
+   "date": "2026-11-11T23:05:05+00:00",
+   "source": "ScanNetSecurity"
+  },
   {
    "title": "ネット印刷サービス「ラクスル」で侵害 - 個人情報や印刷データが流出か",
    "link": "https://www.security-next.com/192575",
    "date": "2026-11-11T13:59:42+00:00",
    "source": "Security NEXT"
-  },
-  {
-   "title": "今後も同種のサイバー攻撃続く恐れ 標的調査や侵害にAI使用の可能性 ～ 国家サイバー統括室",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/11/56746.html",
-   "date": "2026-11-10T23:15:03+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "NTTデータ委託先に不正アクセス、社債購入者に対する特典付与を支援する「STdirectServices」のサービス停止",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/11/56744.html",
-   "date": "2026-11-10T23:05:25+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "九州電力送配電に不正アクセス、電力量情報が漏えいした可能性",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/11/56743.html",
-   "date": "2026-11-10T23:05:21+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "電通総研「FACERE」に設定不備、第三者からの不正アクセス確認",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/11/56742.html",
-   "date": "2026-11-10T23:05:19+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "ISM CloudOne に不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/11/56741.html",
-   "date": "2026-11-10T23:05:14+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "モバイルオーダーサービス「PICKS」に不正アクセス、8,312人の個人情報が漏えい",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/11/56740.html",
-   "date": "2026-11-10T23:05:12+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "ビジュアルアーツに不正アクセス、認証情報が保存されていた可能性のある端末で明確な痕跡は確認されず",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/11/56739.html",
-   "date": "2026-11-10T23:05:10+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "ティンパンアレイに不正アクセス、延べ約120万件の会員情報が流出した可能性",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/11/56738.html",
-   "date": "2026-11-10T23:05:07+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "オンラインくじサイト「はにくじランド」に不正アクセス、第三者による不正なコマンド実行と認証情報の不正利用の形跡を確認",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/11/56737.html",
-   "date": "2026-11-10T23:05:05+00:00",
-   "source": "ScanNetSecurity"
   }
  ]
 }
