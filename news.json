@@ -1,6 +1,12 @@
 {
- "updated": "2026-11-11T14:25:31.953952+00:00",
+ "updated": "2026-11-11T15:56:59.359365+00:00",
  "items": [
+  {
+   "title": "ネット印刷サービス「ラクスル」で侵害 - 個人情報や印刷データが流出か",
+   "link": "https://www.security-next.com/192575",
+   "date": "2026-11-11T13:59:42+00:00",
+   "source": "Security NEXT"
+  },
   {
    "title": "今後も同種のサイバー攻撃続く恐れ 標的調査や侵害にAI使用の可能性 ～ 国家サイバー統括室",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/11/56746.html",
@@ -53,12 +59,6 @@
    "title": "オンラインくじサイト「はにくじランド」に不正アクセス、第三者による不正なコマンド実行と認証情報の不正利用の形跡を確認",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/11/56737.html",
    "date": "2026-11-10T23:05:05+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "JAL 委託先 Amadeus社に不正アクセス、予約情報の一部が外部から参照された形跡",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/11/56736.html",
-   "date": "2026-11-10T23:05:02+00:00",
    "source": "ScanNetSecurity"
   }
  ]
