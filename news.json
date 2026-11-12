@@ -1,64 +1,64 @@
 {
- "updated": "2026-11-12T22:52:48.477826+00:00",
+ "updated": "2026-11-12T23:50:18.657986+00:00",
  "items": [
   {
-   "title": "試験管理システムで侵害、受験者情報流出の可能性 - 日商",
-   "link": "https://www.security-next.com/192652",
-   "date": "2026-11-12T14:21:54+00:00",
-   "source": "Security NEXT"
-  },
-  {
-   "title": "肌測定システムで個人情報や測定結果が流出 - 資生堂",
-   "link": "https://www.security-next.com/192582",
-   "date": "2026-11-12T11:03:26+00:00",
-   "source": "Security NEXT"
-  },
-  {
-   "title": "ランサムウェアは一度限りの身代金要求から継続的な恐喝へ ～ プルーフポイント調査",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/12/56765.html",
-   "date": "2026-11-11T23:10:11+00:00",
+   "title": "オンライン麻雀に不正アクセス 会員情報流出 ～ 寄せられた激励メッセージに謝意 メールはスタッフ全員が目を通し必ず返信",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/13/56779.html",
+   "date": "2026-11-12T23:10:03+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "上場企業の個人情報漏えい事故 過去最多更新 ～ 東京商工リサーチ調査",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/12/56764.html",
-   "date": "2026-11-11T23:10:09+00:00",
+   "title": "ブックオフグループホールディングス子会社の会員管理システムに不正アクセス、638万3,279人の会員情報が漏えい",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/13/56778.html",
+   "date": "2026-11-12T23:05:23+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "NTTデータが住友生命から受託した「住友生命Vitality体験版・企業型」、「Vitalityスマート（福利厚生タイプ含む）」に不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/12/56761.html",
-   "date": "2026-11-11T23:05:23+00:00",
+   "title": "無印良品のオーダーカーテンに関する業務委託先に不正アクセス",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/13/56777.html",
+   "date": "2026-11-12T23:05:20+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "メール配信サービス「アララメッセージ」への不正アクセス、再開時期は未定",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/12/56760.html",
-   "date": "2026-11-11T23:05:19+00:00",
+   "title": "ApplyNow 提供の採用管理プラットフォームに不正アクセス、利用終了した企業団体のデータを削除せず",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/13/56776.html",
+   "date": "2026-11-12T23:05:18+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "メール配信サービス「アララメッセージ」に不正アクセス、8,132万9,467件のメールアドレスが漏えい",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/12/56759.html",
-   "date": "2026-11-11T23:05:16+00:00",
+   "title": "丸井グループの業務委託先 Securitize Japan に不正アクセス、デジタル社債を申し込んだ顧客情報が漏えい",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/13/56775.html",
+   "date": "2026-11-12T23:05:14+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "「MUJIアプリ」への不正アクセス、さらなる総合的セキュリティ対策が必要と判断しネットストア再開を延期",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/12/56758.html",
-   "date": "2026-11-11T23:05:13+00:00",
+   "title": "「ノジマオンライン」に不正アクセス、約700万件の会員情報が漏えい",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/13/56774.html",
+   "date": "2026-11-12T23:05:12+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "エムオーテックスに不正アクセス、LANSCOPE等の製品主要機能への影響は無い",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/12/56757.html",
-   "date": "2026-11-11T23:05:10+00:00",
+   "title": "「ネットマイル」に不正アクセス、最大約549万人の会員情報等が漏えいした可能性",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/13/56773.html",
+   "date": "2026-11-12T23:05:10+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "ヤクルト本社ホームページに不正アクセス、約4万件の個人情報が漏えい",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/12/56756.html",
-   "date": "2026-11-11T23:05:08+00:00",
+   "title": "「しまねのふるさと直送便」にAmazon Payプラグインの脆弱性を悪用した不正アクセス",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/13/56772.html",
+   "date": "2026-11-12T23:05:07+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "東急不動産が管理するウェブサイトに不正アクセス",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/13/56771.html",
+   "date": "2026-11-12T23:05:05+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "「ARTPASS」「アソビュー!」の委託先に不正アクセス、京都市京セラ美術館と二条城で情報流出の可能性",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/13/56770.html",
+   "date": "2026-11-12T23:05:02+00:00",
    "source": "ScanNetSecurity"
   }
  ]
