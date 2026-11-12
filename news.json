@@ -1,6 +1,12 @@
 {
- "updated": "2026-11-12T12:03:59.887966+00:00",
+ "updated": "2026-11-12T13:18:12.628985+00:00",
  "items": [
+  {
+   "title": "肌測定システムで個人情報や測定結果が流出 - 資生堂",
+   "link": "https://www.security-next.com/192582",
+   "date": "2026-11-12T11:03:26+00:00",
+   "source": "Security NEXT"
+  },
   {
    "title": "ランサムウェアは一度限りの身代金要求から継続的な恐喝へ ～ プルーフポイント調査",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/12/56765.html",
@@ -54,12 +60,6 @@
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/12/56755.html",
    "date": "2026-11-11T23:05:05+00:00",
    "source": "ScanNetSecurity"
-  },
-  {
-   "title": "ネット印刷サービス「ラクスル」で侵害 - 個人情報や印刷データが流出か",
-   "link": "https://www.security-next.com/192575",
-   "date": "2026-11-11T13:59:42+00:00",
-   "source": "Security NEXT"
   }
  ]
 }
