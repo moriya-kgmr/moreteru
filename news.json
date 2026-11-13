@@ -1,6 +1,12 @@
 {
- "updated": "2026-11-13T14:23:53.135961+00:00",
+ "updated": "2026-11-13T15:55:03.505555+00:00",
  "items": [
+  {
+   "title": "認証情報が漏洩、GitHub環境に不正アクセス - CSC",
+   "link": "https://www.security-next.com/192847",
+   "date": "2026-11-13T14:50:34+00:00",
+   "source": "Security NEXT"
+  },
   {
    "title": "オンライン麻雀に不正アクセス 会員情報流出 ～ 寄せられた激励メッセージに謝意 メールはスタッフ全員が目を通し必ず返信",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/13/56779.html",
@@ -53,12 +59,6 @@
    "title": "東急不動産が管理するウェブサイトに不正アクセス",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/13/56771.html",
    "date": "2026-11-12T23:05:05+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "「ARTPASS」「アソビュー!」の委託先に不正アクセス、京都市京セラ美術館と二条城で情報流出の可能性",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/13/56770.html",
-   "date": "2026-11-12T23:05:02+00:00",
    "source": "ScanNetSecurity"
   }
  ]
