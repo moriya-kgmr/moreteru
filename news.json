@@ -1,65 +1,65 @@
 {
- "updated": "2026-11-15T22:45:18.137035+00:00",
+ "updated": "2026-11-15T23:51:27.553004+00:00",
  "items": [
+  {
+   "title": "アクサ損害保険「MyAXA」に不正アクセス、約59万7千件の顧客情報が漏えいした可能性",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/16/56793.html",
+   "date": "2026-11-15T23:05:24+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "三井住友海上火災保険の中堅・中小企業向け情報提供サイト「MSコンパス」に不正アクセス",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/16/56792.html",
+   "date": "2026-11-15T23:05:22+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "三井住友海上火災保険「ご契約者さま専用ページ」に不正アクセス、約3万7,000件の顧客情報が漏えい",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/16/56791.html",
+   "date": "2026-11-15T23:05:18+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "「靖國神社オンライン授与品・頒布品サイト」に不正アクセス、約1万4,500件の利用者の個人情報が漏えい",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/16/56790.html",
+   "date": "2026-11-15T23:05:16+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "アイリスオーヤマ公式通販サイト「アイリスプラザ」に不正アクセス、約770万人の個人情報が漏えいした可能性",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/16/56789.html",
+   "date": "2026-11-15T23:05:13+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "「ウチコミ！」にランサムウェア攻撃、14万2,591アカウントに影響",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/16/56788.html",
+   "date": "2026-11-15T23:05:09+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "「Shippio Platform」に不正アクセス、データの一部損傷を確認",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/16/56787.html",
+   "date": "2026-11-15T23:05:07+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "プレステージ・インターナショナルグループの業務システムに不正アクセス、最大約550万件の顧客の個人情報が持ち出されたことを確認",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/16/56786.html",
+   "date": "2026-11-15T23:05:05+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "価格漏えいに伴う官製談合及び入札妨害の容疑で川崎市職員を逮捕",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/16/56785.html",
+   "date": "2026-11-15T23:05:02+00:00",
+   "source": "ScanNetSecurity"
+  },
   {
    "title": "認証情報が漏洩、GitHub環境に不正アクセス - CSC",
    "link": "https://www.security-next.com/192847",
    "date": "2026-11-13T14:50:34+00:00",
    "source": "Security NEXT"
-  },
-  {
-   "title": "「無印良品」のアプリやネットストアで重なる侵害被害",
-   "link": "https://www.security-next.com/192851",
-   "date": "2026-11-13T14:13:57+00:00",
-   "source": "Security NEXT"
-  },
-  {
-   "title": "オンライン麻雀に不正アクセス 会員情報流出 ～ 寄せられた激励メッセージに謝意 メールはスタッフ全員が目を通し必ず返信",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/13/56779.html",
-   "date": "2026-11-12T23:10:03+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "ブックオフグループホールディングス子会社の会員管理システムに不正アクセス、638万3,279人の会員情報が漏えい",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/13/56778.html",
-   "date": "2026-11-12T23:05:23+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "無印良品のオーダーカーテンに関する業務委託先に不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/13/56777.html",
-   "date": "2026-11-12T23:05:20+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "ApplyNow 提供の採用管理プラットフォームに不正アクセス、利用終了した企業団体のデータを削除せず",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/13/56776.html",
-   "date": "2026-11-12T23:05:18+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "丸井グループの業務委託先 Securitize Japan に不正アクセス、デジタル社債を申し込んだ顧客情報が漏えい",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/13/56775.html",
-   "date": "2026-11-12T23:05:14+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "「ノジマオンライン」に不正アクセス、約700万件の会員情報が漏えい",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/13/56774.html",
-   "date": "2026-11-12T23:05:12+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "「ネットマイル」に不正アクセス、最大約549万人の会員情報等が漏えいした可能性",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/13/56773.html",
-   "date": "2026-11-12T23:05:10+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "「しまねのふるさと直送便」にAmazon Payプラグインの脆弱性を悪用した不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/13/56772.html",
-   "date": "2026-11-12T23:05:07+00:00",
-   "source": "ScanNetSecurity"
   }
  ]
 }
