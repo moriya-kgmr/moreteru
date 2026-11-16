@@ -1,6 +1,12 @@
 {
- "updated": "2026-11-16T11:29:19.885595+00:00",
+ "updated": "2026-11-16T15:11:22.844339+00:00",
  "items": [
+  {
+   "title": "過去利用した委託先メルマガシステムが侵害 - JP労組",
+   "link": "https://www.security-next.com/192465",
+   "date": "2026-11-16T02:39:10+00:00",
+   "source": "Security NEXT"
+  },
   {
    "title": "アクサ損害保険「MyAXA」に不正アクセス、約59万7千件の顧客情報が漏えいした可能性",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/16/56793.html",
@@ -54,12 +60,6 @@
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/16/56785.html",
    "date": "2026-11-15T23:05:02+00:00",
    "source": "ScanNetSecurity"
-  },
-  {
-   "title": "認証情報が漏洩、GitHub環境に不正アクセス - CSC",
-   "link": "https://www.security-next.com/192847",
-   "date": "2026-11-13T14:50:34+00:00",
-   "source": "Security NEXT"
   }
  ]
 }
