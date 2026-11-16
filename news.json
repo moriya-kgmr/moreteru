@@ -1,6 +1,18 @@
 {
- "updated": "2026-11-16T15:11:22.844339+00:00",
+ "updated": "2026-11-16T16:45:21.636675+00:00",
  "items": [
+  {
+   "title": "通信販売サイトで個人情報が流出 - 靖国神社",
+   "link": "https://www.security-next.com/192746",
+   "date": "2026-11-16T13:10:18+00:00",
+   "source": "Security NEXT"
+  },
+  {
+   "title": "フィッシング被害で個人情報流出の可能性 - 八十二長野銀",
+   "link": "https://www.security-next.com/192395",
+   "date": "2026-11-16T11:46:12+00:00",
+   "source": "Security NEXT"
+  },
   {
    "title": "過去利用した委託先メルマガシステムが侵害 - JP労組",
    "link": "https://www.security-next.com/192465",
@@ -47,18 +59,6 @@
    "title": "「Shippio Platform」に不正アクセス、データの一部損傷を確認",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/16/56787.html",
    "date": "2026-11-15T23:05:07+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "プレステージ・インターナショナルグループの業務システムに不正アクセス、最大約550万件の顧客の個人情報が持ち出されたことを確認",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/16/56786.html",
-   "date": "2026-11-15T23:05:05+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "価格漏えいに伴う官製談合及び入札妨害の容疑で川崎市職員を逮捕",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/16/56785.html",
-   "date": "2026-11-15T23:05:02+00:00",
    "source": "ScanNetSecurity"
   }
  ]
