@@ -1,65 +1,65 @@
 {
- "updated": "2026-11-16T22:53:16.532597+00:00",
+ "updated": "2026-11-16T23:49:13.009546+00:00",
  "items": [
+  {
+   "title": "アクティブ運営の通販サイトにSQLインジェクション攻撃、最大5万4,916件の顧客情報が流出した可能性",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/17/56807.html",
+   "date": "2026-11-16T23:05:23+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "エディオンECサイトに不正アクセス、不正なプログラムが組み込まれる改ざんが新たに判明",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/17/56806.html",
+   "date": "2026-11-16T23:05:21+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "よーじやの会員情報管理システムに不正アクセス、店舗・オンラインショップ・アプリに登録のあった顧客の個人情報が漏えい",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/17/56805.html",
+   "date": "2026-11-16T23:05:18+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "「teket」に不正アクセス",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/17/56804.html",
+   "date": "2026-11-16T23:05:16+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "機関投資家向けIR情報提供サービス「機関Navi」に不正アクセス",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/17/56803.html",
+   "date": "2026-11-16T23:05:14+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "Cuenoteへの不正アクセス、インプレスのメールマガジン「DIGITAL X News」の会員情報 約5万8,000件が漏えい",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/17/56802.html",
+   "date": "2026-11-16T23:05:11+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "住民記録システム移行作業でテストデータを誤送信しマイナンバーカード失効",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/17/56801.html",
+   "date": "2026-11-16T23:05:08+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "NewsPicksに管理ツールの脆弱性を突いた不正アクセス",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/17/56800.html",
+   "date": "2026-11-16T23:05:06+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "医療関係者向け情報提供ウェブサイト「Pharma DIGITAL」にサイバー攻撃、医療従事者55万8,000名の個人情報が漏えいした可能性",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/17/56799.html",
+   "date": "2026-11-16T23:05:03+00:00",
+   "source": "ScanNetSecurity"
+  },
   {
    "title": "通信販売サイトで個人情報が流出 - 靖国神社",
    "link": "https://www.security-next.com/192746",
    "date": "2026-11-16T13:10:18+00:00",
    "source": "Security NEXT"
-  },
-  {
-   "title": "フィッシング被害で個人情報流出の可能性 - 八十二長野銀",
-   "link": "https://www.security-next.com/192395",
-   "date": "2026-11-16T11:46:12+00:00",
-   "source": "Security NEXT"
-  },
-  {
-   "title": "過去利用した委託先メルマガシステムが侵害 - JP労組",
-   "link": "https://www.security-next.com/192465",
-   "date": "2026-11-16T02:39:10+00:00",
-   "source": "Security NEXT"
-  },
-  {
-   "title": "アクサ損害保険「MyAXA」に不正アクセス、約59万7千件の顧客情報が漏えいした可能性",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/16/56793.html",
-   "date": "2026-11-15T23:05:24+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "三井住友海上火災保険の中堅・中小企業向け情報提供サイト「MSコンパス」に不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/16/56792.html",
-   "date": "2026-11-15T23:05:22+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "三井住友海上火災保険「ご契約者さま専用ページ」に不正アクセス、約3万7,000件の顧客情報が漏えい",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/16/56791.html",
-   "date": "2026-11-15T23:05:18+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "「靖國神社オンライン授与品・頒布品サイト」に不正アクセス、約1万4,500件の利用者の個人情報が漏えい",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/16/56790.html",
-   "date": "2026-11-15T23:05:16+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "アイリスオーヤマ公式通販サイト「アイリスプラザ」に不正アクセス、約770万人の個人情報が漏えいした可能性",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/16/56789.html",
-   "date": "2026-11-15T23:05:13+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "「ウチコミ！」にランサムウェア攻撃、14万2,591アカウントに影響",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/16/56788.html",
-   "date": "2026-11-15T23:05:09+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "「Shippio Platform」に不正アクセス、データの一部損傷を確認",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/16/56787.html",
-   "date": "2026-11-15T23:05:07+00:00",
-   "source": "ScanNetSecurity"
   }
  ]
 }
