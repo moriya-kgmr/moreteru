@@ -1,6 +1,18 @@
 {
- "updated": "2026-11-17T14:27:13.950625+00:00",
+ "updated": "2026-11-17T16:00:36.287467+00:00",
  "items": [
+  {
+   "title": "太陽光発電遠隔監視サービスで侵害 - ポイント不正交換も",
+   "link": "https://www.security-next.com/192657",
+   "date": "2026-11-17T13:42:49+00:00",
+   "source": "Security NEXT"
+  },
+  {
+   "title": "防災製品部の出荷管理システムで侵害か - 古河電工グループ会社",
+   "link": "https://www.security-next.com/192962",
+   "date": "2026-11-17T13:21:22+00:00",
+   "source": "Security NEXT"
+  },
   {
    "title": "証券会社かたる「フィッシング」 - 情報流出の通知なども偽装",
    "link": "https://www.security-next.com/192972",
@@ -47,18 +59,6 @@
    "title": "住民記録システム移行作業でテストデータを誤送信しマイナンバーカード失効",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/17/56801.html",
    "date": "2026-11-16T23:05:08+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "NewsPicksに管理ツールの脆弱性を突いた不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/17/56800.html",
-   "date": "2026-11-16T23:05:06+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "医療関係者向け情報提供ウェブサイト「Pharma DIGITAL」にサイバー攻撃、医療従事者55万8,000名の個人情報が漏えいした可能性",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/17/56799.html",
-   "date": "2026-11-16T23:05:03+00:00",
    "source": "ScanNetSecurity"
   }
  ]
