@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T16:00:36.287467+00:00",
+ "updated": "2026-11-17T17:10:40.961353+00:00",
  "items": [
   {
    "title": "太陽光発電遠隔監視サービスで侵害 - ポイント不正交換も",
@@ -17,6 +17,12 @@
    "title": "証券会社かたる「フィッシング」 - 情報流出の通知なども偽装",
    "link": "https://www.security-next.com/192972",
    "date": "2026-11-17T11:10:47+00:00",
+   "source": "Security NEXT"
+  },
+  {
+   "title": "従業員情報含むファイルをメールで誤送信 - 三菱ガス化学",
+   "link": "https://www.security-next.com/192498",
+   "date": "2026-11-17T08:18:07+00:00",
    "source": "Security NEXT"
   },
   {
@@ -53,12 +59,6 @@
    "title": "Cuenoteへの不正アクセス、インプレスのメールマガジン「DIGITAL X News」の会員情報 約5万8,000件が漏えい",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/17/56802.html",
    "date": "2026-11-16T23:05:11+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "住民記録システム移行作業でテストデータを誤送信しマイナンバーカード失効",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/17/56801.html",
-   "date": "2026-11-16T23:05:08+00:00",
    "source": "ScanNetSecurity"
   }
  ]
