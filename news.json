@@ -1,10 +1,16 @@
 {
- "updated": "2026-11-18T18:00:23.905535+00:00",
+ "updated": "2026-11-18T19:00:45.389620+00:00",
  "items": [
   {
    "title": "年収や資産情報など個人情報流出の可能性 - 楽天証券",
    "link": "https://www.security-next.com/193015",
    "date": "2026-11-18T14:25:28+00:00",
+   "source": "Security NEXT"
+  },
+  {
+   "title": "理研「富岳」で侵害 - 窃取情報で他システムへの攻撃試行も",
+   "link": "https://www.security-next.com/192952",
+   "date": "2026-11-18T14:24:42+00:00",
    "source": "Security NEXT"
   },
   {
@@ -53,12 +59,6 @@
    "title": "ビューティガレージECサイトに不正アクセス、77万5,725件の顧客情報が漏えい",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/18/56819.html",
    "date": "2026-11-17T23:05:13+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "特定の1社にのみに提供しているBIツールが起点に ～  ACCESS AP TAIWANのEC事業者向け業務支援サービス「CROS」に不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/18/56818.html",
-   "date": "2026-11-17T23:05:11+00:00",
    "source": "ScanNetSecurity"
   }
  ]
