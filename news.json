@@ -1,65 +1,35 @@
 {
- "updated": "2026-11-18T13:20:10.933585+00:00",
+ "updated": "2026-11-18T15:02:46.203483+00:00",
  "items": [
   {
-   "title": "セブン銀行に不正アクセス、最大150件程度の在留カードの券面情報が漏えいした可能性",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/18/56825.html",
-   "date": "2026-11-17T23:05:26+00:00",
-   "source": "ScanNetSecurity"
+   "title": "年収や資産情報など個人情報流出の可能性 - 楽天証券",
+   "link": "https://www.security-next.com/193015",
+   "date": "2026-11-18T14:25:28+00:00",
+   "source": "Security NEXT"
   },
   {
-   "title": "「マクロミル モニタサイト」に不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/18/56824.html",
-   "date": "2026-11-17T23:05:23+00:00",
-   "source": "ScanNetSecurity"
+   "title": "太陽光発電遠隔監視サービスで侵害 - ポイント不正交換も",
+   "link": "https://www.security-next.com/192657",
+   "date": "2026-11-17T13:42:49+00:00",
+   "source": "Security NEXT"
   },
   {
-   "title": "API接続設定不備が原因 不正アクセスでYenyの会員情報133万2,505件が漏えい",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/18/56823.html",
-   "date": "2026-11-17T23:05:21+00:00",
-   "source": "ScanNetSecurity"
+   "title": "防災製品部の出荷管理システムで侵害か - 古河電工グループ会社",
+   "link": "https://www.security-next.com/192962",
+   "date": "2026-11-17T13:21:22+00:00",
+   "source": "Security NEXT"
   },
   {
-   "title": "オープンロジのシステムに不正アクセス、出荷データの持ち出しを確認",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/18/56822.html",
-   "date": "2026-11-17T23:05:20+00:00",
-   "source": "ScanNetSecurity"
+   "title": "証券会社かたる「フィッシング」 - 情報流出の通知なども偽装",
+   "link": "https://www.security-next.com/192972",
+   "date": "2026-11-17T11:10:47+00:00",
+   "source": "Security NEXT"
   },
   {
-   "title": "マッチングアプリ「Lili」に不正アクセス、本人確認書類の画像含む会員情報が流出した可能性",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/18/56821.html",
-   "date": "2026-11-17T23:05:17+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "日本生命病院のインターネット閲覧用パソコンがサポート詐欺被害、院内規定に反し個人情報を保存",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/18/56820.html",
-   "date": "2026-11-17T23:05:15+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "ビューティガレージECサイトに不正アクセス、77万5,725件の顧客情報が漏えい",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/18/56819.html",
-   "date": "2026-11-17T23:05:13+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "特定の1社にのみに提供しているBIツールが起点に ～  ACCESS AP TAIWANのEC事業者向け業務支援サービス「CROS」に不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/18/56818.html",
-   "date": "2026-11-17T23:05:11+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "「銀のさら・釜寅・すし上等」公式サイト・公式アプリにランサムウェア攻撃",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/18/56817.html",
-   "date": "2026-11-17T23:05:08+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "八十二長野銀行職員のメールアカウントに不正アクセス、海外企業を騙るフィッシングメールを受信し認証操作",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/18/56816.html",
-   "date": "2026-11-17T23:05:06+00:00",
-   "source": "ScanNetSecurity"
+   "title": "従業員情報含むファイルをメールで誤送信 - 三菱ガス化学",
+   "link": "https://www.security-next.com/192498",
+   "date": "2026-11-17T08:18:07+00:00",
+   "source": "Security NEXT"
   }
  ]
 }
