@@ -1,6 +1,18 @@
 {
- "updated": "2026-11-19T15:02:09.123246+00:00",
+ "updated": "2026-11-19T16:07:33.843964+00:00",
  "items": [
+  {
+   "title": "店頭体験レッスン予約システムで個人情報が流出 - コーセー",
+   "link": "https://www.security-next.com/193020",
+   "date": "2026-11-19T13:04:04+00:00",
+   "source": "Security NEXT"
+  },
+  {
+   "title": "ランサム攻撃で生産関連システムが停止、出荷に影響 - 大崎電気工業",
+   "link": "https://www.security-next.com/193088",
+   "date": "2026-11-19T12:28:50+00:00",
+   "source": "Security NEXT"
+  },
   {
    "title": "サイバーセキュリティクラウドの開発環境に不正アクセス、GitHubに保存されていた個人情報が漏えいした可能性",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/19/56842.html",
@@ -48,18 +60,6 @@
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/19/56835.html",
    "date": "2026-11-18T23:05:08+00:00",
    "source": "ScanNetSecurity"
-  },
-  {
-   "title": "トレジャー・ファクトリーの案件管理システムに不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/19/56834.html",
-   "date": "2026-11-18T23:05:05+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "年収や資産情報など個人情報流出の可能性 - 楽天証券",
-   "link": "https://www.security-next.com/193015",
-   "date": "2026-11-18T14:25:28+00:00",
-   "source": "Security NEXT"
   }
  ]
 }
