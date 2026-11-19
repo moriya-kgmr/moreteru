@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T16:07:33.843964+00:00",
+ "updated": "2026-11-19T17:14:13.914268+00:00",
  "items": [
   {
    "title": "店頭体験レッスン予約システムで個人情報が流出 - コーセー",
@@ -11,6 +11,12 @@
    "title": "ランサム攻撃で生産関連システムが停止、出荷に影響 - 大崎電気工業",
    "link": "https://www.security-next.com/193088",
    "date": "2026-11-19T12:28:50+00:00",
+   "source": "Security NEXT"
+  },
+  {
+   "title": "JETROの一部サイトに不正アクセス - 個人情報が流出",
+   "link": "https://www.security-next.com/192759",
+   "date": "2026-11-19T10:47:33+00:00",
    "source": "Security NEXT"
   },
   {
@@ -53,12 +59,6 @@
    "title": "イオングループの一部Webサイトに不正アクセス、414件の顧客情報が流出",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/19/56836.html",
    "date": "2026-11-18T23:05:12+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "Joshinのネットワークに不正アクセス、免許証画像やマイナンバーカード情報が漏えいした可能性",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/19/56835.html",
-   "date": "2026-11-18T23:05:08+00:00",
    "source": "ScanNetSecurity"
   }
  ]
