@@ -1,6 +1,18 @@
 {
- "updated": "2026-11-20T13:19:14.379810+00:00",
+ "updated": "2026-11-20T15:00:29.061192+00:00",
  "items": [
+  {
+   "title": "買い物アプリのシステムに侵害、内部に個人情報 - USMH",
+   "link": "https://www.security-next.com/192800",
+   "date": "2026-11-20T14:30:55+00:00",
+   "source": "Security NEXT"
+  },
+  {
+   "title": "通販サイト内に不正ファイル、個人情報流出の可能性 - ソフト99",
+   "link": "https://www.security-next.com/192805",
+   "date": "2026-11-20T13:38:06+00:00",
+   "source": "Security NEXT"
+  },
   {
    "title": "クラウド環境や業務ツールに不正アクセス、個人情報流出 - Gunosy",
    "link": "https://www.security-next.com/193094",
@@ -47,18 +59,6 @@
    "title": "資生堂グループの肌測定システム「Facial Condition Analyzer」に不正アクセス、合計2,515件の個人情報が漏えい",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/20/56858.html",
    "date": "2026-11-19T23:05:21+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "チームスピリットのソフトウェア開発用サーバに不正アクセス、28,824件の個人情報が漏えい",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/20/56857.html",
-   "date": "2026-11-19T23:05:18+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "ソニー少額短期保険が社内利用する契約管理システムの開発・テスト環境に不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/20/56856.html",
-   "date": "2026-11-19T23:05:14+00:00",
    "source": "ScanNetSecurity"
   }
  ]
