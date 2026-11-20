@@ -1,6 +1,12 @@
 {
- "updated": "2026-11-20T12:03:37.991084+00:00",
+ "updated": "2026-11-20T13:19:14.379810+00:00",
  "items": [
+  {
+   "title": "クラウド環境や業務ツールに不正アクセス、個人情報流出 - Gunosy",
+   "link": "https://www.security-next.com/193094",
+   "date": "2026-11-20T11:21:03+00:00",
+   "source": "Security NEXT"
+  },
   {
    "title": "「ONE cosme」に不正アクセス、最大1,154名の会員情報が取得された可能性",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/20/56864.html",
@@ -53,12 +59,6 @@
    "title": "ソニー少額短期保険が社内利用する契約管理システムの開発・テスト環境に不正アクセス",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/20/56856.html",
    "date": "2026-11-19T23:05:14+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "JNSA「情報セキュリティ理解度チェックサービス」に不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/20/56855.html",
-   "date": "2026-11-19T23:05:11+00:00",
    "source": "ScanNetSecurity"
   }
  ]
