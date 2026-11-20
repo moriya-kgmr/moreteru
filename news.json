@@ -1,6 +1,12 @@
 {
- "updated": "2026-11-20T15:00:29.061192+00:00",
+ "updated": "2026-11-20T16:01:54.743850+00:00",
  "items": [
+  {
+   "title": "個人情報管理システムが侵害、脆弱性対応中に判明 - 早稲田大",
+   "link": "https://www.security-next.com/192578",
+   "date": "2026-11-20T15:01:45+00:00",
+   "source": "Security NEXT"
+  },
   {
    "title": "買い物アプリのシステムに侵害、内部に個人情報 - USMH",
    "link": "https://www.security-next.com/192800",
@@ -17,6 +23,12 @@
    "title": "クラウド環境や業務ツールに不正アクセス、個人情報流出 - Gunosy",
    "link": "https://www.security-next.com/193094",
    "date": "2026-11-20T11:21:03+00:00",
+   "source": "Security NEXT"
+  },
+  {
+   "title": "リフォーム管理システムに不正アクセス - ヤマダデンキ",
+   "link": "https://www.security-next.com/192867",
+   "date": "2026-11-20T04:23:33+00:00",
    "source": "Security NEXT"
   },
   {
@@ -47,18 +59,6 @@
    "title": "ユミルリンクのメール配信サービスに不正アクセス、延べ4,786万4,147件の配信先情報が漏えい",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/20/56860.html",
    "date": "2026-11-19T23:05:28+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "インターネット調査システムに不正アクセス、個人情報の漏えいがないことを確認",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/20/56859.html",
-   "date": "2026-11-19T23:05:25+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "資生堂グループの肌測定システム「Facial Condition Analyzer」に不正アクセス、合計2,515件の個人情報が漏えい",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/20/56858.html",
-   "date": "2026-11-19T23:05:21+00:00",
    "source": "ScanNetSecurity"
   }
  ]
