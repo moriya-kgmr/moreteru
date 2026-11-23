@@ -1,64 +1,64 @@
 {
- "updated": "2026-11-23T22:59:11.945959+00:00",
+ "updated": "2026-11-23T23:56:18.588001+00:00",
  "items": [
   {
-   "title": "個人情報管理システムが侵害、脆弱性対応中に判明 - 早稲田大",
-   "link": "https://www.security-next.com/192578",
-   "date": "2026-11-20T15:01:45+00:00",
-   "source": "Security NEXT"
-  },
-  {
-   "title": "買い物アプリのシステムに侵害、内部に個人情報 - USMH",
-   "link": "https://www.security-next.com/192800",
-   "date": "2026-11-20T14:30:55+00:00",
-   "source": "Security NEXT"
-  },
-  {
-   "title": "通販サイト内に不正ファイル、個人情報流出の可能性 - ソフト99",
-   "link": "https://www.security-next.com/192805",
-   "date": "2026-11-20T13:38:06+00:00",
-   "source": "Security NEXT"
-  },
-  {
-   "title": "クラウド環境や業務ツールに不正アクセス、個人情報流出 - Gunosy",
-   "link": "https://www.security-next.com/193094",
-   "date": "2026-11-20T11:21:03+00:00",
-   "source": "Security NEXT"
-  },
-  {
-   "title": "リフォーム管理システムに不正アクセス - ヤマダデンキ",
-   "link": "https://www.security-next.com/192867",
-   "date": "2026-11-20T04:23:33+00:00",
-   "source": "Security NEXT"
-  },
-  {
-   "title": "「ONE cosme」に不正アクセス、最大1,154名の会員情報が取得された可能性",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/20/56864.html",
-   "date": "2026-11-19T23:05:41+00:00",
+   "title": "SCS評価制度でランサムウェア対策を点検 ～ セコムトラストシステムズ ウェビナー 12 / 9・10 開催",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/24/56882.html",
+   "date": "2026-11-23T23:10:03+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "楽天証券に不正アクセス、最大約1,125万口座の情報が漏えいした可能性",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/20/56863.html",
-   "date": "2026-11-19T23:05:37+00:00",
+   "title": "マネックス証券の口座開設システムに不正アクセス、本人確認書類画像データが漏えいした可能性",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/24/56881.html",
+   "date": "2026-11-23T23:05:33+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "理研が運用するスーパーコンピュータ「富岳」の運用系システムに不正アクセス、利用者の認証システムに登録された情報が持ち出された可能性",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/20/56862.html",
-   "date": "2026-11-19T23:05:34+00:00",
+   "title": "スカイライナー座席予約システムに不正アクセス、最大約337万件の顧客情報が取得された可能性",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/24/56880.html",
+   "date": "2026-11-23T23:05:30+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "SMBC日興証券が持株会事務受託業務で使用しているシステムに不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/20/56861.html",
-   "date": "2026-11-19T23:05:31+00:00",
+   "title": "アットホーム提供の不動産会社向け業務管理サービス「賃貸管理システム」に不正アクセス",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/24/56879.html",
+   "date": "2026-11-23T23:05:27+00:00",
    "source": "ScanNetSecurity"
   },
   {
-   "title": "ユミルリンクのメール配信サービスに不正アクセス、延べ4,786万4,147件の配信先情報が漏えい",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/20/56860.html",
-   "date": "2026-11-19T23:05:28+00:00",
+   "title": "電通デジタル「TONARIWA」に不正アクセス、導入企業 2 社で個人情報漏えい",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/24/56878.html",
+   "date": "2026-11-23T23:05:23+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "ロート製薬のシステムに不正アクセス、クレジットカード番号含む通話音声データが漏えい",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/24/56876.html",
+   "date": "2026-11-23T23:05:16+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "保険代理店に提供システム「FWD navi」に不正アクセス、最大9,000件の契約情報が閲覧可能な状態に",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/24/56875.html",
+   "date": "2026-11-23T23:05:12+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "ニトリホールディングスに不正アクセス、最大3,762万件の個人情報が漏えい",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/24/56874.html",
+   "date": "2026-11-23T23:05:10+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "スキマバイトアプリ「シェアフル」の社内管理システムに不正アクセス、最大約750万件の個人情報が流出した可能性",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/24/56873.html",
+   "date": "2026-11-23T23:05:07+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "債権回収事業者に不正アクセス、地銀の個人情報漏えい",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/24/56871.html",
+   "date": "2026-11-23T23:05:02+00:00",
    "source": "ScanNetSecurity"
   }
  ]
