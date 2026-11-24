@@ -1,6 +1,30 @@
 {
- "updated": "2026-11-24T13:23:52.581787+00:00",
+ "updated": "2026-11-24T15:09:05.740314+00:00",
  "items": [
+  {
+   "title": "ネットオーダーで侵害、サービスを停止 - ミスド",
+   "link": "https://www.security-next.com/193086",
+   "date": "2026-11-24T14:23:49+00:00",
+   "source": "Security NEXT"
+  },
+  {
+   "title": "ファンクラブ会員の個人情報が流出 - 読売巨人",
+   "link": "https://www.security-next.com/192864",
+   "date": "2026-11-24T11:15:33+00:00",
+   "source": "Security NEXT"
+  },
+  {
+   "title": "高校の修学旅行引率中に生徒の個人情報を紛失 - 広島県",
+   "link": "https://www.security-next.com/192872",
+   "date": "2026-11-24T03:51:43+00:00",
+   "source": "Security NEXT"
+  },
+  {
+   "title": "タワレコ通販サイト、顧客情報が流出",
+   "link": "https://www.security-next.com/193228",
+   "date": "2026-11-24T01:43:05+00:00",
+   "source": "Security NEXT"
+  },
   {
    "title": "SCS評価制度でランサムウェア対策を点検 ～ セコムトラストシステムズ ウェビナー 12 / 9・10 開催",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/24/56882.html",
@@ -35,30 +59,6 @@
    "title": "ロート製薬のシステムに不正アクセス、クレジットカード番号含む通話音声データが漏えい",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/24/56876.html",
    "date": "2026-11-23T23:05:16+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "保険代理店に提供システム「FWD navi」に不正アクセス、最大9,000件の契約情報が閲覧可能な状態に",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/24/56875.html",
-   "date": "2026-11-23T23:05:12+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "ニトリホールディングスに不正アクセス、最大3,762万件の個人情報が漏えい",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/24/56874.html",
-   "date": "2026-11-23T23:05:10+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "スキマバイトアプリ「シェアフル」の社内管理システムに不正アクセス、最大約750万件の個人情報が流出した可能性",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/24/56873.html",
-   "date": "2026-11-23T23:05:07+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "債権回収事業者に不正アクセス、地銀の個人情報漏えい",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/24/56871.html",
-   "date": "2026-11-23T23:05:02+00:00",
    "source": "ScanNetSecurity"
   }
  ]
