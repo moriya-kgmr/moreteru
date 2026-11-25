@@ -1,6 +1,48 @@
 {
- "updated": "2026-11-25T23:00:27.404750+00:00",
+ "updated": "2026-11-25T23:55:45.319209+00:00",
  "items": [
+  {
+   "title": "窃取した認証情報を用いたアカウント乗っ取りも ～「KARTE」不正アクセス調査結果",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/26/56908.html",
+   "date": "2026-11-25T23:05:18+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "「KARTE」への不正アクセス、ZOZOの顧客情報も漏えい",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/26/56907.html",
+   "date": "2026-11-25T23:05:16+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "「KARTE」への不正アクセス、「コミックシーモア」・「MangaPlaza」の顧客情報が流出",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/26/56906.html",
+   "date": "2026-11-25T23:05:14+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "「KARTE」への不正アクセス、「JINSオンラインショップ」等で会員登録を行った最大 約1,829万件の個人情報が漏えいした可能性",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/26/56905.html",
+   "date": "2026-11-25T23:05:11+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "「KARTE」への不正アクセス、ZAP ID登録者 最大約432万件のメールアドレスが漏えいした可能性",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/26/56904.html",
+   "date": "2026-11-25T23:05:09+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "LiPLUSホールディングスが利用する架電システム「Telforce」に不正アクセス、約28万件の電話番号等が漏えいした可能性",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/26/56903.html",
+   "date": "2026-11-25T23:05:07+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "ビックカメラグループが委託するアララ提供のメール配信システムに不正アクセス、1,520万4,757件の顧客情報漏えいを確認",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/26/56902.html",
+   "date": "2026-11-25T23:05:03+00:00",
+   "source": "ScanNetSecurity"
+  },
   {
    "title": "ランサム攻撃で個人情報流出、パスポート写しも - 京王電鉄",
    "link": "https://www.security-next.com/193305",
@@ -18,48 +60,6 @@
    "link": "https://www.security-next.com/193316",
    "date": "2026-11-25T12:39:40+00:00",
    "source": "Security NEXT"
-  },
-  {
-   "title": "九州電力送配電に不正アクセス、使用電力量や発電電力量が漏えいした可能性",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/25/56896.html",
-   "date": "2026-11-24T23:05:24+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "大崎電気工業にランサムウェア攻撃、インターネット上のサイトへの技術情報の掲載を認知",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/25/56895.html",
-   "date": "2026-11-24T23:05:22+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "山善コーポレートサイトに不正アクセス、「お問い合わせフォーム」への登録データ延べ1万508件の個人情報が漏えいした可能性",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/25/56894.html",
-   "date": "2026-11-24T23:05:18+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "ヤマダデンキのリフォーム管理システムに不正アクセス、最大350万件の顧客情報が影響を受けた可能性",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/25/56893.html",
-   "date": "2026-11-24T23:05:16+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "旅行会社向け予約手配システム「Rikisha Easy REZ!」に不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/25/56892.html",
-   "date": "2026-11-24T23:05:12+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "ドッペルゲンガードメイン到達の可能性 ～ 情報セキュリティポリシーに反し個人情報データを私用メールアドレスに送信",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/25/56891.html",
-   "date": "2026-11-24T23:05:09+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "出光興産「idemitsu カーメンテ予約」（旧 PIT in plus）に不正アクセス",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/25/56890.html",
-   "date": "2026-11-24T23:05:07+00:00",
-   "source": "ScanNetSecurity"
   }
  ]
 }
