@@ -1,6 +1,18 @@
 {
- "updated": "2026-11-25T13:29:14.823679+00:00",
+ "updated": "2026-11-25T15:14:52.440444+00:00",
  "items": [
+  {
+   "title": "ランサム攻撃で個人情報流出、パスポート写しも - 京王電鉄",
+   "link": "https://www.security-next.com/193305",
+   "date": "2026-11-25T14:12:41+00:00",
+   "source": "Security NEXT"
+  },
+  {
+   "title": "アプリの顧客情報DBに不正アクセス - マクドナルド",
+   "link": "https://www.security-next.com/193232",
+   "date": "2026-11-25T13:13:26+00:00",
+   "source": "Security NEXT"
+  },
   {
    "title": "九州電力送配電に不正アクセス、使用電力量や発電電力量が漏えいした可能性",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/25/56896.html",
@@ -48,18 +60,6 @@
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/25/56889.html",
    "date": "2026-11-24T23:05:04+00:00",
    "source": "ScanNetSecurity"
-  },
-  {
-   "title": "旅行比較サイト「トラベルコ」に不正アクセス、メールマガジンに登録のあった38万1,926件のメールアドレスが流出",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/25/56888.html",
-   "date": "2026-11-24T23:05:02+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "ネットオーダーで侵害、サービスを停止 - ミスド",
-   "link": "https://www.security-next.com/193086",
-   "date": "2026-11-24T14:23:49+00:00",
-   "source": "Security NEXT"
   }
  ]
 }
