@@ -1,6 +1,12 @@
 {
- "updated": "2026-11-26T09:15:58.329451+00:00",
+ "updated": "2026-11-26T10:24:14.301987+00:00",
  "items": [
+  {
+   "title": "ENEOS公式アプリで侵害、サービス停止 - 影響など調査",
+   "link": "https://www.security-next.com/193377",
+   "date": "2026-11-26T01:59:26+00:00",
+   "source": "Security NEXT"
+  },
   {
    "title": "窃取した認証情報を用いたアカウント乗っ取りも ～「KARTE」不正アクセス調査結果",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/26/56908.html",
@@ -53,12 +59,6 @@
    "title": "アプリの顧客情報DBに不正アクセス - マクドナルド",
    "link": "https://www.security-next.com/193232",
    "date": "2026-11-25T13:13:26+00:00",
-   "source": "Security NEXT"
-  },
-  {
-   "title": "通販サイトに不正アクセス、会員情報改ざんや不正注文も - DHC",
-   "link": "https://www.security-next.com/193316",
-   "date": "2026-11-25T12:39:40+00:00",
    "source": "Security NEXT"
   }
  ]
