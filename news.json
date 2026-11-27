@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T15:03:38.683956+00:00",
+ "updated": "2026-11-27T16:11:34.780879+00:00",
  "items": [
   {
    "title": "化粧品通販サイトに不正アクセス - 個人情報流出の可能性",
@@ -23,6 +23,12 @@
    "title": "「Drupal」が再アップデート、前回更新後も一部サイトは脆弱 - 侵害調査を",
    "link": "https://www.security-next.com/193451",
    "date": "2026-11-27T11:57:15+00:00",
+   "source": "Security NEXT"
+  },
+  {
+   "title": "問合フォームで設定不備、個人情報が閲覧可能に - ソースネクスト",
+   "link": "https://www.security-next.com/193162",
+   "date": "2026-11-27T01:52:05+00:00",
    "source": "Security NEXT"
   },
   {
@@ -53,12 +59,6 @@
    "title": "デジタル庁のファイル共有サービスに正規外アクセス、一部ファイルが漏えいした可能性",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/27/56915.html",
    "date": "2026-11-26T23:05:09+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "NewsPicksへの不正アクセス、BIツール「Metabase」の脆弱性を悪用",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/27/56914.html",
-   "date": "2026-11-26T23:05:05+00:00",
    "source": "ScanNetSecurity"
   }
  ]
