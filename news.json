@@ -1,6 +1,54 @@
 {
- "updated": "2026-11-26T23:04:09.317788+00:00",
+ "updated": "2026-11-27T00:01:55.050009+00:00",
  "items": [
+  {
+   "title": "今日もどこかで情報漏えい 第54回「2026年10月の情報漏えい」教育委員会職員の不正アクセスが発覚した理由",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/27/56921.html",
+   "date": "2026-11-26T23:15:03+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "「六花亭オンラインショップ」カード情報漏えい 不正利用 1 件確認 ～ クレカ再発行時の伝え方を案内 見舞金名目の不審な連絡にも注意喚起",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/27/56918.html",
+   "date": "2026-11-26T23:05:18+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "不正アクセスで札幌のクリスマス抽選会が中止に",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/27/56917.html",
+   "date": "2026-11-26T23:05:14+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "保守用アカウントを利用しシンクライアント環境経由で侵入 ～ エネコム社内ネットワークに不正アクセス",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/27/56916.html",
+   "date": "2026-11-26T23:05:12+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "デジタル庁のファイル共有サービスに正規外アクセス、一部ファイルが漏えいした可能性",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/27/56915.html",
+   "date": "2026-11-26T23:05:09+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "NewsPicksへの不正アクセス、BIツール「Metabase」の脆弱性を悪用",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/27/56914.html",
+   "date": "2026-11-26T23:05:05+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "「ミツモア」にシステムの脆弱性を悪用した不正アクセス、最大36万6,850件の情報が取得される",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/27/56913.html",
+   "date": "2026-11-26T23:05:02+00:00",
+   "source": "ScanNetSecurity"
+  },
+  {
+   "title": "ITreview Grid Award 2026 Fall 脆弱性管理ツール部門「GMOサイバー攻撃 ネットde診断 ASM」が「Leader」を初受賞",
+   "link": "https://scan.netsecurity.ne.jp/article/2026/11/27/56911.html",
+   "date": "2026-11-26T23:00:02+00:00",
+   "source": "ScanNetSecurity"
+  },
   {
    "title": "個人情報含むデータが外部に流出 - 富士ユナイトHD",
    "link": "https://www.security-next.com/193313",
@@ -12,54 +60,6 @@
    "link": "https://www.security-next.com/192812",
    "date": "2026-11-26T02:30:37+00:00",
    "source": "Security NEXT"
-  },
-  {
-   "title": "ENEOS公式アプリで侵害、サービス停止 - 影響など調査",
-   "link": "https://www.security-next.com/193377",
-   "date": "2026-11-26T01:59:26+00:00",
-   "source": "Security NEXT"
-  },
-  {
-   "title": "窃取した認証情報を用いたアカウント乗っ取りも ～「KARTE」不正アクセス調査結果",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/26/56908.html",
-   "date": "2026-11-25T23:05:18+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "「KARTE」への不正アクセス、ZOZOの顧客情報も漏えい",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/26/56907.html",
-   "date": "2026-11-25T23:05:16+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "「KARTE」への不正アクセス、「コミックシーモア」・「MangaPlaza」の顧客情報が流出",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/26/56906.html",
-   "date": "2026-11-25T23:05:14+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "「KARTE」への不正アクセス、「JINSオンラインショップ」等で会員登録を行った最大 約1,829万件の個人情報が漏えいした可能性",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/26/56905.html",
-   "date": "2026-11-25T23:05:11+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "「KARTE」への不正アクセス、ZAP ID登録者 最大約432万件のメールアドレスが漏えいした可能性",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/26/56904.html",
-   "date": "2026-11-25T23:05:09+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "LiPLUSホールディングスが利用する架電システム「Telforce」に不正アクセス、約28万件の電話番号等が漏えいした可能性",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/26/56903.html",
-   "date": "2026-11-25T23:05:07+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "ビックカメラグループが委託するアララ提供のメール配信システムに不正アクセス、1,520万4,757件の顧客情報漏えいを確認",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/26/56902.html",
-   "date": "2026-11-25T23:05:03+00:00",
-   "source": "ScanNetSecurity"
   }
  ]
 }
