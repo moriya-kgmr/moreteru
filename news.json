@@ -1,6 +1,12 @@
 {
- "updated": "2026-11-27T12:02:33.718780+00:00",
+ "updated": "2026-11-27T13:23:18.576958+00:00",
  "items": [
+  {
+   "title": "政府調達情報システムのサーバから個人情報流出か - 文科省",
+   "link": "https://www.security-next.com/193439",
+   "date": "2026-11-27T12:12:40+00:00",
+   "source": "Security NEXT"
+  },
   {
    "title": "「Drupal」が再アップデート、前回更新後も一部サイトは脆弱 - 侵害調査を",
    "link": "https://www.security-next.com/193451",
@@ -54,12 +60,6 @@
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/27/56911.html",
    "date": "2026-11-26T23:00:02+00:00",
    "source": "ScanNetSecurity"
-  },
-  {
-   "title": "個人情報含むデータが外部に流出 - 富士ユナイトHD",
-   "link": "https://www.security-next.com/193313",
-   "date": "2026-11-26T13:04:57+00:00",
-   "source": "Security NEXT"
   }
  ]
 }
