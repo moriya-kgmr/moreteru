@@ -1,6 +1,18 @@
 {
- "updated": "2026-11-27T13:23:18.576958+00:00",
+ "updated": "2026-11-27T15:03:38.683956+00:00",
  "items": [
+  {
+   "title": "化粧品通販サイトに不正アクセス - 個人情報流出の可能性",
+   "link": "https://www.security-next.com/193310",
+   "date": "2026-11-27T14:05:36+00:00",
+   "source": "Security NEXT"
+  },
+  {
+   "title": "契約者向けマイページに不正アクセス、個人情報が流出 - 東京海上ダイレクト",
+   "link": "https://www.security-next.com/193168",
+   "date": "2026-11-27T13:56:19+00:00",
+   "source": "Security NEXT"
+  },
   {
    "title": "政府調達情報システムのサーバから個人情報流出か - 文科省",
    "link": "https://www.security-next.com/193439",
@@ -47,18 +59,6 @@
    "title": "NewsPicksへの不正アクセス、BIツール「Metabase」の脆弱性を悪用",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/27/56914.html",
    "date": "2026-11-26T23:05:05+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "「ミツモア」にシステムの脆弱性を悪用した不正アクセス、最大36万6,850件の情報が取得される",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/27/56913.html",
-   "date": "2026-11-26T23:05:02+00:00",
-   "source": "ScanNetSecurity"
-  },
-  {
-   "title": "ITreview Grid Award 2026 Fall 脆弱性管理ツール部門「GMOサイバー攻撃 ネットde診断 ASM」が「Leader」を初受賞",
-   "link": "https://scan.netsecurity.ne.jp/article/2026/11/27/56911.html",
-   "date": "2026-11-26T23:00:02+00:00",
    "source": "ScanNetSecurity"
   }
  ]
