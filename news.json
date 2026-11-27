@@ -1,6 +1,12 @@
 {
- "updated": "2026-11-27T10:19:59.157079+00:00",
+ "updated": "2026-11-27T12:02:33.718780+00:00",
  "items": [
+  {
+   "title": "「Drupal」が再アップデート、前回更新後も一部サイトは脆弱 - 侵害調査を",
+   "link": "https://www.security-next.com/193451",
+   "date": "2026-11-27T11:57:15+00:00",
+   "source": "Security NEXT"
+  },
   {
    "title": "今日もどこかで情報漏えい 第54回「2026年10月の情報漏えい」教育委員会職員の不正アクセスが発覚した理由",
    "link": "https://scan.netsecurity.ne.jp/article/2026/11/27/56921.html",
@@ -53,12 +59,6 @@
    "title": "個人情報含むデータが外部に流出 - 富士ユナイトHD",
    "link": "https://www.security-next.com/193313",
    "date": "2026-11-26T13:04:57+00:00",
-   "source": "Security NEXT"
-  },
-  {
-   "title": "歯科医療人材マッチングサービスで設定ミス - 個人情報が閲覧可能に",
-   "link": "https://www.security-next.com/192812",
-   "date": "2026-11-26T02:30:37+00:00",
    "source": "Security NEXT"
   }
  ]
